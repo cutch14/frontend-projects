@@ -1,37 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Order summary card</title>
 
-  Order Summary
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+      * {
+        box-sizing: border-box;
+        font-family: "Red Hat Display", sans-serif;
+      }
 
-  Annual Plan
-  $59.99/year
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("images/pattern-background-desktop.svg") no-repeat;
+        background-color: hsl(225, 100%, 94%);
+      }
 
-  Change
+      .container {
+        background-color: white;
+        margin: 20px;
+        max-height: 100%;
+        width: 400px;
+        border-radius: 15px;
+        background: white;
+        text-align: center;
+      }
 
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .main_img {
+        width: 100%;
+        border-radius: 15px 15px 0px 0px;
+      }
+
+      .subhead {
+        width: 300px;
+        margin: 5px auto;
+        margin-bottom: 30px;
+      }
+
+      div .price {
+        margin: 0 auto;
+        padding-left: 10px;
+        background-color: hsl(225, 100%, 98%);
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 15px;
+        margin-bottom: 30px;
+      }
+
+      div .img_price {
+        display: flex;
+        max-height: 100%;
+        justify-content: center;
+        align-items: center;     
+      }
+
+      div .music_img {
+        padding-right: 10px;
+      }
+
+      .annual {
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+
+      .btn {
+        border-radius: 15px;
+        border: none;
+        padding: 5px 10px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .btn:hover {
+        cursor: pointer;
+      }
+
+      .change_btn {
+        background-color: transparent;
+        color: hsl(245, 75%, 52%);
+        text-decoration: underline;
+      }
+
+      .btn_group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .payment_btn {
+        width: 300px;
+        height: 40px;
+        margin-bottom: 10px;
+        background-color: hsl(245, 75%, 52%);
+        color: white;
+      }
+
+      .payment_btn:hover {
+        opacity: 0.8;
+      }
+
+      .cancel_btn {
+        width: 300px;
+        height: 40px;
+        background-color: transparent;
+      }
+
+      .cancel_btn:hover {
+        background-color: hsl(225, 100%, 98%);
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="./images/illustration-hero.svg" alt="" class="main_img" />
+      <h1 class="head">Order Summary</h1>
+      <p class="subhead">
+        You can now listen to millions of songs, audiobooks, and podcasts on any
+        device anywhere you like!
+      </p>
+      <div class="price">
+        <div class="img_price">
+        <img src="./images/icon-music.svg" alt="" class="music_img" />
+        <section class="annual_price">
+          <p class="annual">Annual Plan</p>
+          <p>$59.99/year</p>
+        </div>
+        </section>
+        <button class="btn change_btn">Change</button>
+      </div>
+      <section class="btn_group">
+        <button class="btn payment_btn">Proceed to Payment</button>
+      <button class="btn cancel_btn">Cancel Order</button>
+    </section>
+      
+    </div>
+  </body>
 </html>
