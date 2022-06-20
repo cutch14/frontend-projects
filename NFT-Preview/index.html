@@ -11,39 +11,35 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="./style.css" class="style" />
     <title>Frontend Mentor | NFT preview card component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
-
-      :root {
-        --soft-blue: hsl(215, 51%, 70%);
-        --cyan: hsl(178, 100%, 50%);
-        --main-bg: hsl(217, 54%, 11%);
-        --card-bg: hsl(216, 50%, 16%);
-        --line: hsl(215, 32%, 27%);
-        --White: hsl(0, 0%, 100%);
-      }
-    </style>
   </head>
   <body>
     <div class="container">
-      <img src="./images/image-equilibrium.jpg" alt="" class="hero" />
+      <section class="main_image">
+        <img src="./images/image-equilibrium.jpg" alt="" class="hero" />
+        <div class="overlay">
+          <img src="./images/icon-view.svg" alt="" class="hover_icon" />
+        </div>
+      </section>
+
       <h1 class="title">Equilibrium #3429</h1>
       <p class="sub_header">
         Our Equilibrium collection promotes balance and calm.
       </p>
       <div class="sub_container">
         <p class="current_price">0.041 ETH</p>
-        <p class="time_remaining">3 days left</p>
+        <div class="time">
+          <img src="./images/icon-clock.svg" alt="" class="clock" />
+          <p class="time_remaining">3 days left</p>
+        </div>
       </div>
-      <hr />
+      <p class="break_line"></p>
       <footer class="attribution">
         <img src="./images/image-avatar.png" alt="" class="profile" />
-        <p class="creation">Creation of Jules Wyvern</p>
+        <p class="creation">
+          Creation of <span class="name">Jules Wyvern</span>
+        </p>
       </footer>
     </div>
   </body>
