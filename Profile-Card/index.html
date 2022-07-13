@@ -11,10 +11,40 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Profile card component</title>
   </head>
   <body>
-    Victor Crest 26 London 80K Followers 803K Likes 1.4K Photos
+    <div class="main-container">
+      <div class="background">
+        <div class="image"></div>
+        <div class="color"></div>
+      </div>
+      <div class="content">
+        <img
+          src="./images/image-victor.jpg"
+          alt="profile picture"
+          class="profile-pic"
+        />
+        <h3 class="name">Victor Crest <span class="age"> 26</span></h3>
+        <p class="location">London</p>
+        <p class="breakline"></p>
+        <div class="socials">
+          <p class="head followers">
+            80K <br />
+            <span class="sub">Followers</span>
+          </p>
+          <p class="head likes">
+            803K <br />
+            <span class="sub">Likes</span>
+          </p>
+          <p class="head photos">
+            1.4K <br />
+            <span class="sub">Photos</span>
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

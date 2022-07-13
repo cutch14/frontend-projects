@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+:root {
+    --darkCyan: hsl(185, 75%, 39%);
+    --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --darkGrayishBlue: hsl(227, 10%, 46%);
+    --darkGray: hsl(0, 0%, 59%);
+}
+
+body {
+    background: url("./images/bg-pattern-bottom.svg") 600px 200px no-repeat,
+                url("./images/bg-pattern-top.svg") -300px -500px no-repeat;
+    background-color: hsl(185, 75%, 39%);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.main-container {
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+.image {
+    height: 150px;
+    background-image: url("./images/bg-pattern-card.svg");
+    border-radius: 15px 15px 0 0;
+}
+
+.color {
+    background-color: white;
+    height: 250px;
+    border-radius: 0 0 15px 15px;
+}
+
+.content {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    position: relative;
+    margin-top: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.name {
+    height: 20px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 8px;
+    color: var(--veryDarkDesaturatedBlue);
+}
+
+.age {
+    color: var(--darkGray);
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.location {
+    height: 20px;
+    position: relative;
+    top: -20px;
+    color: var(--darkGray);
+    font-size: 15px;
+}
+
+.breakline {
+    height: 0.1px;
+    width: 90%;
+    border: 0.1px solid var(--darkGray);
+    position: relative;
+    top: -15px;
+}
+
+.socials {
+    display: flex;
+    height: 80px;
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    bottom: 30px;
+    text-align: center;
+}
+
+.head {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--veryDarkDesaturatedBlue);
+}
+
+.sub {
+    font-size: 12px;
+    color: var(--darkGrayishBlue);
+    letter-spacing: 1px;
+}
