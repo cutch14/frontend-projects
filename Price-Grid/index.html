@@ -11,36 +11,46 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Single Price Grid Component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    Join our community 30-day, hassle-free money back guarantee Gain access to
-    our full library of tutorials along with expert code reviews. Perfect for
-    any developers who are serious about honing their skills. Monthly
-    Subscription &dollar;29 per month Full access for less than &dollar;1 a day
-    Sign Up Why Us Tutorials by industry experts Peer &amp; expert code review
-    Coding exercises Access to our GitHub repos Community forum Flashcard decks
-    New videos every week
+    <div class="main-container">
+      <div class="head-container">
+        <header class="head">
+          <h2 class="title">Join our community</h2>
+          <h4 class="sub-header">30-day, hassle-free money back guarantee</h4>
+          <p class="header-text">
+            Gain access to our full library of tutorials along with expert code
+            reviews. Perfect for any developers who are serious about honing
+            their skills.
+          </p>
+        </header>
+      </div>
+      <div class="subscription-container">
+        <h3 class="subscribe">Monthly Subscription</h3>
+        <div class="price-container">
+          <h3 class="price">&dollar;29</h3>
+          <p class="monthly">per month</p>
+        </div>
+        <p class="subscription-text">
+          Full access for less than &dollar;1 a day
+        </p>
 
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer>
+        <button class="sign-up">Sign Up</button>
+      </div>
+      <div class="about-container">
+        <h3 class="about-header">Why Us</h3>
+        <p class="about-text">
+          Tutorials by industry experts <br />
+          Peer &amp; expert code review <br />
+          Coding exercises <br />
+          Access to our GitHub repos <br />
+          Community forum <br />
+          Flashcard decks <br />
+          New videos every week
+        </p>
+      </div>
+    </div>
   </body>
 </html>
