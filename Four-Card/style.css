@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-size: 15px;
     font-family: "Poppins", sans-serif;
-    text-align: center;
 }
 
 :root {
@@ -26,6 +25,7 @@ body {
     font-weight: 200;
     color: var(--grayishBlue);
     margin-top: 20px;
+    text-align: center;
 }
 
 .sub-header {
@@ -33,6 +33,7 @@ body {
     color: var(--veryDarkBlue);
     margin-top: -25px;
     margin-bottom: 4px;
+    text-align: center;
 }
 
 .title-text {
@@ -71,6 +72,7 @@ body {
 .container-left {
     border-top-color: var(--cyan);
     border-top-width: 4px;
+
 }
 
 .top-center-container {
