@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --veryDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+}
+
+body {
+    color: var(--veryLightGray);
+}
+
+.header {
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--grayishBlue);
+    margin-top: 20px;
+}
+
+.sub-header {
+    font-size: 2rem;
+    color: var(--veryDarkBlue);
+    margin-top: -25px;
+    margin-bottom: 4px;
+}
+
+.title-text {
+    width: 450px;
+    margin: auto;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--grayishBlue);
+}
+
+
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+    margin-top: 23px;
+}
+
+.container-left, .top-center-container, .bottom-center-container, .container-right {
+    border: 1px solid black;
+    width: 280px;
+    height: 180px;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 5px black;
+    border-right-color: var(--veryLightGray);
+    border-bottom-color: var(--veryLightGray);
+    border-left-color: var(--veryLightGray);
+    display: flex;
+    flex-direction: column;
+}
+
+.container-left {
+    border-top-color: var(--cyan);
+    border-top-width: 4px;
+}
+
+.top-center-container {
+    border-top-color: var(--red);
+    border-top-width: 4px;
+}
+
+.bottom-center-container {
+    border-top-color: var(--orange);
+    border-top-width: 4px;
+}
+
+.container-right {
+    border-top-color: var(--blue);
+    border-top-width: 4px;
+}
+
+.title {
+    color: var(--veryDarkBlue);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 0px;
+    align-self: flex-start;
+}
+
+.text {
+    color: var(--grayishBlue);
+    font-size: .8rem;
+    height: 100%;
+    width: 220px;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+.image {
+    height: 35px;
+    width: 35px;
+    align-self: flex-end;
+}
+
+@media only screen and (max-width: 650px) {
+
+    .box-container {
+        flex-direction: column;
+        margin-top: 250px;
+    }
+
+    .container-left {
+        margin-top: -5px;
+        margin-bottom: 0px;
+    }
+
+    .bottom-center-container {
+        margin-bottom: 0px;
+    }
+
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .header, .sub-header {
+        font-size: 1.6rem;
+    }
+
+    .title-text {
+        width: 300px;
+        line-height: 20px;
+        padding: 5px;
+
+    }
+}
