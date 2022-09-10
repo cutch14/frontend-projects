@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+    height: 768px;
+    width: 1440px;
+    background: linear-gradient(to bottom, var(--softViolet), var(--softBlue));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --softViolet: hsl(273, 75%, 66%);
+    --softBlue: hsl(240, 73%, 65%);
+    --veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+    --softRed: hsl(14, 88%, 65%);
+    --veryDarkGrayishBlue: hsl(237, 12%, 33%);
+    --darkGrayishBlue: hsl(240, 6%, 50%);
+    --lightGrayishBlue: hsl(240, 5%, 91%);
+}
+
+/*  main container box  */
+
+div.main-container {
+    height: 509px;
+    width: 920px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--lightGrayishBlue);
+}
+
+/* Main container images */
+
+section.image-container {
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 620px 620px;
+    background-position: -200px -50px;
+}
+
+img.main-img {
+    margin-left: -50px;
+    margin-top: 50px;
+}
+
+img.box-img {
+    position: absolute;
+    left: 160px;
+    top: 320px;
+}
+
+/* Main container accordian section */
+
+section.accordian-container {
+    height: 500px;
+    width: 470px;
+    padding: 20px;
+}
+
+h1.faq {
+    height: 32px;
+    width: 67px;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    color: var(--veryDarkDesaturatedBlue);
+}
+
+div.question-container {
+    border-bottom: 1px solid var(--darkGrayishBlue);
+    min-height: 52px;
+    max-height: 140px;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+div.question {
+    height: 35px;
+    width: 350px;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:  #4B4C5F;
+    transition: all 0.1s ease-in-out;
+}
+
+div.question:hover {
+    color: var(--softRed);
+    cursor: pointer;
+}
+
+div.question.active {
+    font-weight: 700;
+    color: #4B4C5F;
+}
+
+span.chevron {
+    border-style: solid;
+    border-width: 0.25rem 0.25rem 0 0;
+    border-color: var(--softRed);
+    content: "";
+    display: inline-block;
+    height: 0.8rem;
+    width: 0.8rem;
+    transform: rotate(135deg);
+    transition: all 0.3s ease-in-out;
+}
+
+span.chevron.active {
+    transform: rotate(-45deg);
+    margin-top: 8px;
+}
+
+div.answer {
+    height: 36px;
+    width: 319px;
+    font-size: 12px;
+    color: var(--darkGrayishBlue);
+    margin-bottom: 10px;
+    display: none;
+}
+
+div.answer.active {
+    display: block;
+}
+
+/* Adjust distance from bottom border of password answer */
+
+div.password {
+    margin-bottom: 20px;
+}
+
+/* Media query mobile */ 
+
+@media only screen and (max-width: 800px) {
+    body {
+        width: 375px;
+        height: 768px;
+    }
+
+    div.main-container {
+        width: 327px;
+        height: 535px;
+        flex-direction: column;
+        margin-top: 80px;
+    }
+
+    section.image-container {
+        background-image: url("./images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 245px 245px;
+        background-position: 33px -145px;
+        width: 327px;
+        height: 180px;
+    }
+    
+    img.main-img {
+        margin-left: 40px;
+        margin-top: -110px;
+        max-width: 237px;
+        max-height: 180px;
+    }
+    
+    img.box-img {
+        position: absolute;
+        left: 60px;
+        top: 120px;
+        width: 73px;
+        height: 65px;
+    }
+
+    section.accordian-container {
+        width: 279px;
+        height: 355px;
+        margin: auto;
+        margin-top: -50px;
+    }
+
+    h1.faq {
+        margin: auto;
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
+    div.question-container {
+        width: 279px;
+        margin-left: -20px;
+    }
+
+    div.question {
+        font-size: 13px;
+        width: 279px;
+    }
+
+    div.answer {
+        width: 279px;
+        font-size: 12px;
+    }
+
+    div.answer.first-answer {
+        margin-bottom: 25px;
+    }
+
+    span.chevron {
+        height: 0.5rem;
+        width: 0.5rem;
+    }
+}
