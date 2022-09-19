@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+:root {
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --desaturatedDarkBlue: hsl(214, 17%, 51%);
+    --grayishBlue: hsl(212, 23%, 69%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+body {
+    width: 375px;
+    height: 667px;
+    background-color: var(--lightGrayishBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.main-container {
+    width: 327px;
+    height: 512px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+section.image-wrapper {
+    width: 327px;
+    height: 200px;
+}
+
+section.image-wrapper > img.main-image {
+    width: 327px;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+section.text-container {
+    margin-bottom: 25px;
+}
+
+section.text-container > h1.text-header {
+    width: 263px;
+    height: 72px;
+    font-size: 16px;
+    line-height: 24px;
+    margin: auto;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    color: var(--veryDarkGrayishBlue);
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+section.text-container > p.text {
+    width: 263px;
+    height: 100px;
+    margin: auto;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.12px;
+    color: var(--desaturatedDarkBlue);
+}
+
+section.page-footer {
+    position: relative;
+    margin-top: 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* User profile tab */
+
+section.profile {
+    height: 64px;
+    width: 327px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+section.profile > img.profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}
+
+section.profile > div.username-container {
+    height: 40px;
+    width: 118px;
+    margin-left: -40px;
+}
+
+section.profile > div.username-container > h5.profile-name {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    letter-spacing: 0.12px;
+    font-weight: 700;
+    color: var(--veryDarkGrayishBlue);
+}
+
+section.profile > div.username-container > h5.date {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--grayishBlue);
+}
+
+section.profile > div.share-icon1-container {
+    height: 32px;
+    width: 32px;
+    background-color: var(--lightGrayishBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+section.profile > div.share-icon1-container:hover {
+    cursor: pointer;
+}
+
+section.profile > div.share-icon1-container > img.share-icon {
+    width: 15px;
+    height: 13px;
+}
+
+/* Share tab */
+
+section.socials {
+    width: 327px;
+    height: 64px;
+    background: var(--veryDarkGrayishBlue);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+    position: absolute;
+    top: 0;
+    /* opacity: 0; */
+    display: none;
+    cursor: pointer;
+}
+
+section.socials > h5.share {
+    width: 62px; 
+    height: 20px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--grayishBlue);
+    text-transform: uppercase;
+}
+
+section.socials > div.social-icons {
+    width: 92px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -40px;
+}
+
+img.facebook, img.twitter, img.pinterest {
+    background-color: var(--veryDarkGrayishBlue);
+}
+
+section.socials > div.share-icon2-container {
+    height: 32px;
+    width: 32px;
+    background-color: var(--desaturatedDarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-right: -40px;
+}
+
+section.socials > div.share-icon2-container:hover {
+    cursor: pointer;
+}
+
+section.socials > div.share-icon2-container > img.share-icon2 {
+    width: 15px;
+    height: 13px;
+    filter: brightness(500%);
+}
+
+/* Desktop styling */
+
+@media only screen and (min-width: 600px) {
+
+    body {
+        width: 1440px;
+        height: 800px;
+    }
+
+    main.main-container {
+        width: 730px;
+        height: 280px;
+        display: flex;
+    }
+
+    section.image-wrapper {
+        width: 285px;
+        height: 280px;
+    }
+    
+    section.image-wrapper > img.main-image {
+        width: 285px;
+        height: 280px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    section.text-container {
+        width: 365px;
+        height: 150px;
+    }
+
+    section.text-container > h1.text-header {
+        width: 365px;
+        height: 84px;
+        font-size: 20px;
+        margin-left: 40px;
+    }
+
+    section.text-container > p.text {
+        width: 365px;
+        height: 60px;
+        margin-left: 40px;
+        font-size: 13px;
+        margin-top: -10px;
+    }
+
+    section.page-footer {
+        width: 365px;
+        position: relative;
+        margin-top: 220px;
+        margin-left: -330px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    section.profile {
+        justify-content: space-between;
+    }
+
+    section.profile > div.username-container {
+        margin-left: -100px;
+    }
+
+    section.profile > div.share-icon1-container {
+        margin-right: -30px;
+    }
+
+    section.profile > div.share-icon1-container.active {
+        background-color: var(--veryDarkGrayishBlue);
+    }
+
+    section.profile > div.share-icon1-container > img.share-icon.active {
+        filter: brightness(400%);
+    }
+
+    section.socials {
+        border-radius: 10px;
+        width: 248px;
+        height: 67px;
+        top: -95px;
+        right: -95px;
+    }
+    
+    section.socials > div.social-icons {
+        width: 92px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: -10px;
+    }
+    
+    section.socials > div.share-icon2-container {
+        display: none;
+    }
+
+    
+    section.socials > div.share-icon2-container > img.share-icon2 {
+        display: none;
+    }
+
+    div.square {
+        width: 24px;
+        height: 24px;
+        background-color: var(--veryDarkGrayishBlue);
+        position: absolute;
+        transform: rotate(45deg);
+        top: 55px;
+        left: 115px;
+    }
+
+}
+
