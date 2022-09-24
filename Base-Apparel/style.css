@@ -127,11 +127,11 @@ section.main-page-container > div.sign-up > img.warning {
     position: absolute;
     top: 12px;
     right: 80px;
-    display: none;
+    visibility: hidden;
 }
 
 section.main-page-container > div.sign-up > img.warning.active {
-    display: block;
+    visibility: visible;
 }
 
 section.main-page-container > div.sign-up > div.enter-btn > img.enter-arrow {
@@ -148,11 +148,11 @@ section.main-page-container > div.sign-up > p.error-text {
     color: var(--softRed);
     margin-top: 10px;
     margin-left: 20px;
-    display: none;
+    visibility: hidden;
 }
 
 section.main-page-container > div.sign-up > p.error-text.active {
-    display: block;
+    visibility: visible;
 }
 
 /* Desktop styling */
