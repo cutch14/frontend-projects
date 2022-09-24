@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+:root {
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+    --darkGrayishRed: hsl(0, 6%, 24%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main.main-container {
+    width: 375px;
+    height: 800px;
+    background: url("./images/bg-pattern-desktop.svg");
+    background-size: 400%;
+    background-repeat: no-repeat;
+}
+
+header.header-logo > img.logo {
+    width: 100px;
+    height: 20.89px;
+    margin: 20px;
+}
+
+section.main-image > img.hero {
+    width: 376px;
+    height: 250px;
+    margin-left: -1px;
+}
+
+section.main-page-container {
+    height: 400px;
+    width: 311px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.main-page-container > section.information {
+    width: 311px;
+    height: 126px;
+    text-align: center;
+}
+
+section.main-page-container > section.information > h1.title {
+    font-size: 40px;
+    line-height: 42px;
+    color: hsla(0, 7%, 24%, 1);
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 10.8254px;
+}
+
+section.main-page-container > section.information > h1.title > div.title-styling {
+    font-weight: 300;
+    color: var(--desaturatedRed);
+    text-transform: uppercase;
+    letter-spacing: 10.8254px;
+}
+
+section.main-page-container > section.information > p.text {
+    color: var(--desaturatedRed);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+section.main-page-container > div.sign-up {
+    position: relative;
+    top: -10px;
+}
+
+section.main-page-container > div.sign-up > input.email-input {
+    width: 311px;
+    height: 48px;
+    opacity: 50%;
+    /* background: transparent; */
+    border: 1px solid var(--desaturatedRed);
+    border-radius: 28px;
+    padding-left: 20px;
+}
+
+section.main-page-container > div.sign-up > input.email-input::placeholder {
+    color: var(--desaturatedRed);
+}
+
+section.main-page-container > div.sign-up > input.email-input:focus {
+    outline: none;
+}
+
+section.main-page-container > div.sign-up > div.enter-btn {
+    width: 64px;
+    height: 48px;
+    background: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+    border-radius: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+}
+
+section.main-page-container > div.sign-up > div.enter-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+section.main-page-container > div.sign-up > img.warning {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    right: 80px;
+    display: none;
+}
+
+section.main-page-container > div.sign-up > img.warning.active {
+    display: block;
+}
+
+section.main-page-container > div.sign-up > div.enter-btn > img.enter-arrow {
+    width: 8.84px;
+    height: 17.67px;
+    color: white;
+}
+
+section.main-page-container > div.sign-up > p.error-text {
+    width: 165px;
+    height: 13px;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--softRed);
+    margin-top: 10px;
+    margin-left: 20px;
+    display: none;
+}
+
+section.main-page-container > div.sign-up > p.error-text.active {
+    display: block;
+}
+
+/* Desktop styling */
+
+@media only screen and (min-width: 600px) {
+    main.main-container {
+        width: 1440px;
+        height: 800px;
+        background-size: 100%;
+        display: grid;
+        grid-template-columns: 1fr 610px;
+        grid-template-rows: 15% 85%;
+    }
+
+    header.header-logo > img.logo {
+        width: 158px;
+        height: 33px;
+        margin-top: 50px;
+        margin-left: 178px;
+    }
+
+    section.main-image > img.hero {
+        width: 610px;
+        height: 800px;
+        content: url("./images/hero-desktop.jpg");
+    }
+
+    section.main-page-container {
+        width: 830px;
+        height: 100%;
+        justify-content: space-around;
+        margin-top: 0;
+    }
+
+    section.main-page-container > section.information > h1.title {
+        font-size: 64px;
+        line-height: 71px;
+        letter-spacing: 17.32px;
+        text-align: left;
+        margin-left: -80px;
+    }
+    
+    section.main-page-container > section.information > h1.title > div.title-styling {
+        line-height: 64px;
+    }
+    
+    section.main-page-container > section.information > p.text {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: left;
+        height: 84px;
+        width: 444px;
+        margin-left: -80px;
+    }
+
+    section.main-page-container > div.sign-up {
+        top: 30px;
+        width: 445px;
+        margin-left: -40px;
+    }
+
+    section.main-page-container > div.sign-up > input.email-input {
+        width: 445px;
+        height: 56px;
+        padding-top: 6px;
+    }
+
+    section.main-page-container > div.sign-up > div.enter-btn {
+        width: 100px;
+        height: 56px;
+    }
+
+    section.main-page-container > div.sign-up > img.warning {
+        top: 15px;
+        right: 120px;
+    }
+}

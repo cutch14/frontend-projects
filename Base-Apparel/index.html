@@ -14,31 +14,38 @@
     <link rel="stylesheet" href="style.css" class="css" />
 
     <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    We're coming soon Hello fellow shoppers! We're currently building our new
-    fashion store. Add your email below to stay up-to-date with announcements
-    and our launch deals. Email Address
+    <main class="main-container">
+      <header class="header-logo">
+        <img src="./images/logo.svg" alt="" class="logo" />
+      </header>
+      <section class="main-image">
+        <img src="./images/hero-mobile.jpg" alt="" class="hero" />
+      </section>
+      <section class="main-page-container">
+        <section class="information">
+          <h1 class="title">
+            <div class="title-styling">We're</div>
+            coming soon
+          </h1>
+          <p class="text">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+        </section>
+        <div class="sign-up">
+          <input type="text" class="email-input" placeholder="Email Address" />
+          <img src="./images/icon-error.svg" alt="" class="warning" />
+          <div class="enter-btn">
+            <img src="./images/icon-arrow.svg" alt="" class="enter-arrow" />
+          </div>
+          <p class="error-text">Please provide a valid email</p>
+        </div>
+      </section>
+    </main>
 
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer>
     <script src="script.js"></script>
   </body>
 </html>
