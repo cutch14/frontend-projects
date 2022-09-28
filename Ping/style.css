@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+    width: 375px;
+    height: 812px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --paleBlue: hsl(223, 100%, 88%);
+    --lightRed: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --veryDarkBlue: hsl(209, 33%, 12%);
+}
+
+header.page-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header.page-head > img.header-img {
+    width: 56px;
+    height: 24px;
+}
+
+header.page-head > h1.header-title {
+    width: 302px;
+    height: 32px;
+    font-weight: 300;
+    font-size: 22px;
+    text-align: center;
+    color: var(--gray);
+    margin-top: 50px;
+}
+
+header.page-head > h1.header-title > strong {
+    color: black;
+}
+
+header.page-head > h4.header-text {
+    width: 146px;
+    height: 15px;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--veryDarkBlue);
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+header.page-head > section.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 281px;
+    height: 120px;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+header.page-head > section.input-container > input.email-input {
+    height: 40px;
+    border-radius: 28px;
+    border: 0.5px solid var(--paleBlue);
+    padding-left: 25px;
+    padding-top: 5px;
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
+}
+
+header.page-head > section.input-container > input.email-input:focus {
+    outline: none;
+}
+
+header.page-head > section.input-container > input.email-input:focus.active {
+    outline: 1px solid var(--lightRed);
+}
+
+header.page-head > section.input-container > input.email-input::placeholder {
+    font-size: 12px;
+    color: hsla(223, 59%, 83%, 1);
+}
+
+header.page-head > section.input-container > button.input-btn {
+    height: 40px;
+    border-radius: 28px;
+    border: none;
+    background-color: var(--blue);
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.230414);
+    transition: all 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+}
+
+header.page-head > section.input-container > button.input-btn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+header.page-head > section.input-container > button.input-btn:active {
+    transform: translateY(4px);
+}
+
+header.page-head > section.input-container > p.input-error {
+    color: var(--lightRed);
+    font-size: 12px;
+    font-style: italic;
+    width: 206px;
+    height: 20px;
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    visibility: hidden;
+}
+
+header.page-head > section.input-container > p.input-error.active {
+    visibility: visible;
+}
+
+main.main-contain {
+    width: 320px;
+    height: 192px;
+}
+
+main > img.main-img {
+    width: 320px;
+    height: 192px;
+}
+
+footer.page-footer {
+    height: 120px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer.page-footer > section.social-icons {
+    height: 31px;
+    width: 120px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-brands {
+    width: 32px;
+    height: 31px;
+    color: var(--blue);
+    border: 1px solid var(--paleBlue);
+    border-radius: 50px;
+}
+
+.fa-facebook-f {
+    padding-left: 9px;
+    padding-top: 6px;
+}
+
+.fa-twitter {
+    padding-left: 7px;
+    padding-top: 6px;
+}
+
+.fa-instagram {
+    padding-left: 8px;
+    padding-top: 6px;
+}
+
+footer.page-footer > p.footer-text {
+    font-size: 10px;
+    width: 169px;
+    height: 12px;
+    color: var(--gray);
+}
+
+/* Desktop styling */
+
+@media only screen and (min-width: 650px) {
+    body {
+        width: 1440px;
+        height: 1024px;
+    }
+
+    header.page-head > img.header-img {
+        width: 90px;
+        height: 32px;
+    }
+
+    header.page-head > h1.header-title {
+        width: 712px;
+        height: 60px;
+        font-weight: 300;
+        font-size: 48px;
+    }
+
+    header.page-head > h4.header-text {
+        width: 243px;
+        height: 24px;
+        font-size: 20px;
+        margin-top: -15px;
+    }
+
+    header.page-head > section.input-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 637px;
+        height: 56px;
+    }
+
+    header.page-head > section.input-container > input.email-input {
+        width: 421px;
+        height: 56px;
+    }
+
+    header.page-head > section.input-container > input.email-input::placeholder {
+        font-size: 16px;
+    }
+
+    header.page-head > section.input-container > button.input-btn {
+        width: 200px;
+        height: 56px;
+        font-size: 16px;
+    }
+
+    main.main-contain {
+        width: 640px;
+        height: 383px;
+        margin-top: 30px;
+    }
+    
+    main > img.main-img {
+        width: 640px;
+        height: 383px;
+    }
+
+    footer.page-footer {
+        width: 204px;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer.page-footer > p.footer-text {
+        width: 203px;
+        height: 15px;
+        font-size: 12px;
+    }
+}
