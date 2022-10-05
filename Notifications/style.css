@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    line-height: 17.64px;
+}
+
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --veryLightGrayishBlue: hsl(210, 60%, 98%);
+    --lightGrayishBlue1: hsl(211, 68%, 94%);
+    --lightGrayishBlue2: hsl(205, 33%, 90%);
+    --grayishBlue: hsl(219, 14%, 63%);
+    --darkGrayishBlue: hsl(219, 12%, 42%);
+    --veryDarkBlue: hsl(224, 21%, 14%);
+}
+
+body {
+    background-color: var(--veryLightGrayishBlue);
+    cursor: default;
+}
+
+/* Mobile styling */
+
+main.main-container {
+    background-color: var(--white);
+    width: 375px;
+    height: 901px;
+    border-radius: 8px;
+}
+
+header.notification-header {
+    width: 343px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+header.notification-header > h3.title {
+    width: 127px;
+    height: 25px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+header.notification-header > p.three {
+    width: 32px;
+    height: 25px;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -70px;
+    margin-top: -3px;
+}
+
+header.notification-header > p.mark-read {
+    width: 101px;
+    height: 18px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--darkGrayishBlue);
+    margin-top: 2px;
+}
+
+header.notification-header > p.mark-read:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+section.notification {
+    border-radius: 8px;
+    width: 343px;
+    max-height: 223px;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto;
+    margin-bottom: 12px;
+    display: flex;
+}
+
+section.notification.active {
+    background-color: var(--veryLightGrayishBlue);
+}
+
+section.notification > img.profile-pic {
+    height: 39px;
+    width: 39px;
+    padding: 2px;
+    padding-left: 5px;
+}
+
+section.notification > div.notification-info {
+    max-width: 255px;
+    padding-left: 5px;
+}
+
+section.notification > div.notification-info > p.notification-text {
+    font-size: 14px;
+    color: var(--darkGrayishBlue);
+}
+
+section.notification > div.notification-info > div.comment {
+    border: 1px solid var(--lightGrayishBlue2);
+    border-radius: 5px;
+    width: 263px;
+    height: 122px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--darkGrayishBlue);
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 26px;
+}
+
+section.notification > div.notification-info > div.comment:hover {
+    cursor: pointer;
+    background-color: var(--lightGrayishBlue1);
+}
+
+section.notification > div.notification-info.kimberley {
+    position: relative;
+}
+
+section.notification > div.notification-info.kimberley > p.notification-text {
+    width: 197px;
+}
+
+section.notification > div.notification-info.kimberley > img.commented-pic {
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    right: -90px;
+    top: 0;
+}
+
+section.notification > div.notification-info.kimberley > img.commented-pic:hover {
+    cursor: pointer;
+}
+
+section.notification > div.notification-info > p.notification-text > strong {
+    color: #1C202B;
+    font-weight: 800;
+}
+
+section.notification > div.notification-info > p.notification-text > strong:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+section.notification > div.notification-info > p.notification-text > span.post {
+    color: var(--darkGrayishBlue);
+    font-weight: 700;
+}
+
+section.notification > div.notification-info > p.notification-text > span.group {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+section.notification > div.notification-info > p.notification-text > span:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+section.notification > div.notification-info > p.notification-text > span.unread {
+    color: var(--red);
+    width: 8px;
+    height: 8px;
+    visibility: hidden;
+}
+
+section.notification > div.notification-info > p.notification-text > span.unread.active {
+    visibility: visible;
+}
+
+section.notification > div.notification-info > p.time {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--grayishBlue);
+    margin-top: 3px;
+}
+
+
+/* Desktop styling */ 
+
+@media only screen and (min-width: 600px) {
+
+    body {
+        width: 1440px;
+        height: 991px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main.main-container {
+        width: 730px;
+        max-height: 900px;
+    }
+
+    header.notification-header {
+        width: 668px;
+        height: 30px;
+    }
+
+    header.notification-header > p.three {
+        margin-left: -390px;
+    }
+
+    section.notification {
+        width: 670px;
+    }
+
+    section.notification > div.notification-info {
+        max-width: 560px;
+        min-height: 54px;
+        padding-top: 10px;
+    }
+
+    section.notification > div.notification-info > p.notification-text {
+        font-size: 16px;
+    }
+
+    section.notification > img.profile-pic {
+        margin-top: 10px;
+    }
+
+    section.notification > div.notification-info > div.comment {
+        width: 566px;
+        max-height: 97px;
+        font-size: 16px;
+        line-height: 20px;
+        margin-left: 48px;
+        margin-top: 20px;
+    }
+
+    section.notification > div.notification-info.kimberley > p.notification-text {
+        width: 339px;
+    }
+    
+    section.notification > div.notification-info.kimberley > img.commented-pic {
+        width: 45px;
+        height: 45px;
+        right: -275px;
+        top: 0;
+    }
+}
