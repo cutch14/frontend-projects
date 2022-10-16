@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+}
+
+:root {
+    --linearGradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --red: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrayishViolet: hsl(270, 3%, 87%);
+    --darkGrayishViolet: hsl(279, 6%, 55%);
+    --veryDarkViolet: hsl(278, 68%, 11%);
+}
+
+body {
+    margin: 0;
+    background-color: #F2F2F2;
+}
+
+main.main-container {
+    width: 375px;
+    height: 704px;
+}
+
+section.card-image {
+    height: 240px;
+    width: 375px;
+    background-color: var(--veryDarkViolet);
+}
+
+section.card-image > img.card-back {
+    width: 286px;
+    height: 157px;
+    margin-left: 73px;
+    margin-top: 32px;
+    position: relative;
+    z-index: 0;
+}
+
+section.card-image > div.card-front {
+    background: url("./images/bg-card-front.png");
+    width: 286px;
+    height: 157px;
+    padding: 20px;
+    margin-left: 16px;
+    margin-top: -75px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 10;
+}
+
+section.card-image > div.card-front > img.card-front-icon {
+    width: 54px;
+    height: 30px;
+}
+
+section.card-image > div.card-front > h3.sample-card-number {
+    width: 245px;
+    height: 23px;
+    font-weight: 500;
+    letter-spacing: 2.2px;
+    color: var(--white);
+}
+
+section.card-image > div.card-front > h3.sample-card-number {
+    display: flex;
+    width: 250px;
+    height: 11px;
+    justify-content: space-between;
+}
+
+section.card-image > div.card-front > div.card-details-container > h5.sample-card-name {
+    width: 99px;
+    height: 11px;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.29px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+section.card-image > div.card-front > div.card-details-container > h5.sample-card-expiry {
+    width: 32px;
+    height: 11px;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.29px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+div.card-before-card-after {
+    height: 464px;
+    width: 375px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+}
+
+div.card-before-card-after > section.card-details {
+    display: none;
+}
+
+div.card-before-card-after > section.card-details.active {
+    height: 358px;
+    width: 327px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+h4.card-text {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--veryDarkViolet);
+}
+
+h4.date-month-year {
+    width: 75px;
+}
+
+div.card-before-card-after > section.card-details > div > input {
+    width: 327px;
+    height: 45px;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--lightGrayishViolet);
+    margin-bottom: 10px;
+}
+
+div.card-before-card-after > section.card-details > div > input::placeholder {
+    color: var(--lightGrayishViolet);
+    padding-left: 10px;
+}
+
+div.card-before-card-after > section.card-details > div.additional-card-details {
+    width: 327px;
+    height: 79px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Error text */
+
+div.cardholder, div.card-number, div.expiry-cvc {
+    position: relative;
+}
+
+div.expiry-date, div.expiry-month {
+    width: 72px;
+    height: 69px;
+    position: relative;
+}
+
+p.error-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--red);
+    width: 165px;
+    position: absolute;
+    top: 75px;
+    visibility: hidden;
+}
+
+p.error-text.name-error.active {
+    visibility: visible;
+}
+
+p.error-text.card-number-error.active {
+    visibility: visible;
+}
+
+p.error-text.card-date-error.active {
+    visibility: visible;
+}
+
+p.error-text.card-cvc-error.active {
+    visibility: visible;
+}
+
+input.expiry-month-input, input.expiry-year-input {
+    width: 72px;
+    height: 45px;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--lightGrayishViolet);
+}
+
+input.cvc-input {
+    width: 164px;
+    height: 45px;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--lightGrayishViolet);
+}
+
+div.card-before-card-after > section.card-details > div > input.card-name-input:hover,
+div.card-before-card-after > section.card-details > div > input.card-number-input:hover
+{
+    cursor: pointer;
+}
+
+div.card-before-card-after > section.card-details > div > input.card-name-input:focus, 
+div.card-before-card-after > section.card-details > div > input.card-number-input:focus
+{
+    outline-color: mediumslateblue;
+}
+
+/* Input error border colour */
+
+div.card-before-card-after > section.card-details > div > input.card-name-input.active {
+    border-color: var(--red);
+}
+
+div.card-before-card-after > section.card-details > div > input.card-number-input.active {
+    border-color: var(--red);
+}
+
+input.expiry-month-input.active {
+    border-color: var(--red);
+}
+
+input.expiry-year-input.active {
+    border-color: var(--red);
+}
+
+input.cvc-input.active {
+    border-color: var(--red);
+}
+
+input.expiry-month-input::placeholder,
+input.expiry-year-input::placeholder,
+input.cvc-input::placeholder {
+    color: var(--lightGrayishViolet);
+    padding-left: 10px;
+} 
+
+div.expiry-cvc {
+    width: 164px;
+    height: 69px;
+}
+
+input.expiry-month-input:hover,
+input.expiry-year-input:hover,
+input.cvc-input:hover {
+    cursor: pointer;
+}
+
+input.expiry-month-input:focus,
+input.expiry-year-input:focus,
+input.cvc-input:focus {
+    outline-color: mediumslateblue;
+}
+
+div.card-before-card-after > section.card-details > div.confirm-button {
+    margin-top: 50px;
+    width: 327px;
+    height: 53px;
+}
+
+div.card-before-card-after > section.card-details > div.confirm-button > button {
+    width: 327px;
+    height: 53px;
+    border-radius: 8px;
+    background: var(--veryDarkViolet);
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+div.card-before-card-after > section.card-details > div.confirm-button > button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+div.card-before-card-after > section.successfull-input {
+    display: none;
+}
+
+div.card-before-card-after > section.successfull-input.active {
+    position: absolute;
+    width: 327px;
+    height: 291px;
+    top: 81px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.card-before-card-after > section.successfull-input > img.tick-img {
+    width: 80px;
+    height: 80px;
+    margin-top: 5px;
+}
+
+div.card-before-card-after > section.successfull-input > h1.thank-you {
+    width: 327px;
+    height: 36px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 35.73px;
+    letter-spacing: 3.42px;
+    text-transform: uppercase;
+    margin-top: -2px;
+    font-weight: 500;
+}
+
+div.card-before-card-after > section.successfull-input > h4.card-added {
+    width: 263px;
+    height: 23px;
+    font-size: 18px;
+    color: hsla(278, 6%, 55%, 1);
+    margin-top: -35px;
+    font-weight: 500;
+}
+
+div.card-before-card-after > section.successfull-input > button.continue-btn {
+    width: 327px;
+    height: 53px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--veryDarkViolet);
+    border-radius: 8px;
+}
+
+/* Desktop styling */
+
+@media only screen and (min-width: 600px) {
+
+    main.main-container {
+        width: 1440px;
+        height: 900px;
+        display: flex;
+    }
+
+    section.card-image {
+        height: 900px;
+        width: 483px;
+    }
+
+    div.card-before-card-after {
+        height: 900px;
+        width: calc(1440px - 483px);
+    }
+
+    section.card-image > img.card-back {
+        width: 447px;
+        height: 245px;
+        margin-top: 470px;
+        margin-left: 350px;
+        z-index: 1;
+    }
+
+    section.card-image > div.card-front {
+        width: 447px;
+        height: 245px;
+        margin-top: -530px;
+        margin-left: 280px;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    section.card-image > div.card-front > img.card-front-icon {
+        width: 84px;
+        height: 47px;
+        margin-top: 20px;
+    }
+
+    section.card-image > div.card-front > h3.sample-card-number {
+        width: 393px;
+        height: 36px;
+        font-size: 28px;
+        letter-spacing: 3.42px;
+        margin-top: 55px;
+    }
+
+    section.card-image > div.card-front > div.card-details-container {
+        margin-top: -20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section.card-image > div.card-front > div.card-details-container > h5.sample-card-name {
+        width: 280px;
+        height: 18px;
+        font-size: 14px;
+    }
+
+    section.card-image > div.card-front > div.card-details-container > h5.sample-card-expiry {
+        width: 49px;
+        height: 18px;
+        font-size: 14px;
+    }
+
+    div.card-before-card-after > section.card-details.active {
+        margin-left: 200px;
+        margin-top: 300px;
+    }
+ 
+    div.card-before-card-after > section.successfull-input.active {
+        top: 305px;
+        left: 432px;
+    }
+}
