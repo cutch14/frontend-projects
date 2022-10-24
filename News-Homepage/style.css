@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --softOrange: hsl(35, 77%, 62%);
+    --softRed: hsl(5, 85%, 63%);
+    --offWhite: hsl(36, 100%, 99%);
+    --grayishBlue: hsl(233, 8%, 79%);
+    --darkGrayishBlue: hsl(236, 13%, 42%);
+    --veryDarkBlue: hsl(240, 100%, 5%);
+}
+
+/* Mobile styling */
+
+main.main-container {
+    width: 375px;
+    height: 1872px;
+    position: relative;
+    border: 1px solid black;
+}
+
+/* Overlay for active menu state */
+
+main.main-container > div.overlay {
+    position: absolute;
+    width: 375px;
+    height: 1872px;
+    top: 0;
+    left: 0;
+    background-color: var(--veryDarkBlue);
+    opacity: 0;
+}
+
+/* Header */
+
+header.header-icon {
+    width: 44.98px;
+    height: 28px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+header.header-icon > img.header-img {
+    width: 41.56px;
+    height: 27.51px;
+}
+
+/* Menu */
+
+div.burger {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 1;
+}
+
+section.menu {
+    width: 256px;
+    height: 669px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--offWhite);
+    transform: translateX(101%);
+    opacity: 0;
+}
+
+section.menu > div.menu-options {
+    width: 203px;
+    height: 216px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 25px;
+    margin-top: 50%;
+}
+
+section.menu > div.menu-options > a {
+    width: 203px;
+    height: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #00001A;
+}
+
+/* Page title image & text */
+
+section.page-title {
+    width: 343px;
+    height: 636px;
+    margin: auto;
+}
+
+section.page-title > img.title-img {
+    width: 343px;
+    height: 300px;
+}
+
+section.page-title > div.main-content {
+    width: 343px;
+    height: 336px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+section.page-title > div.main-content > h1.main-title {
+    width: 343px;
+    height: 120px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    color: var(--veryDarkBlue);
+}
+
+section.page-title > div.main-content > p.main-text {
+    width: 343px;
+    height: 104px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--darkGrayishBlue);
+}
+
+section.page-title > div.main-content > button.read-more {
+    width: 185px;
+    height: 48px;
+    border: none;
+    background-color: var(--softRed);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4.375px;
+    text-transform: uppercase;
+    color: var(--offWhite);
+}
