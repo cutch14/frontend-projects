@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="header">
+        <div class="balance-container">
+          <p class="my-balance">My balance</p>
+          <p class="balance-amount">$921.48</p>
+        </div>
+        <img src="./images/logo.svg" alt="" class="balance-image" />
+      </header>
+      <section class="expenses-container">
+        <h1 class="expenses-header">Spending - Last 7 days</h1>
+        <section class="expenses-days-column">
+          <div class="monday">
+            <div class="daily-spend">$17.45</div>
+            <div class="mon-col column"></div>
+            <div class="mon">mon</div>
+          </div>
+          <div class="tuesday">
+            <div class="daily-spend">$34.91</div>
+            <div class="tue-col column"></div>
+            <div class="tue">tue</div>
+          </div>
+          <div class="wednesday">
+            <div class="daily-spend">$52.36</div>
+            <div class="wed-col column"></div>
+            <div class="wed">wed</div>
+          </div>
+          <div class="thursday">
+            <div class="daily-spend">$31.07</div>
+            <div class="thu-col column"></div>
+            <div class="thu">thu</div>
+          </div>
+          <div class="friday">
+            <div class="daily-spend">$23.39</div>
+            <div class="fri-col column"></div>
+            <div class="fri">fri</div>
+          </div>
+          <div class="saturday">
+            <div class="daily-spend">$43.28</div>
+            <div class="sat-col column"></div>
+            <div class="sat">sat</div>
+          </div>
+          <div class="sunday">
+            <div class="daily-spend">$25.48</div>
+            <div class="sun-col column"></div>
+            <div class="sun">sun</div>
+          </div>
+        </section>
+        <div class="breakline"></div>
+        <footer class="expenses-footer">
+          <div class="total-container">
+            <p class="this-month">Total this month</p>
+            <p class="monthly-total">$478.33</p>
+          </div>
+          <div class="monthly-change-container">
+            <p class="monthly-amount">+2.4%</p>
+            <p class="month-change">from last month</p>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

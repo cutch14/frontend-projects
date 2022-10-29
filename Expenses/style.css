@@ -1,0 +1,19 @@
+
+
+section.expenses-container > section.expenses-days-column {
+    width: 303px;
+    height: 177px;
+    border: 1px solid red;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+section.expenses-container > section.expenses-days-column > div > div.column {
+    width: 33px;
+    height: 20px;
+    background-color: blueviolet;
+    margin: auto;
+}
+
