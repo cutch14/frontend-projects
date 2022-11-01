@@ -69,13 +69,14 @@ const date = new Date();
 const day = date.getDay();
 
 
+const dailySpend = document.querySelectorAll('.daily-spend');
 const dailyAmountColumns = document.querySelectorAll('.column');
 
 // Populate each days spend
 
 function populateDailySpend() {
   dailyAmountColumns.forEach((el, i) => {
-    el.previousElementSibling.innerHTML = financeInfo[i].amount;
+    el.previousElementSibling.innerHTML = `$${financeInfo[i].amount}`;
   })
 };
 
@@ -85,7 +86,7 @@ function displayDailyAmountColumsHeights() {
     dailyAmountColumns.forEach((col, i) => {
     setTimeout(() => {
         col.style.height = `${2.87 * financeInfo[i].amount}px`;
-    }, i * 1000)
+    }, (i + 1) * 500)
 });
 };
 
@@ -94,9 +95,20 @@ function displayDailyAmountColumsHeights() {
 function highlightCurrentDay() {
   const today = getCurrentDay[day][day];
   currentDailyColumn = dailyAmountColumns[today];
-  currentDailyColumn.style.backgroundColor = 'cyan';
+  currentDailyColumn.style.backgroundColor = 'hsla(186, 35%, 60%, 1)';
+}
+
+// Toggle daily spend display
+
+function toggleDailySpend(e) {
+  const spendToDisplay = e.target.previousElementSibling;
+  spendToDisplay.classList.toggle("active");
 }
 
 document.addEventListener('DOMContentLoaded', displayDailyAmountColumsHeights);
 document.addEventListener('DOMContentLoaded', populateDailySpend);
 document.addEventListener('DOMContentLoaded', highlightCurrentDay);
+
+dailyAmountColumns.forEach(elem => {
+  elem.addEventListener('click', toggleDailySpend);
+})
