@@ -13,6 +13,10 @@
     font-family: "Epilogue";
 }
 
+body {
+    background-color: var(--almostWhite);
+}
+
 /* Main page display */
 
 main.main-container {
@@ -74,6 +78,10 @@ section.menu > div.features-container > div.feature-header > h4.features {
     color: var(--mediumGray);
 }
 
+section.menu > div.features-container > div.feature-header > h4.features:hover {
+    cursor: pointer;
+}
+
 section.menu > div.features-container > div.feature-header > span.chevron {
     width: 10px;
     height: 10px;
@@ -84,6 +92,10 @@ section.menu > div.features-container > div.feature-header > span.chevron {
     margin-top: -4px;
 }
 
+section.menu > div.features-container > div.feature-header > span.chevron:hover {
+    cursor: pointer;
+}
+
 section.menu > div.features-container > div.features-options {
     width: 119px;
     height: 152px;
@@ -92,6 +104,11 @@ section.menu > div.features-container > div.features-options {
     align-items: flex-start;
     justify-content: space-evenly;
     padding-left: 20px;
+    display: none;
+}
+
+section.menu > div.features-container > div.features-options.open {
+    display: flex;
 }
 
 section.menu > div.features-container > div.features-options > div {
@@ -123,10 +140,11 @@ section.menu > div.features-container > div.features-options > div > img {
 
 section.menu > div.company-container {
     width: 125px;
-    height: 140px;
+    max-height: 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 section.menu > div.company-container > div.company-header {
@@ -143,6 +161,10 @@ section.menu > div.company-container > div.company-header > h4.company {
     color: var(--mediumGray);
 }
 
+section.menu > div.company-container > div.company-header > h4.company:hover {
+    cursor: pointer;
+}
+
 section.menu > div.company-container > div.company-header > span.chevron {
     width: 10px;
     height: 10px;
@@ -152,6 +174,10 @@ section.menu > div.company-container > div.company-header > span.chevron {
     color: var(--mediumGray);
 }
 
+section.menu > div.company-container > div.company-header > span.chevron:hover {
+    cursor: pointer;
+}
+
 section.menu > div.company-container > div.company-options {
     width: 76px;
     height: 110px;
@@ -159,6 +185,11 @@ section.menu > div.company-container > div.company-options {
     flex-direction: column;
     justify-content: space-evenly;
     align-self: center;
+    display: none;
+}
+
+section.menu > div.company-container > div.company-options.open {
+    display: flex;
 }
 
 section.menu > div.company-container > div.company-options > p {
@@ -187,15 +218,27 @@ section.menu > button.login, section.menu > button.register {
     font-size: 14px;
     color: var(--mediumGray);
     background-color: var(--almostWhite);
+    transition: all 0.2s ease-in-out;
 }
 
 section.menu > button.login {
     border: none;
 }
 
+section.menu > button.login:hover {
+    cursor: pointer;
+    color: var(--almostBlack);
+}
+
 section.menu > button.register {
     border: 1.5px solid var(--mediumGray);
     border-radius: 14px;
+}
+
+section.menu > button.register:hover {
+    cursor: pointer;
+    border: 1.5px solid var(--almostBlack);
+    color: var(--almostBlack);
 }
 
 /* Active menu overlay */
@@ -247,12 +290,18 @@ div.burger.open {
     z-index: 1;
 }
 
+div.burger:hover {
+    cursor: pointer;
+}
+
 /* Hero image */
 
-section.hero-img-container > img.hero-img {
+section.hero-img-container {
     width: 375px;
     height: 281.25px;
     margin-top: 20px;
+    background-image: url("./images/image-hero-mobile.png");
+    background-size: 375px 281.25px;
 }
 
 /* Page info section */
@@ -333,5 +382,225 @@ footer.footer-socials > img.maker-img {
 /* Desktop styling */
 
 @media only screen and (min-width: 650px) {
-    
+    /* Main page display */
+
+main.main-container {
+    width: 1440px;
+    height: 900px;
+}
+
+/* Header logo */
+
+header.page-header {
+    width: 87px;
+    height: 35px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+div.burger {
+    display: none;
+}
+
+/* Hero image */
+
+section.hero-img-container {
+    width: 480px;
+    height: 640px;
+    background-image: url("./images/image-hero-desktop.png");
+    background-size: 480px 640px;
+    position: absolute;
+    top: 130px;
+    left: 830px;
+}
+
+/* Page info section */
+
+section.page-info {
+    width: 540px;
+    height: 400px;
+    position: absolute;
+    top: 234px;
+    left: 165px;
+    align-items: flex-start;
+}
+
+section.page-info > h1.title {
+    width: 540px;
+    height: 161px;
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: 1.11111px;
+    text-align: left;
+}
+
+section.page-info > p.text {
+    width: 445px;
+    height: 84px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+}
+
+section.page-info > button.learn-more {
+    width: 163px;
+    height: 56px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.25px;
+}
+
+/* Footer */
+
+footer.footer-socials {
+    width: 477.63px;
+    height: 35.9px;
+    position: absolute;
+    top: 742px;
+    left: 165.38px;
+}
+
+footer.footer-socials > img.databiz-img {
+    width: 113.14px;
+    height: 20px;
+}
+
+footer.footer-socials > img.audio-img {
+    width: 73px;
+    height: 35.9px
+}
+
+footer.footer-socials > img.meet-img {
+    width: 89.31px;
+    height: 20px;
+}
+
+footer.footer-socials > img.maker-img {
+    width: 82.01px;
+    height: 24px;
+}
+
+/* Menu */
+
+section.menu {
+    width: 1300px;
+    height: 40px;
+    background-color: var(--almostWhite);
+    position: absolute;
+    top: 0;
+    right: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    transform: translateX(0%);
+}
+
+/* Menu features section */
+
+section.menu > div.features-container {
+    width: 180px;
+    max-height: 100%;
+    margin-left: -210px;
+    margin-bottom: 20px;
+}
+
+section.menu > div.features-container > div.feature-header {
+    width: 79px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+section.menu > div.features-container > div.feature-header > h4.features {
+    width: 79px;
+    height: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--mediumGray);
+}
+
+section.menu > div.features-container > div.features-options {
+    width: 153px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+}
+
+/* Mobile menu company section */
+
+section.menu > div.company-container {
+    width: 125px;
+    max-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: -220px;
+    margin-bottom: 3px;
+}
+
+section.menu > div.company-container > div.company-header {
+    width: 85px;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.menu > div.company-container > div.company-header > h4.company {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--mediumGray);
+}
+
+section.menu > div.company-container > div.company-options {
+    width: 116px;
+    height: 128px;
+    position: absolute;
+    align-items: center;
+    padding-top: 10px;
+    top: 60px;
+    left: 230px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+}
+
+section.menu > div.careers, section.menu > div.about {
+    width: 42px;
+    height: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--mediumGray);
+    margin-bottom: 0px;
+    margin-left: -170px;
+}
+
+section.menu > div.about {
+    margin-left: -90px;
+}
+
+section.menu > button.login, section.menu > button.register {
+    width: 104px;
+    height: 42px;
+    margin-top: 2px; 
+    margin-right: -150px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--mediumGray);
+    background-color: var(--almostWhite);
+    transition: all 0.2s ease-in-out;
+}
+
 }
