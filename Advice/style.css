@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+:root {
+    --lightCyan: hsl(193, 38%, 86%);
+    --neonGreen: hsl(150, 100%, 66%);
+    --grayishBlue: hsl(217, 19%, 38%);
+    --darkGrayishBlue: hsl(217, 19%, 24%);
+    --darkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+    width: 375px;
+    height: 667px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--darkBlue);
+    display: flex;
+    justify-content: center;
+    padding-top: 170px;
+}
+
+main.main-container {
+    width: 343px;
+    height: 291px;
+    background-color: var(--darkGrayishBlue);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 20px 0;
+}
+
+main.main-container > h1.advice-number {
+    width: 104px;
+    height: 15px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3.45714px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--neonGreen);
+}
+
+main.main-container > h2.advice {
+    width: 295px;
+    height: 132px;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    color: var(--lightCyan);
+    margin-top: 0;
+}
+
+main.main-container > div.divider {
+    width: 295px;
+    height: 16px;
+    position: absolute;
+    top: 220px;
+}
+
+main.main-container > div.divider > img.divider-image {
+    width: 295px;
+    height: 16px;
+}
+
+main.main-container > div.advice-button-container {
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    background-color: var(--neonGreen);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 259px;
+}
+
+main.main-container > div.advice-button-container:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 40px #53FFAA;
+}
+
+main.main-container > div.advice-button-container > img.dice {
+    width: 24px;
+    height: 24px;
+}
+
+/* Desktop styling */
