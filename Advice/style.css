@@ -93,3 +93,56 @@ main.main-container > div.advice-button-container > img.dice {
 }
 
 /* Desktop styling */
+
+@media only screen and (min-width: 650px) {
+    body {
+        width: 1440px;
+        height: 810px;
+    }
+
+    main.main-container {
+        width: 540px;
+        height: 332px;
+    }
+    
+    main.main-container > h1.advice-number {
+        width: 120px;
+        height: 18px;
+        font-size: 13px;
+        letter-spacing: 4.09px;
+    }
+    
+    main.main-container > h2.advice {
+        width: 444px;
+        height: 114px;
+        font-size: 28px;
+        line-height: 38.25px;
+        letter-spacing: 0.3px;
+    }
+    
+    main.main-container > div.divider {
+        width: 444px;
+        height: 19px;
+        position: absolute;
+        top: 250px;
+    }
+    
+    main.main-container > div.divider > img.divider-img {
+        width: 444px;
+        height: 19px;
+    }
+    
+    main.main-container > div.advice-button-container {
+        top: 300px;
+    }
+    
+    main.main-container > div.advice-button-container:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 40px #53FFAA;
+    }
+    
+    main.main-container > div.advice-button-container > img.dice {
+        width: 24px;
+        height: 24px;
+    }
+}
