@@ -45,6 +45,7 @@ main.main-container > section.slider-container {
     height: 32px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 70px;
 }
 
@@ -67,8 +68,13 @@ main.main-container > section.slider-container > div.slider {
     transition: all 0.2 ease-in;
 }
 
+main.main-container > section.slider-container > div.slider.selected {
+    justify-content: flex-end;
+}
+
 main.main-container > section.slider-container > div.slider:hover {
     cursor: pointer;
+    opacity: 75%;
 }
 
 main.main-container > section.slider-container > div.slider > div.slider-icon {
@@ -121,11 +127,11 @@ main.main-container > section.pricing-container > div > p.basic-title {
 }
 
 main.main-container > section.pricing-container > div > h1.basic {
-    width: 210px;
+    width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 main.main-container > section.pricing-container > div > h1.basic > span.dollar {
@@ -136,7 +142,7 @@ main.main-container > section.pricing-container > div > h1.basic > span.dollar {
 }
 
 main.main-container > section.pricing-container > div > h1.basic > span.amount {
-    width: 176px;
+    max-width: 100%;
     height: 71px;
     font-size: 72px;
     letter-spacing: -2.16px;
@@ -158,7 +164,7 @@ main.main-container > section.pricing-container > div > section.basic-subcontain
     width: 269px;
     height: 60px;
     font-size: 15px;
-    color: var(--darkGrayishBlue);
+    color: var(--grayishBlue);
     border-top: 1px solid var(--lightGrayishBlue);
     border-bottom: 1px solid var(--lightGrayishBlue);
     display: flex;
@@ -171,7 +177,7 @@ main.main-container > section.pricing-container > div > section.basic-subcontain
     width: 269px;
     height: 60px;
     font-size: 15px;
-    color: var(--darkGrayishBlue);
+    color: var(--grayishBlue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,7 +188,7 @@ main.main-container > section.pricing-container > div > section.basic-subcontain
     width: 269px;
     height: 60px;
     font-size: 15px;
-    color: var(--darkGrayishBlue);
+    color: var(--grayishBlue);
     border-top: 1px solid var(--lightGrayishBlue);
     border-bottom: 1px solid var(--lightGrayishBlue);
     display: flex;
@@ -226,7 +232,7 @@ main.main-container > section.pricing-container > div > p.professional-title {
 }
 
 main.main-container > section.pricing-container > div > h1.professional {
-    width: 210px;
+    max-width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
@@ -242,7 +248,7 @@ main.main-container > section.pricing-container > div > h1.professional > span.d
 }
 
 main.main-container > section.pricing-container > div > h1.professional > span.amount {
-    width: 176px;
+    max-width: 100%;
     height: 71px;
     font-size: 72px;
     letter-spacing: -2.16px;
@@ -331,7 +337,7 @@ main.main-container > section.pricing-container > div > p.master-title {
 }
 
 main.main-container > section.pricing-container > div > h1.master {
-    width: 210px;
+    max-width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
@@ -346,7 +352,7 @@ main.main-container > section.pricing-container > div > h1.master > span.dollar 
 }
 
 main.main-container > section.pricing-container > div > h1.master > span.amount {
-    width: 176px;
+    max-width: 100%;
     height: 71px;
     font-size: 72px;
     letter-spacing: -2.16px;
@@ -368,7 +374,7 @@ main.main-container > section.pricing-container > div > section.master-subcontai
     width: 269px;
     height: 60px;
     font-size: 15px;
-    color: var(--darkGrayishBlue);
+    color: var(--grayishBlue);
     border-top: 1px solid var(--lightGrayishBlue);
     border-bottom: 1px solid var(--lightGrayishBlue);
     display: flex;
@@ -381,7 +387,7 @@ main.main-container > section.pricing-container > div > section.master-subcontai
     width: 269px;
     height: 60px;
     font-size: 15px;
-    color: var(--darkGrayishBlue);
+    color: var(--grayishBlue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -392,7 +398,7 @@ main.main-container > section.pricing-container > div > section.master-subcontai
     width: 269px;
     height: 60px;
     font-size: 15px;
-    color: var(--darkGrayishBlue);
+    color: var(--grayishBlue);
     border-top: 1px solid var(--lightGrayishBlue);
     border-bottom: 1px solid var(--lightGrayishBlue);
     display: flex;
@@ -423,19 +429,42 @@ main.main-container > section.pricing-container > div > button.master-learn-more
 /* Desktop styling */
 
 @media only screen and (min-width: 650px) {
+
 /* Page container */
 
 main.main-container {
     width: 1440px;
     height: 850px;
-    background-color: var(--veryLightGrayishBlue);
     background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
-    background-repeat: no-repeat;
     background-size: 472px 760px, 360px 372px;
     background-position: 1000px 0px, 0px 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 30px;
 }    
+
+/* Price container section */
+
+main.main-container > section.pricing-container {
+    width: 1050px;
+    height: 501px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+main.main-container > section.pricing-container > div {
+    width: 350px;
+}
+
+main.main-container > section.pricing-container > div.professional-price-container {
+    height: 501px;
+    padding: 25px;
+}
+
+main.main-container > section.pricing-container > div > p.basic-title,
+main.main-container > section.pricing-container > div > p.professional-title,
+main.main-container > section.pricing-container > div > p.master-title {
+    font-size: 18px;
+}
+
 }
 
