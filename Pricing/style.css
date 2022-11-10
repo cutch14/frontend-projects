@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --veryLightGrayishBlue: hsl(240, 78%, 98%);
+    --lightGrayishBlue: hsl(234, 14%, 74%);
+    --grayishBlue: hsl(233, 13%, 49%);
+    --darkGrayishBlue: hsl(232, 13%, 33%);
+    --linearGradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+}
+
+/* Page container */
+
+main.main-container {
+    width: 375px;
+    height: 1750px;
+    background-color: var(--veryLightGrayishBlue);
+    background-image: url("./images/bg-top.svg");
+    background-repeat: no-repeat;
+    background-size: 472px 760px;
+    background-position: 150px -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Page title and slider */
+
+main.main-container > header.page-header {
+    width: 192px;
+    height: 39px;
+    font-size: 32px;
+    color: var(--grayishBlue);
+    margin: 40px;
+}
+
+main.main-container > section.slider-container {
+    width: 239px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+main.main-container > section.slider-container > div.annual {
+    width: 70px;
+    height: 28px;
+    font-size: 15px;
+    color: var(--grayishBlue);
+}
+
+main.main-container > section.slider-container > div.slider {
+    width: 56px;
+    height: 32px;
+    background: linear-gradient(to right, hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    border-radius: 16px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 0.2 ease-in;
+}
+
+main.main-container > section.slider-container > div.slider:hover {
+    cursor: pointer;
+}
+
+main.main-container > section.slider-container > div.slider > div.slider-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+main.main-container > section.slider-container > div.month {
+    width: 65px;
+    height: 28px;
+    font-size: 15px;
+    color: var(--grayishBlue);
+}
+
+/* Price container section */
+
+main.main-container > section.pricing-container {
+    width: 327px;
+    height: 1450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.main-container > section.pricing-container > div {
+    width: 327px;
+    height: 453px;
+    border-radius: 10px;
+    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Basic pricing */
+
+main.main-container > section.pricing-container > div.basic-price-container {
+    background-color: #FFFFFF;
+}
+
+main.main-container > section.pricing-container > div > p.basic-title {
+    width: 91px;
+    height: 28px;
+    font-size: 28px;
+    text-align: center;
+    color: var(--grayishBlue);
+}
+
+main.main-container > section.pricing-container > div > h1.basic {
+    width: 210px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > h1.basic > span.dollar {
+    width: 23.3px;
+    height: 49px;
+    font-size: 40px;
+    color: var(--darkGrayishBlue);
+}
+
+main.main-container > section.pricing-container > div > h1.basic > span.amount {
+    width: 176px;
+    height: 71px;
+    font-size: 72px;
+    letter-spacing: -2.16px;
+    color: var(--darkGrayishBlue);
+    display: flex;
+    align-items: center;
+}
+
+main.main-container > section.pricing-container > div > section.basic-subcontainer {
+    width: 269px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: -10px;
+}
+
+main.main-container > section.pricing-container > div > section.basic-subcontainer > h3.basic-storage {
+    width: 269px;
+    height: 60px;
+    font-size: 15px;
+    color: var(--darkGrayishBlue);
+    border-top: 1px solid var(--lightGrayishBlue);
+    border-bottom: 1px solid var(--lightGrayishBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > section.basic-subcontainer > h3.basic-users {
+    width: 269px;
+    height: 60px;
+    font-size: 15px;
+    color: var(--darkGrayishBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > section.basic-subcontainer > h3.basic-send {
+    width: 269px;
+    height: 60px;
+    font-size: 15px;
+    color: var(--darkGrayishBlue);
+    border-top: 1px solid var(--lightGrayishBlue);
+    border-bottom: 1px solid var(--lightGrayishBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > button.basic-learn-more {
+    width: 269px;
+    height: 44px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1.39286px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+}
+
+main.main-container > section.pricing-container > div > button.basic-learn-more:hover {
+    cursor: pointer;
+    color: #6D72DE;
+    border: 1px solid #6D72DE;
+    background: #FFFFFF;
+}
+
+/* Professional pricing */
+
+main.main-container > section.pricing-container > div.professional-price-container {
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+}
+
+main.main-container > section.pricing-container > div > p.professional-title {
+    width: 196px;
+    height: 28px;
+    font-size: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+main.main-container > section.pricing-container > div > h1.professional {
+    width: 210px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: -15px;
+}
+
+main.main-container > section.pricing-container > div > h1.professional > span.dollar {
+    width: 23.3px;
+    height: 49px;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+main.main-container > section.pricing-container > div > h1.professional > span.amount {
+    width: 176px;
+    height: 71px;
+    font-size: 72px;
+    letter-spacing: -2.16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+main.main-container > section.pricing-container > div > section.professional-subcontainer {
+    width: 269px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: -10px;
+}
+
+main.main-container > section.pricing-container > div > section.professional-subcontainer > h3.professional-storage {
+    width: 269px;
+    height: 60px;
+    font-size: 15px;
+    color: #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > section.professional-subcontainer > h3.professional-users {
+    width: 269px;
+    height: 60px;
+    font-size: 15px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > section.professional-subcontainer > h3.professional-send {
+    width: 269px;
+    height: 60px;
+    font-size: 15px;
+    color: #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > button.professional-learn-more {
+    width: 269px;
+    height: 44px;
+    border: none;
+    border-radius: 6px;
+    color: #6D72DE;
+    font-size: 13px;
+    letter-spacing: 1.39286px;
+    text-transform: uppercase;
+    background: #FFFFFF;
+}
+
+main.main-container > section.pricing-container > div > button.professional-learn-more:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+}
+
+/* Master pricing */
+
+main.main-container > section.pricing-container > div.master-price-container {
+    background-color: #FFFFFF;
+}
+
+main.main-container > section.pricing-container > div > p.master-title {
+    width: 91px;
+    height: 28px;
+    font-size: 28px;
+    text-align: center;
+    color: var(--grayishBlue);
+}
+
+main.main-container > section.pricing-container > div > h1.master {
+    width: 210px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > h1.master > span.dollar {
+    width: 23.3px;
+    height: 49px;
+    font-size: 40px;
+    color: var(--darkGrayishBlue);
+}
+
+main.main-container > section.pricing-container > div > h1.master > span.amount {
+    width: 176px;
+    height: 71px;
+    font-size: 72px;
+    letter-spacing: -2.16px;
+    color: var(--darkGrayishBlue);
+    display: flex;
+    align-items: center;
+}
+
+main.main-container > section.pricing-container > div > section.master-subcontainer {
+    width: 269px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: -10px;
+}
+
+main.main-container > section.pricing-container > div > section.master-subcontainer > h3.master-storage {
+    width: 269px;
+    height: 60px;
+    font-size: 15px;
+    color: var(--darkGrayishBlue);
+    border-top: 1px solid var(--lightGrayishBlue);
+    border-bottom: 1px solid var(--lightGrayishBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > section.master-subcontainer > h3.master-users {
+    width: 269px;
+    height: 60px;
+    font-size: 15px;
+    color: var(--darkGrayishBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > section.master-subcontainer > h3.master-send {
+    width: 269px;
+    height: 60px;
+    font-size: 15px;
+    color: var(--darkGrayishBlue);
+    border-top: 1px solid var(--lightGrayishBlue);
+    border-bottom: 1px solid var(--lightGrayishBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.main-container > section.pricing-container > div > button.master-learn-more {
+    width: 269px;
+    height: 44px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1.39286px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+}
+
+main.main-container > section.pricing-container > div > button.master-learn-more:hover {
+    cursor: pointer;
+    color: #6D72DE;
+    border: 1px solid #6D72DE;
+    background: #FFFFFF;
+}
+
+/* Desktop styling */
+
+@media only screen and (min-width: 650px) {
+/* Page container */
+
+main.main-container {
+    width: 1440px;
+    height: 850px;
+    background-color: var(--veryLightGrayishBlue);
+    background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
+    background-repeat: no-repeat;
+    background-size: 472px 760px, 360px 372px;
+    background-position: 1000px 0px, 0px 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}    
+}
+
