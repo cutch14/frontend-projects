@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap');
+
+:root {
+    --darkBlue: #172339;
+    --greyishBlue: #49566D;
+    --cream: #F3EDE7;
+    --whiteCream: #FAF8F6;
+    --purple: #A060FF;
+    --brightPurple: #CB30E3;
+    --orange: #FFA84E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Epilogue", sans-serif;
+}
+
+body {
+    width: 375px;
+    height: 2389px;
+    background: linear-gradient(
+        var(--whiteCream) 0%,
+        var(--whiteCream) 70%,
+        var(--cream) 70%,
+        var(--cream) 100%
+    )
+}
+
+/* Header */
+
+header.page-header {
+    width: 343px;
+    height: 48px;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.page-header > p.suite {
+    width: 81px;
+    height: 32px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+header.page-header > button.request-button {
+    width: 182px;
+    height: 48px;
+    border: 1px solid var(--darkBlue);
+    border-radius: 6px;
+    background-color: var(--whiteCream);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.14px;
+    columns: var(--darkBlue);
+}
+
+/* Main container */
+
+main.main-content-container {
+    width: 375px;
+    max-height: 100%;
+    margin: auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 375px;
+    grid-template-rows: 635.32px 313px 150px 748px;
+    gap: 50px;
+    justify-items: center;
+}
+
+/* Information main section */
+
+main.main-content-container > section.main-info {
+    width: 343.5px;
+    height: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 343.5px;
+    grid-template-rows: 19px 89px 30px 84px 30px 61px 60px 240px;
+}
+
+main.main-content-container > section.main-info > img.curved-img {
+    width: 151.47px;
+    height: 19px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: end;
+    margin-right: 32px;
+}
+
+main.main-content-container > section.main-info > h1.title {
+    width: 343px;
+    height: 89px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 38px;
+    color: var(--darkBlue);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+main.main-content-container > section.main-info > p.text {
+    width: 343px;
+    height: 84px;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--greyishBlue);
+}
+
+main.main-content-container > section.main-info > button.main-request {
+    width: 256px;
+    height: 61px;
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+    border-radius: 6px;
+    background-color: var(--darkBlue);
+    color: var(--whiteCream);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.18px;
+}
+
+main.main-content-container > section.main-info > img.phone-img {
+    width: 343px;
+    height: 240px;
+    grid-column: 1 / 2;
+    grid-row: 8 / 9;
+}
+
+/* Reach statistic section */
+
+main.main-content-container > section.reach-stats {
+    width: 344px;
+    height: 313px;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.main-content-container > section.reach-stats > div {
+    width: 343px;
+    height: 83px;
+}
+
+main.main-content-container > section.reach-stats > div > h2 {
+    width: 343px;
+    height: 56px;
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--darkBlue);
+    text-align: center;
+}
+
+main.main-content-container > section.reach-stats > div > p {
+    width: 343px;
+    height: 26px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--greyishBlue);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+/* Profile section */
+
+main.main-content-container > section.profile {
+    width: 375px;
+    height: 748px;
+    background-color: var(--darkBlue);
+    border-radius: 15px;
+    grid-row: 4 / 5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+main.main-content-container > section.profile > img.profile-img {
+    width: 252px;
+    height: 402px;
+    position: absolute;
+    left: 70px;
+    top: -180px;
+}
+
+main.main-content-container > section.profile > img.curved-img-profile {
+    width: 49.27px;
+    height: 40px;
+}
+
+main.main-content-container > section.profile > h3.profile-title {
+    width: 343px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--whiteCream);
+    text-align: center;
+}
+
+main.main-content-container > section.profile > p.profile-text {
+    width: 343px;
+    height: 160px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.09px;
+    color: var(--cream);
+    text-align: center;
+}
+
+main.main-content-container > section.profile > div.profile-footer {
+    width: 190px;
+    height: 58px;
+    margin-bottom: 50px;
+}
+
+main.main-content-container > section.profile > div.profile-footer > h4.profile-name {
+    width: 190px;
+    height: 32px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.18px;
+    text-align: center;
+    color: var(--whiteCream);
+}
+
+main.main-content-container > section.profile > div.profile-footer > h5.profile-job {
+    width: 190px;
+    height: 26px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2.5px;
+    color: var(--whiteCream);
+    text-align: center;
+}
+
+/* Page footer */
+
+footer.page-footer {
+    width: 125px;
+    height: 150px;
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer.page-footer > img.footer-img {
+    width: 81px;
+    height: 25px;
+}
+
+footer.page-footer > p.copyright {
+    width: 125px;
+    height: 16px;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.08333px;
+    color: var(--greyishBlue);
+}
+
+footer.page-footer > div.footer-socials {
+    width: 116px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Tablet styling*/
