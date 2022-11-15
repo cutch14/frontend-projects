@@ -55,8 +55,8 @@ header.page-header > button.request-button {
     background-color: var(--whiteCream);
     font-weight: 700;
     font-size: 14px;
-    letter-spacing: 0.14px;
-    columns: var(--darkBlue);
+    letter-spacing: -0.14px;
+    color: var(--darkBlue);
 }
 
 /* Main container */
@@ -129,7 +129,10 @@ main.main-content-container > section.main-info > button.main-request {
     letter-spacing: 0.18px;
 }
 
-main.main-content-container > section.main-info > img.phone-img {
+main.main-content-container > section.main-info > div.phone-img {
+    background: url("./assets/image-hero-landscape.png");
+    background-repeat: no-repeat;
+    background-size: 343px 240px;
     width: 343px;
     height: 240px;
     grid-column: 1 / 2;
@@ -188,7 +191,10 @@ main.main-content-container > section.profile {
     gap: 40px;
 }
 
-main.main-content-container > section.profile > img.profile-img {
+main.main-content-container > section.profile > div.profile-img {
+    background: url("./assets/image-jeremy-small.png");
+    background-repeat: no-repeat;
+    background-size: 252px 402px;
     width: 252px;
     height: 402px;
     position: absolute;
@@ -281,3 +287,339 @@ footer.page-footer > div.footer-socials {
 }
 
 /* Tablet styling*/
+
+@media only screen and (min-width: 550px) and (max-width: 950px) {
+    body {
+        width: 768px;
+        height: 1962px;
+    }
+
+    /* Header */
+
+    header.page-header {
+        width: 689px;
+        height: 56px;
+    }
+
+    header.page-header > button.request-button {
+        width: 219px;
+        height: 56px;
+        font-size: 16px;
+        letter-spacing: -0.16px;
+    }
+
+    /* Main container */
+
+    main.main-content-container {
+        width: 689px;
+        max-height: 100%;
+        margin: auto;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 689px;
+        grid-template-rows: 482px 83px 181px 684px;
+        gap: 70px;
+        justify-items: center;
+    }
+
+    /* Information main section */
+
+    main.main-content-container > section.main-info {
+        width: 689px;
+        height: 482px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: grid;
+        grid-template-columns: 256px 94px 55px 81px 93px;
+        grid-template-rows: 60px 129px 30px 84px 30px 1fr;
+    }
+
+    main.main-content-container > section.main-info > img.curved-img {
+        width: 231.19px;
+        height: 29px;
+        grid-column: 2 / 5;
+        grid-row: 1 / 2;
+        justify-self: start;
+        align-self: center;
+        margin-left: -28px;
+    }
+
+    main.main-content-container > section.main-info > h1.title {
+        width: 503px;
+        height: 129px;
+        text-align: left;
+        letter-spacing: -0.78px;
+        font-size: 56px;
+        grid-column: 1 / 5;
+        grid-row: 2 / 3;
+        padding: 5px;
+    }
+
+    main.main-content-container > section.main-info > p.text {
+        width: 343px;
+        height: 84px;
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    main.main-content-container > section.main-info > button.main-request {
+        width: 256px;
+        height: 61px;
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+        align-self: center;
+    }
+
+    main.main-content-container > section.main-info > div.phone-img {
+        background: url("./assets/image-hero-portrait.png");
+        background-repeat: no-repeat;
+        background-size: 281px 482px;
+        width: 281px;
+        height: 482px;
+        grid-column: 4 / 7;
+        grid-row: 1 / end;
+        z-index: -1;
+    }
+
+    /* Reach statistic section */
+
+    main.main-content-container > section.reach-stats {
+        width: 689px;
+        height: 83px;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main.main-content-container > section.reach-stats > div {
+        width: 223px;
+        height: 83px;
+    }
+
+    main.main-content-container > section.reach-stats > div > h2 {
+        width: 223px;
+        height: 56px;
+        font-weight: 700;
+        font-size: 48px;
+        color: var(--darkBlue);
+        text-align: center;
+    }
+
+    main.main-content-container > section.reach-stats > div > p {
+        width: 223px;
+        height: 26px;
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--greyishBlue);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+
+    /* Profile section */
+
+    main.main-content-container > section.profile {
+        width: 689px;
+        height: 684px;
+        grid-row: 4 / 5;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 40px;
+    }
+
+    main.main-content-container > section.profile > div.circle-blur {
+        width: 197px;
+        height: 197px;
+        position: absolute;
+        top: 0;
+        border-radius: 50%;
+        background:var(--brightPurple);
+        opacity: 0.48;
+        filter: blur(67.957px);
+    }
+
+    main.main-content-container > section.profile > div.profile-img {
+        background: url("./assets/image-jeremy-small.png");
+        background-size: 252px 402px;
+        width: 252px;
+        height: 402px;
+        position: absolute;
+        left: 220px;
+        top: -180px;
+        z-index: 1;
+    }
+
+    main.main-content-container > section.profile > img.curved-img-profile {
+        width: 49.27px;
+        height: 40px;
+    }
+
+    main.main-content-container > section.profile > h3.profile-title {
+        width: 573px;
+    }
+
+    main.main-content-container > section.profile > p.profile-text {
+        width: 573px;
+        height: 96px;
+    }
+
+
+    /* Page footer */
+
+    footer.page-footer {
+        width: 689px;
+        height: 32px;
+        margin: 90px auto;
+        flex-direction: row;
+    }
+}
+
+/* Desktop styling */ 
+
+@media only screen and (min-width: 950px) {
+    body {
+        width: 1440px;
+        height: 1716px;
+        border: 2px solid darkgreen;
+    }
+
+    /* Header */
+
+    header.page-header {
+        width: 1110px;
+        height: 56px;
+        margin-top: 40px;
+    }
+
+    header.page-header > button.request-button {
+        width: 219px;
+        height: 56px;
+        font-size: 16px;
+        letter-spacing: -0.16px;
+    }
+
+    /* Main container */
+
+    main.main-content-container {
+        border: 1px solid lightcoral;
+        width: 1110px;
+        max-height: 100%;
+        margin: auto;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 800px 310px;
+        grid-template-rows: 600px 545px;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    /* Information main section */
+
+    main.main-content-container > section.main-info {
+        width: 343.5px;
+        height: 100%;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: grid;
+        grid-template-columns: 343.5px;
+        grid-template-rows: 19px 89px 30px 84px 30px 61px 60px 240px;
+    }
+
+    main.main-content-container > section.main-info > img.curved-img {
+        width: 151.47px;
+        height: 19px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        justify-self: end;
+        margin-right: 32px;
+    }
+
+    main.main-content-container > section.main-info > h1.title {
+        width: 343px;
+        height: 89px;
+        text-align: left;
+        font-weight: 400;
+        font-size: 38px;
+        color: var(--darkBlue);
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    main.main-content-container > section.main-info > p.text {
+        width: 343px;
+        height: 84px;
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--greyishBlue);
+    }
+
+    main.main-content-container > section.main-info > button.main-request {
+        width: 256px;
+        height: 61px;
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+        border-radius: 6px;
+        background-color: var(--darkBlue);
+        color: var(--whiteCream);
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.18px;
+    }
+
+    main.main-content-container > section.main-info > div.phone-img {
+        background: url("./assets/image-hero-landscape.png");
+        background-repeat: no-repeat;
+        background-size: 343px 240px;
+        width: 343px;
+        height: 240px;
+        grid-column: 1 / 2;
+        grid-row: 8 / 9;
+    }
+
+    /* Reach statistic section */
+
+    main.main-content-container > section.reach-stats {
+        width: 344px;
+        height: 313px;
+        grid-row: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    main.main-content-container > section.reach-stats > div {
+        width: 343px;
+        height: 83px;
+    }
+
+    main.main-content-container > section.reach-stats > div > h2 {
+        width: 343px;
+        height: 56px;
+        font-weight: 700;
+        font-size: 48px;
+        color: var(--darkBlue);
+        text-align: center;
+    }
+
+    main.main-content-container > section.reach-stats > div > p {
+        width: 343px;
+        height: 26px;
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--greyishBlue);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+}
