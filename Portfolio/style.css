@@ -141,6 +141,12 @@ main.main-content > section.profile > p.contact-me {
     text-decoration-thickness: 2px;
     text-underline-offset: 15px;
     text-align: center;
+    transition: all 0.2s ease-in;
+}
+
+main.main-content > section.profile > p.contact-me:hover {
+    cursor: pointer;
+    color: var(--limeGreen);
 }
 
 /* Skills section */ 
@@ -161,9 +167,9 @@ main.main-content > section.skills {
 main.main-content > section.skills > div.skills-image {
     background: url("./images/pattern-rings.svg");
     position: absolute;
-    width: 530px;
+    width: 170px;
     height: 129px;
-    left: 190px;
+    right: -15px;
     bottom: -64px;
 }
 
@@ -224,6 +230,12 @@ main.main-content > div.projects-header > p.project-contact {
     letter-spacing: 2.29px;
     text-transform: uppercase;
     border-bottom: 2px solid var(--limeGreen);
+    transition: all 0.2s ease-in;
+}
+
+main.main-content > div.projects-header > p.project-contact:hover {
+    cursor: pointer;
+    color: var(--limeGreen);
 }
 
 /* Projects */
@@ -284,6 +296,12 @@ main.main-content > section.projects-container > div.project-display > div.proje
     letter-spacing: 2.29px;
     text-transform: uppercase;
     border-bottom: 2px solid var(--limeGreen);
+    transition: all 0.2s ease-in;
+}
+
+main.main-content > section.projects-container > div.project-display > div.projects-links > p:hover {
+    cursor: pointer;
+    color: var(--limeGreen);
 }
 
 main.main-content > section.projects-container > div.project-display > 
@@ -409,6 +427,13 @@ main.main-content > section.contact-container > form.contact-info > textarea.mes
     resize: none;padding-left: 10px;
 }
 
+main.main-content > section.contact-container > form.contact-info > input.name::placeholder,
+main.main-content > section.contact-container > form.contact-info > input.email::placeholder,
+main.main-content > section.contact-container > form.contact-info > textarea.message::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+}
+
 main.main-content > section.contact-container > button.send {
     width: 144px;
     height: 38px;
@@ -420,10 +445,12 @@ main.main-content > section.contact-container > button.send {
     font-size: 16px;
     text-transform: uppercase;
     margin-top: -40px;
+    transition: all 0.2s ease-in;
 } 
 
 main.main-content > section.contact-container > button.send:hover {
     cursor: pointer;
+    color: var(--limeGreen);
 }
 
 /* Hide errors */
@@ -693,7 +720,7 @@ main.main-content > footer.page-footer > div.footer-socials > img.twitter {
     main.main-content > section.skills > div.skills-image {
         background: url("./images/pattern-rings.svg");
         position: absolute;
-        width: 530px;
+        width: 187px;
         height: 129px;
         left: 550px;
         bottom: -20px;
@@ -890,3 +917,460 @@ main.main-content > footer.page-footer > div.footer-socials > img.twitter {
 }
 
 /* Desktop styling */
+
+@media only screen and (min-width: 801px) {
+
+    body {
+        width: 1440px;
+        height: 100%;
+        border: 1px solid red;
+    }
+    
+    /* Header styling */
+    
+    header.page-header {
+        width: 1110px;
+        height: 50px;
+        margin: 20px auto;
+        flex-direction: row;
+    }
+    
+    header.page-header > h1.header-name {
+        width: 172px;
+        height: 32px;
+        font-size: 32px;
+        letter-spacing: 0.44px;
+    }
+    
+    header.page-header > div.header-socials {
+        width: 192.25px;
+        height: 25px;
+        align-items: center;
+    }
+    
+    header.page-header > div.header-socials > img.git {
+        width: 24.61px;
+        height: 24px;
+    }
+    header.page-header > div.header-socials > img.frontend {
+        width: 24.6px;
+        height: 22px;
+    }
+    header.page-header > div.header-socials > img.linkedin {
+        width: 24px;
+        height: 24px;
+    }
+    header.page-header > div.header-socials > img.twitter {
+        width: 23.28px;
+        height: 18.93px;
+    }
+    
+    /* Main content */
+    
+    main.main-content > section.profile {
+        height: 610px;
+        width: 1110px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    main.main-content > section.profile > div.profile-img {
+        background: url("./images/image-profile-desktop.webp");
+        background-size: 445px 720px;
+        width: 445px;
+        height: 720px;
+        top: -90px;
+        left: 860px;
+        z-index: -1;
+    }
+    
+    main.main-content > section.profile > img.circle {
+        right: 185px;
+        top: 440px;
+    }
+    
+    main.main-content > section.profile > img.pattern {
+        position: absolute;
+        top: 40px;
+        left: -100px;
+    }
+    
+    main.main-content > section.profile > h2.profile-title {
+        width: 706px;
+        height: 200px;
+        font-weight: 700;
+        font-size: 88px;
+        line-height: 88px;
+        letter-spacing: -2.5px;
+        text-align: left;
+        margin-left: -80px;
+    }
+    
+    main.main-content > section.profile > p.profile-text {
+        width: 445px;
+        height: 84px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: left;
+        margin-left: -340px;
+    }
+    
+    main.main-content > section.profile > p.contact-me {
+        margin-left: -665px;
+        margin-top: 27px;
+    }
+    
+    /* Skills section */ 
+    
+    main.main-content > section.skills {
+        position: relative;
+        width: 1110px;
+        height: 327px;
+        margin: 70px auto;
+        border-top: 1px solid white;
+        border-bottom: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 60px 0 0 0;
+    }
+    
+    main.main-content > section.skills > div.skills-image {
+        width: 300px;
+        left: 972px;
+        bottom: 0px;
+    }
+    
+    main.main-content > section.skills > div {
+        width: 345px;
+        height: 98px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    main.main-content > section.skills > div > h3 {
+        font-size: 48px;
+        letter-spacing: -1.5px;
+        text-align: left;
+    }
+    
+    main.main-content > section.skills > div > p {
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    /* Projects section */
+    /* Projects section header */
+    
+    main.main-content > div.projects-header {
+        width: 1110px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    
+    main.main-content > div.projects-header > h3.project-title {
+        width: 334px;
+        height: 88px;
+        font-weight: 700;
+        font-size: 88px;
+        letter-spacing: -2.5px;
+        margin-top: -40px;
+    }
+    
+    main.main-content > div.projects-header > p.project-contact {
+        width: 120px;
+        height: 38px;
+    }
+    
+    /* Projects */
+    
+    main.main-content > section.projects-container {
+        width: 1110px;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+    
+    main.main-content > section.projects-container > div.project-display {
+        width: 540px;
+        height: 487px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: relative;
+        align-items: flex-start;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > h4 {
+        width: 540px;
+        height: 40px;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > div.project-skills {
+        width: 300px;
+        height: 30px;
+        display: flex;
+        gap: 15px;
+        font-weight: 500;
+        font-size: 18px;
+        margin-top: -10px;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > div.projects-links {
+        width: 343px;
+        height: 38px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        position: absolute;
+        z-index: 0;
+        left: 200px;
+        top: 180px;
+    }
+
+    
+    main.main-content > section.projects-container > div.project-display > div.projects-links > p {
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 2.29px;
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--limeGreen);
+    }
+    
+    main.main-content > section.projects-container > div.project-display > div.projects-links:hover {
+        z-index: 1;
+        cursor: pointer;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > div.projects-links > p:hover {
+        color: var(--limeGreen);
+        cursor: pointer;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > 
+    div.projects-links > p.view {
+        width: 138px;
+        height: 38px;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > 
+    div.projects-links > p.code {
+        width: 103px;
+        height: 38px;
+    }
+    
+    
+    main.main-content > section.projects-container > div.project-display > div.project-img {
+        width: 540px;
+        height: 400px;
+        transition: all 0.2s ease-in-out;
+        z-index: 1;
+    }
+
+    main.main-content > section.projects-container > div.project-display > div.project-img:hover {
+        opacity: 0.4;
+        cursor: pointer;
+        z-index: 0;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > div.first-project-img {
+        background: url("./images/thumbnail-project-1-large.webp");
+        background-size: 540px 400px;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > div.second-project-img {
+        background: url("./images/thumbnail-project-2-large.webp");
+        background-size: 540px 400px;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > div.third-project-img {
+        background: url("./images/thumbnail-project-3-large.webp");
+        background-size: 540px 400px;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > div.fourth-project-img {
+        background: url("./images/thumbnail-project-4-large.webp");
+        background-size: 540px 400px;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > div.fifth-project-img {
+        background: url("./images/thumbnail-project-5-large.webp");
+        background-size: 540px 400px;
+    }
+    
+    main.main-content > section.projects-container > div.project-display > div.sixth-project-img {
+        background: url("./images/thumbnail-project-6-large.webp");
+        background-size: 540px 400px;
+    }
+    
+    /* Contact section */
+    
+    main.main-content > section.contact-container {
+        width: 1440px;
+        height: 475px;
+        padding: 0 16px;
+        background-color: var(--darkGrey);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: space-between;
+        padding: 30px 160px 40px 160px;
+    }
+    
+    main.main-content > section.contact-container > h4.contact-section-title {
+        width: 343px;
+        height: 88px;
+        font-weight: 700;
+        font-size: 88px;
+        letter-spacing: -2.5px;
+        text-align: left;
+    }
+    
+    main.main-content > section.contact-container > p.contact-section-text {
+        width: 445px;
+        height: 78px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: left;
+    }
+    
+    /* Inputs */
+    
+    main.main-content > section.contact-container > form.contact-info {
+        width: 445px;
+        height: 327px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: relative;
+        align-self: flex-end;
+    }
+    
+    main.main-content > section.contact-container > form.contact-info > img.form-rings {
+        width: 530px;
+        height: 129px;
+        position: absolute;
+        left: -343px;
+        top: 229px;
+    }
+    
+    main.main-content > section.contact-container > form.contact-info > input.name,
+    main.main-content > section.contact-container > form.contact-info > input.email {
+        width: 445px;
+        height: 43px;
+        background-color: var(--darkGrey);
+        border: none;
+        border-bottom: 1px solid var(--white);
+        outline: none;
+        padding-left: 10px;
+        color: var(--lightGrey);
+    }
+    
+    main.main-content > section.contact-container > form.contact-info > textarea.message {
+        width: 445px;
+        height: 107px;
+        background-color: var(--darkGrey);
+        border: none;
+        border-bottom: 1px solid var(--white);
+        outline: none;
+        color: var(--lightGrey);
+        resize: none;
+        padding-left: 10px;
+    }
+    
+    main.main-content > section.contact-container > button.send {
+        width: 144px;
+        height: 38px;
+        border: none;
+        border-bottom: 2px solid var(--limeGreen);
+        background-color: var(--darkGrey);
+        align-self: flex-end;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: -40px;
+    } 
+    
+    main.main-content > section.contact-container > button.send:hover {
+        cursor: pointer;
+    }
+
+    
+     main.main-content > section.contact-container > div.line {
+        height: 1px;
+        width: 1110px;
+        position: absolute;
+        top: 3280px;
+        left: 160px;
+        margin-top: 80px;
+     } 
+    
+    /* Footer */
+    
+    main.main-content > footer.page-footer {
+        width: 1440px;
+        height: 200px;
+        background-color: var(--darkGrey);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        padding: 0 165px;
+        margin-bottom: 0;
+    }
+    
+    main.main-content > footer.page-footer > p.footer-name {
+        width: 150px;
+        height: 35px;
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: -0.44px;
+        text-align: left;
+        margin-left: -5px;
+    }
+    
+    main.main-content > footer.page-footer > div.footer-socials {
+        width: 192.49px;
+        height: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    main.main-content > footer.page-footer > div.footer-socials > img.github {
+        height: 24.61px;
+        width: 24px;
+    }
+    
+    main.main-content > footer.page-footer > div.footer-socials > img.frontend {
+        width: 24.6px;
+        height: 22px;
+    }
+    
+    main.main-content > footer.page-footer > div.footer-socials > img.linkedin {
+        width: 24px;
+        height: 24px;
+    }
+    
+    main.main-content > footer.page-footer > div.footer-socials > img.twitter {
+        width: 23.28px;
+        height: 18.93px;
+    }
+}
