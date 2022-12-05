@@ -23,6 +23,7 @@ body {
     height: 100%;
     background-color: var(--black);
     overflow-x: hidden;
+    border: 1px solid red;
 }
 
 /* Header styling */
@@ -199,9 +200,10 @@ main.main-content > div.projects-header > h3.project-title {
     margin-top: -10px;
 }
 
-main.main-content > div.projects-header > p.project-contact {
+main.main-content > div.projects-header > a.project-contact {
     width: 120px;
     height: 38px;
+    text-decoration: none;
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 2.29px;
@@ -210,7 +212,7 @@ main.main-content > div.projects-header > p.project-contact {
     transition: all 0.2s ease-in;
 }
 
-main.main-content > div.projects-header > p.project-contact:hover {
+main.main-content > div.projects-header > a.project-contact:hover {
     cursor: pointer;
     color: var(--limeGreen);
 }
@@ -267,16 +269,17 @@ main.main-content > section.projects-container > div.project-display > div.proje
     gap: 30px;
 }
 
-main.main-content > section.projects-container > div.project-display > div.projects-links > p {
+main.main-content > section.projects-container > div.project-display > div.projects-links > a {
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 2.29px;
     text-transform: uppercase;
     border-bottom: 2px solid var(--limeGreen);
     transition: all 0.2s ease-in;
+    text-decoration: none;
 }
 
-main.main-content > section.projects-container > div.project-display > div.projects-links > p:hover {
+main.main-content > section.projects-container > div.project-display > div.projects-links > a:hover {
     cursor: pointer;
     color: var(--limeGreen);
 }
@@ -300,32 +303,32 @@ main.main-content > section.projects-container > div.project-display > div.proje
 }
 
 main.main-content > section.projects-container > div.project-display > div.first-project-img {
-    background: url("./images/thumbnail-project-1-small.webp");
+    background: url("./images/thumbnail-project-2-small.webp"); 
     background-size: 343px 253px;
 }
 
 main.main-content > section.projects-container > div.project-display > div.second-project-img {
-    background: url("./images/thumbnail-project-2-small.webp");
+    background: url("./images/news-homepage.png");
     background-size: 343px 253px;
 }
 
 main.main-content > section.projects-container > div.project-display > div.third-project-img {
-    background: url("./images/thumbnail-project-3-small.webp");
+    background: url("./images/music-page.png");
     background-size: 343px 253px;
 }
 
 main.main-content > section.projects-container > div.project-display > div.fourth-project-img {
-    background: url("./images/thumbnail-project-4-small.webp");
+    background: url("./images/Card-details.png");
     background-size: 343px 253px;
 }
 
 main.main-content > section.projects-container > div.project-display > div.fifth-project-img {
-    background: url("./images/thumbnail-project-5-small.webp");
+    background: url("./images/Expenses-chart.png");
     background-size: 343px 253px;
 }
 
 main.main-content > section.projects-container > div.project-display > div.sixth-project-img {
-    background: url("./images/thumbnail-project-6-small.webp");
+    background: url("./images/advice.png");
     background-size: 343px 253px;
 }
 
