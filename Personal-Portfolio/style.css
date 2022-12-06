@@ -23,7 +23,7 @@ body {
     height: 100%;
     background-color: var(--black);
     overflow-x: hidden;
-    border: 1px solid red;
+    margin: auto;
 }
 
 /* Header styling */
@@ -145,9 +145,9 @@ main.main-content > section.skills {
 main.main-content > section.skills > div.skills-image {
     background: url("./images/pattern-rings.svg");
     position: absolute;
-    width: 170px;
+    width: 250px;
     height: 129px;
-    right: -15px;
+    right: -100px;
     bottom: -64px;
 }
 
@@ -588,7 +588,7 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
     main.main-content > section.skills > div.skills-image {
         background: url("./images/pattern-rings.svg");
         position: absolute;
-        width: 187px;
+        width: 250px;
         height: 129px;
         left: 550px;
         bottom: -20px;
@@ -742,7 +742,7 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
 @media only screen and (min-width: 901px) {
 
     body {
-        width: 100vw;
+        width: 1440px;
         height: 100%;
         overflow-x: scroll;
     }
@@ -771,23 +771,25 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 70px;
+        padding-left: 165px;
     }
     
     main.main-content > section.profile > div.profile-img {
-        background: url("./images/image-profile-desktop.webp");
+        background: url("./images/desktop-comp-img.jpg");
         background-size: 445px 720px;
         width: 445px;
         height: 720px;
+        position: absolute;
         top: -90px;
-        left: 860px;
+        left: 830px;
         z-index: -1;
     }
     
     main.main-content > section.profile > img.circle {
-        right: 185px;
+        right: 215px;
         top: 440px;
     }
     
@@ -798,14 +800,13 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
     }
     
     main.main-content > section.profile > h2.profile-title {
-        width: 706px;
+        width: 850px;
         height: 200px;
         font-weight: 700;
         font-size: 88px;
-        line-height: 88px;
+        line-height: 95px;
         letter-spacing: -2.5px;
         text-align: left;
-        margin-left: -80px;
     }
     
     main.main-content > section.profile > p.profile-text {
@@ -815,11 +816,9 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
         font-size: 18px;
         line-height: 28px;
         text-align: left;
-        margin-left: -340px;
     }
     
     main.main-content > section.profile > p.contact-me {
-        margin-left: -665px;
         margin-top: 27px;
     }
     
@@ -828,10 +827,10 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
     main.main-content > section.skills {
         position: relative;
         width: 1110px;
-        height: 327px;
+        height: 237px;
         margin: 70px auto;
         border-top: 1px solid white;
-        border-bottom: none;
+        border-bottom: 1px solid white;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -841,7 +840,7 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
     
     main.main-content > section.skills > div.skills-image {
         width: 300px;
-        left: 872px;
+        left: 974px;
         bottom: 0px;
     }
     
@@ -857,12 +856,12 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
     main.main-content > section.skills > div > h3 {
         font-size: 48px;
         letter-spacing: -1.5px;
-        text-align: left;
+        text-align: center;
     }
     
     main.main-content > section.skills > div > p {
         font-size: 18px;
-        text-align: left;
+        text-align: center;
     }
     
     /* Projects section */
@@ -912,6 +911,7 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
         justify-content: space-evenly;
         position: relative;
         align-items: flex-start;
+        gap: 10px;
     }
     
     main.main-content > section.projects-container > div.project-display > h4 {
@@ -987,47 +987,41 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
     }
     
     main.main-content > section.projects-container > div.project-display > div.first-project-img {
-        background: url("./images/thumbnail-project-1-large.webp");
         background-size: 540px 400px;
     }
     
     main.main-content > section.projects-container > div.project-display > div.second-project-img {
-        background: url("./images/thumbnail-project-2-large.webp");
         background-size: 540px 400px;
     }
     
     main.main-content > section.projects-container > div.project-display > div.third-project-img {
-        background: url("./images/thumbnail-project-3-large.webp");
         background-size: 540px 400px;
     }
     
     main.main-content > section.projects-container > div.project-display > div.fourth-project-img {
-        background: url("./images/thumbnail-project-4-large.webp");
         background-size: 540px 400px;
     }
     
     main.main-content > section.projects-container > div.project-display > div.fifth-project-img {
-        background: url("./images/thumbnail-project-5-large.webp");
         background-size: 540px 400px;
     }
     
     main.main-content > section.projects-container > div.project-display > div.sixth-project-img {
-        background: url("./images/thumbnail-project-6-large.webp");
         background-size: 540px 400px;
     }
     
     /* Contact section */
     
     main.main-content > section.contact-container {
-        width: 100vw;
-        height: 475px;
+        width: 1440px;
+        height: 455px;
         padding: 0 16px;
         background-color: var(--darkGrey);
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: space-between;
+        align-items: center;
         padding: 30px 160px 40px 160px;
     }
     
@@ -1046,97 +1040,34 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
         font-weight: 500;
         font-size: 18px;
         line-height: 28px;
-        text-align: left;
+        text-align: center;
     }
-    
-    /* Inputs */
-    
-    main.main-content > section.contact-container > form.contact-info {
-        width: 445px;
-        height: 327px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        position: relative;
-        align-self: flex-end;
-    }
-    
-    main.main-content > section.contact-container > form.contact-info > img.form-rings {
-        width: 530px;
-        height: 129px;
-        position: absolute;
-        left: -343px;
-        top: 229px;
-    }
-    
-    main.main-content > section.contact-container > form.contact-info > input.name,
-    main.main-content > section.contact-container > form.contact-info > input.email {
-        width: 445px;
-        height: 43px;
-        background-color: var(--darkGrey);
-        border: none;
-        border-bottom: 1px solid var(--white);
-        outline: none;
-        padding-left: 10px;
-        color: var(--lightGrey);
-    }
-    
-    main.main-content > section.contact-container > form.contact-info > textarea.message {
-        width: 445px;
-        height: 107px;
-        background-color: var(--darkGrey);
-        border: none;
-        border-bottom: 1px solid var(--white);
-        outline: none;
-        color: var(--lightGrey);
-        resize: none;
-        padding-left: 10px;
-    }
-    
-    main.main-content > section.contact-container > button.send {
-        width: 144px;
-        height: 38px;
-        border: none;
-        border-bottom: 2px solid var(--limeGreen);
-        background-color: var(--darkGrey);
-        align-self: flex-end;
-        font-weight: 700;
-        font-size: 16px;
-        text-transform: uppercase;
-        margin-top: -40px;
-    } 
-    
-    main.main-content > section.contact-container > button.send:hover {
-        cursor: pointer;
-    }
-
-    
+       
      main.main-content > section.contact-container > div.line {
         height: 1px;
-        width: 800px;
+        width: 1110px;
         position: absolute;
-        top: 3280px;
+        top: 3200px;
         left: 160px;
-        margin-top: 80px;
      } 
     
     /* Footer */
     
     main.main-content > footer.page-footer {
-        width: 100vw;
-        height: 200px;
+        width: 1440px;
+        height: 100px;
         background-color: var(--darkGrey);
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 400px;
         padding: 0 165px;
         margin-bottom: 0;
     }
     
     main.main-content > footer.page-footer > p.footer-name {
-        width: 150px;
+        width: 300px;
         height: 35px;
         font-weight: 700;
         font-size: 32px;
@@ -1146,7 +1077,7 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
     }
     
     main.main-content > footer.page-footer > div.footer-socials {
-        width: 192.49px;
+        width: 66px;
         height: 25px;
         display: flex;
         justify-content: space-between;
@@ -1160,15 +1091,5 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
     main.main-content > footer.page-footer > div.footer-socials > img.frontend {
         width: 24.6px;
         height: 22px;
-    }
-    
-    main.main-content > footer.page-footer > div.footer-socials > img.linkedin {
-        width: 24px;
-        height: 24px;
-    }
-    
-    main.main-content > footer.page-footer > div.footer-socials > img.twitter {
-        width: 23.28px;
-        height: 18.93px;
     }
 }
