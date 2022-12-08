@@ -69,12 +69,9 @@ main.main-content > section.profile > div.profile-img {
     height: 320px;
 }
 
-main.main-content > section.profile > div.circle {
-    background: url("./images/pattern-circle.svg");
+main.main-content > section.profile > img.circle {
     position: absolute;
-    width: 64px;
-    height: 129px;
-    right: -15px;
+    right: -70px;
     top: 180px;
     opacity: .4;
 }
@@ -525,7 +522,7 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
         left: 445px;
     }
 
-    main.main-content > section.profile > div.circle {
+    main.main-content > section.profile > img.circle {
         position: absolute;
         width: 129px;
         height: 129px;
@@ -791,7 +788,7 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
         z-index: -1;
     }
     
-    main.main-content > section.profile > div.circle {
+    main.main-content > section.profile > img.circle {
         width: 129px;
         height: 129px;
         right: 215px;
