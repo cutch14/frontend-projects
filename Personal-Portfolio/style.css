@@ -61,7 +61,7 @@ main.main-content > section.profile {
 }
 
 main.main-content > section.profile > div.profile-img {
-    background: url("./images/desktop-comp-img.jpg");
+    background: url("./images/ezgif.com-gif-maker.webp");
     opacity: .4;
     background-repeat: no-repeat;
     background-size: 250px 300px;
@@ -516,7 +516,6 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
     }
 
     main.main-content > section.profile > div.profile-img {
-        background: url("./images/desktop-comp-img.jpg");
         background-repeat: no-repeat;
         background-size: 322px 600px;
         width: 322px;
@@ -783,7 +782,6 @@ main.main-content > footer.page-footer > div.footer-socials > a.frontend:hover {
     }
     
     main.main-content > section.profile > div.profile-img {
-        background: url("./images/desktop-comp-img.jpg");
         background-size: 445px 720px;
         width: 445px;
         height: 720px;
