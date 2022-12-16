@@ -404,3 +404,188 @@ footer.page-footer > div.socials > img.twitter {
     height: 16.25px;
 }
 }
+
+/* Desktop styling */
+
+@media only screen and (min-width: 900px) {
+    body {
+        width: 1439px;
+        height: 2554px;
+    }
+
+    /* Header */
+
+section.page-header {
+    position: relative;
+    width: 1275px;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, 
+    var(--white) 0%, var(--white) 50%, var(--black) 50%, var(--black) 100%);
+}
+
+section.page-header > div.header-img {
+    position: absolute;
+    background: url("./assets/desktop/image-hero.jpg") no-repeat;
+    background-size: 450px 700px;
+    height: 700px;
+    width: 450px;
+    left: 400px;
+}
+
+section.page-header > h1.page-title {
+    position: absolute;
+    left: -239px;
+    top: 210px;
+    width: 514px;
+    height: 176px;
+    font-size: 6rem;
+    line-height: 5.5rem;
+    margin-left: 350px;
+    margin-top: -50px;
+    z-index: 1;
+    background: -webkit-linear-gradient(left, white 0%, white 56%, black 56%, black 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section.page-header > p.header-text {
+    position: absolute;
+    top: 160px;
+    left: 430px;
+    font-size: 1.375rem;
+    line-height: 2rem;
+    width: 350px;
+    height: 160px;
+    z-index: 1;
+}
+
+section.page-header > div.location-box { 
+    position: absolute;
+    top: 370px;
+    left: 508px;
+    margin-left: 270px;
+    z-index: 1;
+}
+
+/* Page images */
+
+section.main-gallery-content {
+    width: 1110px;
+    max-height: 100%;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+section.main-gallery-content > div.gallery-image-one {
+    background: url("./assets/desktop/image-grid-1.jpg");
+    width: 635px;
+    height: 400px;
+    order: 1;
+    margin-bottom: 15px;
+}
+
+section.main-gallery-content > div.gallery-info {
+    width: 465px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    order: 0;
+}
+
+section.main-gallery-content > div.gallery-info > h2.gallery-info-title {
+    width: 350px;
+    height: 120px;
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+}
+
+section.main-gallery-content > div.gallery-info > h2.gallery-info-title br {
+    display: none;
+}
+
+section.main-gallery-content > div.gallery-info > p.gallery-info-text {
+    width: 350px;
+    height: 128px;
+    font-size: 1.375rem;
+    line-height: 2rem;
+}
+
+section.main-gallery-content > div.gallery-image-two {
+    background: url("./assets/desktop/image-grid-2.jpg");
+    width: 635px;
+    height: 720px;
+    order: 2;
+}
+
+section.main-gallery-content > div.gallery-image-three {
+    background: url("./assets/desktop/image-grid-3.jpg");
+    width: 445px;
+    height: 313px;
+    align-self: flex-start;
+    order: 3;
+}
+
+section.main-gallery-content > div.gallery-info-footer {
+    width: 445px;
+    height: 377px;
+    order: 4;
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+}
+
+section.main-gallery-content > div.gallery-info-footer > h3.gallery-footer-title {
+    width: 350px;
+    height: 120px;
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+}
+
+section.main-gallery-content > div.gallery-info-footer > p.gallery-footer-text {
+    width: 350px;
+    height: 96px;
+    font-size: 1.375rem;
+    line-height: 2rem;
+}
+
+/* Page footer */
+
+footer.page-footer {
+    width: 1440px;
+    height: 244px;
+    margin: 80px auto 0px auto;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 165px;
+    padding-right: 165px;
+    padding-top: 80px;
+}
+
+footer.page-footer > h4.footer-title {
+    width: 159.57px;
+    height: 80px;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+footer.page-footer > p.footer-text {
+    width: 430px;
+    height: 84px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+}
