@@ -29,11 +29,11 @@ div.return-box {
     height: 72px;
     display: flex;
     position: absolute;
-    left: 55px;
+    left: 0px;
     z-index: 1;
 }
 
-div.return-box > h3.return-title {
+div.return-box > a.return-title {
     width: 204px;
     height: 72px;
     background-color: var(--black);
@@ -45,9 +45,10 @@ div.return-box > h3.return-title {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.2272rem;
+    text-decoration: none;
 }
 
-div.return-box > div.return-chevron-box {
+div.return-box > a.return-chevron-box {
     width: 56px;
     height: 72px;
     background-color: var(--rust);
@@ -56,9 +57,19 @@ div.return-box > div.return-chevron-box {
     align-items: center;
 }
 
-div.return-box > div.return-chevron-box > img.return-chevron {
+div.return-box > a.return-chevron-box > img.return-chevron {
     width: 8px;
     height: 24px;
+}
+
+div.return-box:hover a.return-chevron-box {
+    cursor: pointer;
+    background-color: var(--black);
+}
+
+div.return-box:hover a.return-title {
+    cursor: pointer;
+    background-color: var(--rust);
 }
 
 /* Map */
@@ -181,6 +192,11 @@ section.footer > div.socials > img.twitter {
     height: 16.25px;
 }
 
+section.footer > div.socials > img:hover {
+    cursor: pointer;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
 /* Tablet styling */
  @media only screen and (min-width: 600px) {
     /* Return to homepage box */
@@ -190,7 +206,7 @@ section.footer > div.socials > img.twitter {
     }
 
     div.return-box {
-    left: 230px;
+    left: 20px;
     }
 
     /* Map */
@@ -267,7 +283,7 @@ section.footer > div.socials > img.twitter {
     /* Return to homepage box */
 
     div.return-box {
-        left: 85px;
+        left: 55px;
     }
 
 

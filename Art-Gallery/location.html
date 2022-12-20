@@ -10,28 +10,39 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-    <link
+
+    <!-- Leaflet JS code -->
+
+    <!-- <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
       integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
       crossorigin=""
     />
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
+
     <script
       src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
       integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
       crossorigin=""
-    ></script>
+    ></script> -->
+
+    <!-- Mapbox code -->
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="locationstyle.css" />
     <title>Frontend Mentor | Art gallery website</title>
   </head>
   <body>
     <div class="return-box">
-      <div class="return-chevron-box">
+      <a href="./index.html" class="return-chevron-box">
         <img src="./assets/icon-arrow-left.svg" alt="" class="return-chevron" />
-      </div>
-      <h3 class="return-title">Back to Home</h3>
+      </a>
+      <a href="./index.html" class="return-title">Back to Home</a>
     </div>
     <div id="map"></div>
     <section class="location-info">
@@ -61,15 +72,33 @@
       </div>
     </section>
     <script>
-      var map = L.map("map").setView([41.480452, -71.310879], 15);
+      // Leaflet JS map code
 
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution:
-          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }).addTo(map);
+      // var map = L.map("map").setView([41.480452, -71.310879], 15);
+      // L.tileLayer(
+      //   "https://api.mapbox.com/styles/v1/cutch14/clbw7fqnk005v14rvrisbvjdl/wmts?access_token=pk.eyJ1IjoiY3V0Y2gxNCIsImEiOiJjbGJ3N2ExaTEyNHoxM3BrZTNjYnBqbmp4In0.38cTJODudqcBlK5QKOCjoQ",
+      //   {
+      //     maxZoom: 19,
+      //     attribution:
+      //       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      //   }
+      // ).addTo(map);
+      // var marker = L.marker([41.480452, -71.310879]).addTo(map);
 
-      var marker = L.marker([41.480452, -71.310879]).addTo(map);
+      // Mapbox code
+
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiY3V0Y2gxNCIsImEiOiJjbGJ3N2ExaTEyNHoxM3BrZTNjYnBqbmp4In0.38cTJODudqcBlK5QKOCjoQ";
+      const map = new mapboxgl.Map({
+        container: "map", // container ID
+        style: "mapbox://styles/cutch14/clbw7fqnk005v14rvrisbvjdl", // style URL
+        center: [-71.310879, 41.480452], // starting position [lng, lat]
+        zoom: 14.5, // starting zoom
+      });
+
+      const marker = new mapboxgl.Marker()
+        .setLngLat([-71.310879, 41.480452])
+        .addTo(map);
     </script>
   </body>
 </html>

@@ -63,9 +63,10 @@ section.page-header > div.location-box {
     height: 72px;
     display: flex;
     margin-left: -85px;
+    transition: all 0.2s ease-in-out;
 }
 
-section.page-header > div.location-box > p.our-location {
+section.page-header > div.location-box > a.our-location {
     width: 204px;
     height: 72px;
     background-color: var(--black);
@@ -77,9 +78,10 @@ section.page-header > div.location-box > p.our-location {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.2272rem;
+    text-decoration: none;
 }
 
-section.page-header > div.location-box > div.chevron-container {
+section.page-header > div.location-box > a.chevron-container {
     width: 56px;
     height: 72px;
     background-color: var(--rust);
@@ -88,9 +90,19 @@ section.page-header > div.location-box > div.chevron-container {
     align-items: center;
 }
 
-section.page-header > div.location-box > div.chevron-container > img.location-chevron {
+section.page-header > div.location-box > a.chevron-container > img.location-chevron {
     width: 8px;
     height: 24px;
+}
+
+section.page-header > div.location-box:hover a.our-location {
+    cursor: pointer;
+    background-color: var(--rust);
+}
+
+section.page-header > div.location-box:hover a.chevron-container {
+    cursor: pointer;
+    background-color: var(--black);
 }
 
 /* Page images */
@@ -234,6 +246,11 @@ footer.page-footer > div.socials > img.instagram {
 footer.page-footer > div.socials > img.twitter {
     width: 20px;
     height: 16.25px;
+}
+
+footer.page-footer > div.socials > img:hover {
+    cursor: pointer;
+    filter: invert(10%) sepia(57%) saturate(1732%) hue-rotate(305deg) brightness(100%) contrast(81%);
 }
 
 @media only screen and (min-width: 650px) {
