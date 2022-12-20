@@ -44,6 +44,7 @@
       </a>
       <a href="./index.html" class="return-title">Back to Home</a>
     </div>
+    <div class="map"></div>
     <div id="map"></div>
     <section class="location-info">
       <h3 class="location-title">Our location</h3>
@@ -87,18 +88,18 @@
 
       // Mapbox code
 
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoiY3V0Y2gxNCIsImEiOiJjbGJ3c2x2MDQwYzFyM3Byd3F2Z2hjamV2In0.KU6DWfFIuYdzOWfoCeMVlA";
-      const map = new mapboxgl.Map({
-        container: "map", // container ID
-        style: "mapbox://styles/cutch14/clbw7fqnk005v14rvrisbvjdl", // style URL
-        center: [-71.310879, 41.480452], // starting position [lng, lat]
-        zoom: 14.5, // starting zoom
-      });
+      // mapboxgl.accessToken =
+      //   "pk.eyJ1IjoiY3V0Y2gxNCIsImEiOiJjbGJ3c2x2MDQwYzFyM3Byd3F2Z2hjamV2In0.KU6DWfFIuYdzOWfoCeMVlA";
+      // const map = new mapboxgl.Map({
+      //   container: "map", // container ID
+      //   style: "mapbox://styles/cutch14/clbw7fqnk005v14rvrisbvjdl", // style URL
+      //   center: [-71.310879, 41.480452], // starting position [lng, lat]
+      //   zoom: 14.5, // starting zoom
+      // });
 
-      const marker = new mapboxgl.Marker()
-        .setLngLat([-71.310879, 41.480452])
-        .addTo(map);
+      // const marker = new mapboxgl.Marker()
+      //   .setLngLat([-71.310879, 41.480452])
+      //   .addTo(map);
     </script>
   </body>
 </html>

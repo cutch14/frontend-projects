@@ -74,11 +74,17 @@ div.return-box:hover a.return-title {
 
 /* Map */
 
-#map {
+div.map {
+    background-image: url("./assets/mobile/image-map.png");
+    width: 375px;
+    height: 550px;
+}
+
+/* #map {
     height: 550px;
     width: 375px;
     z-index: 0;
-}
+} */
 
 /* Unused map styling */
 
@@ -211,10 +217,16 @@ section.footer > div.socials > img:hover {
 
     /* Map */
 
-    #map {
+    div.map {
+        background: url("./assets/tablet/image-map.png");
+        width: 768px;
+        height: 600px;
+    }
+
+    /* #map {
     height: 600px;
     width: 768px;
-    }
+    } */
 
     /* Unused map styling */
 
@@ -290,19 +302,19 @@ section.footer > div.socials > img:hover {
 
     /* Map */
 
-    #map {
+    /* #map {
         height: 600px;
         width: 1440px;
         z-index: 0;
-    }
+    } */
 
     /* Unused map styling */
 
-    /* div.map {
-        background: url("./assets/mobile/image-map.png");
-        width: 375px;
-        height: 550px;
-    } */
+    div.map {
+        background: url("./assets/desktop/image-map.png");
+        width: 1440px;
+        height: 600px;
+    }
 
     /* Location details */ 
 
