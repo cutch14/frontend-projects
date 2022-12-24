@@ -128,12 +128,13 @@ const updatedTimePeriod = {
   "monthly": "Last Month -"
 }
 
+function handleTimePopulation() {
 // Update time scale
 
-let timescaleOption = 'daily';
-let currentTimescale = updatedTimePeriod[timescaleOption];
+  let timescaleOption = this.dataset.time;
+  let currentTimescale = updatedTimePeriod[timescaleOption];
 
-timeContainers.forEach(elem => {
+  timeContainers.forEach(elem => {
   // Grab element title for filtering data, current & prev elements to update
 
   let dataTitle = elem.dataset.title;
@@ -146,6 +147,7 @@ timeContainers.forEach(elem => {
     return d.title === dataTitle
   })
 
+
   // Update time elements
 
   let currentTime = filteredData[0]["timeframes"][timescaleOption].current;
@@ -154,6 +156,11 @@ timeContainers.forEach(elem => {
   let currentHourSuffix = currentTime === 1 ? "hr" : "hrs";
   let previousHourSuffix = previousTime === 1 ? "hr" : "hrs";
 
-  timeUseToUpdate.innerHTML = `${currentTime} <span>${currentHourSuffix}</span>`;
+  timeUseToUpdate.innerHTML = `${currentTime}${currentHourSuffix}`;
   previousTimeUseToUpdate.innerHTML = `${currentTimescale} ${previousTime}${previousHourSuffix}`;
 })
+}
+
+
+
+timescaleSwitch.forEach(a => a.addEventListener('click', handleTimePopulation))
