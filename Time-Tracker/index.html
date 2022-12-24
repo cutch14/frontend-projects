@@ -1,80 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Time tracking dashboard</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <section class="profile">
+        <div class="profile-subcontainer">
+          <img src="./images/image-jeremy.png" alt="" class="profile-img" />
+          <div class="profile-info">
+            <p class="report-for">Report for</p>
+            <h2 class="profile-name">Jeremy Robson</h2>
+          </div>
+        </div>
+        <div class="timescale">
+          <p class="daily" data-time="daily" data-timePeriod="Day">Daily</p>
+          <p class="weekly" data-time="weekly" data-timePeriod="Week">Weekly</p>
+          <p class="monthly" data-time="monthly" data-timePeriod="Month">
+            Monthly
+          </p>
+        </div>
+      </section>
+      <section class="work-container">
+        <div class="work-tile">
+          <div class="work-header">
+            <h4 class="work-title">Work</h4>
+            <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
+          </div>
+          <div class="work-time time-container" data-title="Work">
+            <h4 class="time-work"></h4>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </section>
+      <section class="play-container">
+        <div class="play-tile">
+          <div class="play-header">
+            <h4 class="play-title">Play</h4>
+            <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
+          </div>
+          <div class="play-time time-container" data-title="Play">
+            <h4 class="time-play"></h4>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </section>
+      <section class="study-container">
+        <div class="study-tile">
+          <div class="study-header">
+            <h4 class="study-title">Study</h4>
+            <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
+          </div>
+          <div class="study-time time-container" data-title="Study">
+            <h4 class="time-study"></h4>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </section>
+      <section class="exercise-container">
+        <div class="exercise-tile">
+          <div class="exercise-header">
+            <h4 class="exercise-title">Exercise</h4>
+            <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
+          </div>
+          <div class="exercise-time time-container" data-title="Exercise">
+            <h4 class="time-exercise"></h4>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </section>
+      <section class="social-container">
+        <div class="social-tile">
+          <div class="social-header">
+            <h4 class="social-title">Social</h4>
+            <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
+          </div>
+          <div class="social-time time-container" data-title="Social">
+            <h4 class="time-social"></h4>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </section>
+      <section class="self-care-container">
+        <div class="self-care-tile">
+          <div class="self-care-header">
+            <h4 class="self-care-title">Self Care</h4>
+            <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
+          </div>
+          <div class="self-care-time time-container" data-title="Self Care">
+            <h4 class="time-self-care"></h4>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
