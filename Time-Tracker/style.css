@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+    font-family: "Rubik", sans-serif;
+}
+
+:root {
+    --blue: hsl(246, 80%, 60%);
+    --lightOrange: hsl(15, 100%, 70%);
+    --softBlue: hsl(195, 74%, 62%);
+    --lightRed: hsl(348, 100%, 68%);
+    --limeGreen: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --softOrange: hsl(43, 84%, 65%);
+    --veryDarkBlue: hsl(226, 43%, 10%);
+    --darkBlue: hsl(235, 46%, 20%);
+    --desaturatedBlue: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+}
+
+body {
+    width: 100vw;
+    max-height: 100%;
+    background-color: var(--veryDarkBlue);
+    display: flex;
+    justify-content: center;
+}
+
+main.main-container {
+    width: 37.5rem;
+    height: 146.9rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 32.7rem;
+    grid-template-rows: 20.3rem, repeat(7, 16rem);
+    justify-content: center;
+    align-content: center;
+}
+
+/* Profile tile */
+
+main.main-container > section {
+    width: 32.7rem;
+    height: 16rem;
+}
+
+main.main-container > section.profile {
+    width: 32.7rem;
+    height: 20.3rem;
+    border-radius: 1.5rem;
+    background-color: var(--darkBlue);
+}
+
+main.main-container > section.profile > div.profile-subcontainer {
+    width: 32.7rem;
+    height: 13.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--blue);
+    border-radius: 1.5rem;
+}
+
+main.main-container > section.profile > div.profile-subcontainer > div.profile-img {
+    background: url("./images/image-jeremy.png");
+    width: 6.4rem;
+    height: 6.4rem;
+    background-size: 6.4rem 6.4rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+main.main-container > section.profile > div.profile-subcontainer > div.profile-info {
+    width: 17.2rem;
+    height: 5rem;
+}
+
+main.main-container > section.profile > div.profile-subcontainer > div.profile-info > p.report-for {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--paleBlue);
+}
+
+main.main-container > section.profile > div.profile-subcontainer > div.profile-info > h2.profile-name {
+    font-weight: 300;
+    font-size: 2.4rem;
+    color: white;
+}
+
+section.profile > div.timescale {
+    width: 32.7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.3rem;
+    color: var(--desaturatedBlue);
+}
+
+section.profile > div.timescale p:hover {
+    cursor: pointer;
+}
+
+section.profile > div.timescale p.active {
+    color: white;
+}
+
+/* Tiles - individual bg colors */
+
+main.main-container > section.work-container {
+    background: linear-gradient(var(--lightOrange) 0%, var(--lightOrange) 70%, var(--veryDarkBlue) 100%);
+}
+
+main.main-container > section.play-container {
+    background: linear-gradient(var(--softBlue) 0%, var(--softBlue) 70%, var(--veryDarkBlue) 100%);
+}
+
+main.main-container > section.study-container {
+    background: linear-gradient(var(--lightRed) 0%, var(--lightRed) 70%, var(--veryDarkBlue) 100%);
+}
+
+main.main-container > section.exercise-container {
+    background: linear-gradient(var(--limeGreen) 0%, var(--limeGreen) 70%, var(--veryDarkBlue) 100%);
+}
+
+main.main-container > section.social-container {
+    background: linear-gradient(var(--violet) 0%, var(--violet) 70%, var(--veryDarkBlue) 100%);
+}
+
+main.main-container > section.self-care-container {
+    background: linear-gradient(var(--softOrange) 0%, var(--softOrange) 70%, var(--veryDarkBlue) 100%);
+}
+
+/* Tiles - shared rules */
+
+main.main-container > section.time-box {
+    height: 16rem;
+    width: 32.7rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+main.main-container > section.time-box > img {
+    position: absolute;
+    width: 7.8rem;
+    height: 7.8rem;
+    top: -10px;
+    right: 10px;
+}
+
+main.main-container > section.time-box > div {
+    height: 12.2rem;
+    width: 32.7rem;
+    background-color: var(--darkBlue);
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 0.5px solid var(--darkBlue);
+    z-index: 1;
+}
+
+main.main-container > section.time-box > div > div.head-container {
+    width: 27.9rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main.main-container > section.time-box > div > div.head-container > h4 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: white;
+}
+
+main.main-container > section.time-box > div > div.time-container {
+    width: 27.9rem;
+    height: 3.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main.main-container > section.time-box > div > div.time-container > h4 {
+    font-weight: 300;
+    font-size: 3.2rem;
+    color: white;
+}
+
+main.main-container > section.time-box > div > div.time-container > p {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--paleBlue);
+}

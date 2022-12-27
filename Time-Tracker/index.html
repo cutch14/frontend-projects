@@ -12,13 +12,15 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="style.css" />
+
     <title>Time tracking dashboard</title>
   </head>
   <body>
     <main class="main-container">
       <section class="profile">
         <div class="profile-subcontainer">
-          <img src="./images/image-jeremy.png" alt="" class="profile-img" />
+          <div class="profile-img"></div>
           <div class="profile-info">
             <p class="report-for">Report for</p>
             <h2 class="profile-name">Jeremy Robson</h2>
@@ -26,15 +28,18 @@
         </div>
         <div class="timescale">
           <p class="daily" data-time="daily" data-timePeriod="Day">Daily</p>
-          <p class="weekly" data-time="weekly" data-timePeriod="Week">Weekly</p>
+          <p class="weekly active" data-time="weekly" data-timePeriod="Week">
+            Weekly
+          </p>
           <p class="monthly" data-time="monthly" data-timePeriod="Month">
             Monthly
           </p>
         </div>
       </section>
-      <section class="work-container">
+      <section class="work-container time-box">
+        <img src="./images/icon-work.svg" alt="" class="time-box-img" />
         <div class="work-tile">
-          <div class="work-header">
+          <div class="work-header head-container">
             <h4 class="work-title">Work</h4>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
           </div>
@@ -44,9 +49,10 @@
           </div>
         </div>
       </section>
-      <section class="play-container">
+      <section class="play-container time-box">
+        <img src="./images/icon-play.svg" alt="" class="time-box-img" />
         <div class="play-tile">
-          <div class="play-header">
+          <div class="play-header head-container">
             <h4 class="play-title">Play</h4>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
           </div>
@@ -56,9 +62,10 @@
           </div>
         </div>
       </section>
-      <section class="study-container">
+      <section class="study-container time-box">
+        <img src="./images/icon-study.svg" alt="" class="time-box-img" />
         <div class="study-tile">
-          <div class="study-header">
+          <div class="study-header head-container">
             <h4 class="study-title">Study</h4>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
           </div>
@@ -68,9 +75,10 @@
           </div>
         </div>
       </section>
-      <section class="exercise-container">
+      <section class="exercise-container time-box">
+        <img src="./images/icon-exercise.svg" alt="" class="time-box-img" />
         <div class="exercise-tile">
-          <div class="exercise-header">
+          <div class="exercise-header head-container">
             <h4 class="exercise-title">Exercise</h4>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
           </div>
@@ -80,9 +88,10 @@
           </div>
         </div>
       </section>
-      <section class="social-container">
+      <section class="social-container time-box">
+        <img src="./images/icon-social.svg" alt="" class="time-box-img" />
         <div class="social-tile">
-          <div class="social-header">
+          <div class="social-header head-container">
             <h4 class="social-title">Social</h4>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
           </div>
@@ -92,9 +101,10 @@
           </div>
         </div>
       </section>
-      <section class="self-care-container">
+      <section class="self-care-container time-box">
+        <img src="./images/icon-self-care.svg" alt="" class="time-box-img" />
         <div class="self-care-tile">
-          <div class="self-care-header">
+          <div class="self-care-header head-container">
             <h4 class="self-care-title">Self Care</h4>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
           </div>

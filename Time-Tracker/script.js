@@ -129,6 +129,11 @@ const updatedTimePeriod = {
 }
 
 function handleTimePopulation() {
+// Handle selected button style change
+
+timescaleSwitch.forEach(e => e.classList.remove("active"));
+this.classList.add("active");
+
 // Update time scale
 
   let timescaleOption = this.dataset.time;
