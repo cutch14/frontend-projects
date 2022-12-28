@@ -24,6 +24,7 @@ html {
     --darkBlue: hsl(235, 46%, 20%);
     --desaturatedBlue: hsl(235, 45%, 61%);
     --paleBlue: hsl(236, 100%, 87%);
+    --hoverStateBlue: hsl(236, 41%, 34%);
 }
 
 body {
@@ -32,6 +33,7 @@ body {
     background-color: var(--veryDarkBlue);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 main.main-container {
@@ -57,6 +59,9 @@ main.main-container > section.profile {
     height: 20.3rem;
     border-radius: 1.5rem;
     background-color: var(--darkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 main.main-container > section.profile > div.profile-subcontainer {
@@ -108,6 +113,7 @@ section.profile > div.timescale {
 
 section.profile > div.timescale p:hover {
     cursor: pointer;
+    color: azure;
 }
 
 section.profile > div.timescale p.active {
@@ -172,6 +178,12 @@ main.main-container > section.time-box > div {
     border-radius: 15px;
     border: 0.5px solid var(--darkBlue);
     z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+main.main-container > section.time-box > div:hover {
+    cursor: pointer;
+    background-color: var(--hoverStateBlue);
 }
 
 main.main-container > section.time-box > div > div.head-container {
@@ -206,4 +218,180 @@ main.main-container > section.time-box > div > div.time-container > p {
     font-weight: 400;
     font-size: 1.5rem;
     color: var(--paleBlue);
+}
+
+/* Desktop styling */
+
+@media only screen and (min-width: 800px) {
+
+    body {
+        height: 100vh;
+        width: 115rem;
+        margin: auto;
+    }
+
+    main.main-container {
+        width: 111rem;
+        height: 51.8rem;
+        display: grid;
+        grid-gap: 3rem;
+        grid-template-columns: repeat(4, 25.5rem);
+        grid-template-rows: repeat(2, 24.4rem);
+        justify-content: center;
+        align-content: center;
+        grid-template-areas: 
+                "profile work play study"
+                "profile exercise social self-care";
+    }
+    
+    /* Profile tile */
+    
+    main.main-container > section {
+        width: 32.7rem;
+        height: 16rem;
+    }
+    
+    main.main-container > section.profile {
+        width: 25.5rem;
+        height: 51.8rem;
+        grid-area: profile;
+    }
+    
+    main.main-container > section.profile > div.profile-subcontainer {
+        width: 25.5rem;
+        height: 35.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+        padding: 3.7rem;
+    }
+    
+    main.main-container > section.profile > div.profile-subcontainer > div.profile-img {
+        background: url("./images/image-jeremy.png");
+        width: 7.8rem;
+        height: 7.8rem;
+        background-size: 7.8rem 7.8rem;
+    }
+    
+    main.main-container > section.profile > div.profile-subcontainer > div.profile-info {
+        width: 13.9rem;
+        height: 11.6rem;
+    }
+    
+    main.main-container > section.profile > div.profile-subcontainer > div.profile-info > h2.profile-name {
+        font-size: 4rem;
+        line-height: 4.7rem;
+    }
+    
+    section.profile > div.timescale {
+        width: 6.8rem;
+        height: 10.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+        color: var(--desaturatedBlue);
+        padding: 0 0 6rem 3.7rem;
+    }
+
+    section.profile > div.timescale p {
+        font-weight: 400;
+        font-size: 1.8rem;
+    }
+    
+    /* Tiles - individual bg colors */
+    
+    main.main-container > section.work-container {
+        background: linear-gradient(var(--lightOrange) 0%, var(--lightOrange) 70%, var(--veryDarkBlue) 100%);
+        grid-area: work;
+    }
+    
+    main.main-container > section.play-container {
+        background: linear-gradient(var(--softBlue) 0%, var(--softBlue) 70%, var(--veryDarkBlue) 100%);
+        grid-area: play;
+    }
+    
+    main.main-container > section.study-container {
+        background: linear-gradient(var(--lightRed) 0%, var(--lightRed) 70%, var(--veryDarkBlue) 100%);
+        grid-area: study;
+    }
+    
+    main.main-container > section.exercise-container {
+        background: linear-gradient(var(--limeGreen) 0%, var(--limeGreen) 70%, var(--veryDarkBlue) 100%);
+        grid-area: exercise;
+    }
+    
+    main.main-container > section.social-container {
+        background: linear-gradient(var(--violet) 0%, var(--violet) 70%, var(--veryDarkBlue) 100%);
+        grid-area: social;
+    }
+    
+    main.main-container > section.self-care-container {
+        background: linear-gradient(var(--softOrange) 0%, var(--softOrange) 70%, var(--veryDarkBlue) 100%);
+        grid-area: self-care;
+    }
+    
+    /* Tiles - shared rules */
+    
+    main.main-container > section.time-box {
+        height: 24.4rem;
+        width: 25.5rem;
+        border-radius: 15px;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    main.main-container > section.time-box > img {
+        position: absolute;
+        width: 7.8rem;
+        height: 7.8rem;
+        top: -10px;
+        right: 10px;
+    }
+    
+    main.main-container > section.time-box > div {
+        height: 19.9rem;
+        width: 25.5rem;
+        display: flex;
+        gap: 0rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 15px;
+        z-index: 1;
+    }
+    
+    main.main-container > section.time-box > div > div.head-container {
+        width: 19rem;
+        height: 2.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    main.main-container > section.time-box > div > div.time-container {
+        width: 19rem;
+        height: 9.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main.main-container > section.time-box > div > div.time-container > h4 {
+        font-weight: 300;
+        font-size: 5.6rem;
+        color: white;
+    }
+    
+    main.main-container > section.time-box > div > div.time-container > p {
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: var(--paleBlue);
+    }
 }
