@@ -15,8 +15,78 @@
     <title>GitHub user search app</title>
   </head>
   <body>
-    devfinder Light Dark Search GitHub username... Search Joined Repos Followers
-    Following
+    <main class="main-container">
+      <header class="page-header">
+        <h1 class="title">devfinder</h1>
+        <div class="light-mode-container">
+          <p class="light-mode-switch">Dark</p>
+          <img src="./assets/icon-moon.svg" alt="" class="light-mode-img" />
+        </div>
+      </header>
+      <section class="search-container">
+        <img src="./assets/icon-search.svg" alt="" class="search-img" />
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search GitHub username..."
+        />
+        <div class="search-button">Search</div>
+      </section>
+      <section class="main-user-display">
+        <div class="user-header">
+          <img
+            src="./assets/blank-profile-picture-g23d0c126a_640.png"
+            alt=""
+            class="user-profile-img"
+            width="48px"
+            height="48px"
+          />
+        </div>
+        <div class="main-user-info">
+          <h2 class="username-title">The Octocat</h2>
+          <h3 class="username-tag">@octocat</h3>
+          <p class="joined-info">Joined 25 Jan 2011</p>
+        </div>
+      </section>
+      <p class="user-bio">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
+        tempora dolore non voluptatibus vero maiores, ut in, voluptas autem
+        deserunt est quibusdam ab id. Nulla, dolores! Assumenda totam velit
+        architecto.
+      </p>
+      <section class="reach-container">
+        <div class="repo-container">
+          <h4 class="repo-head">Repos</h4>
+          <p class="repo-count">8</p>
+        </div>
+        <div class="followers-container">
+          <h4 class="followers-head">Followers</h4>
+          <p class="followers-count">3938</p>
+        </div>
+        <div class="followers-container">
+          <h4 class="followers-head">Following</h4>
+          <p class="followers-count">9</p>
+        </div>
+      </section>
+      <section class="social-container">
+        <div class="location-box">
+          <img src="./assets/icon-location.svg" alt="" class="location-img" />
+          <p class="location">San Francisco</p>
+        </div>
+        <div class="website-box">
+          <img src="./assets/icon-website.svg" alt="" class="github-img" />
+          <p class="website">https://github.blog</p>
+        </div>
+        <div class="twitter-box">
+          <img src="./assets/icon-twitter.svg" alt="" class="twitter-img" />
+          <p class="twitter">Not Applicable</p>
+        </div>
+        <div class="company">
+          <img src="./assets/icon-company.svg" alt="" />
+          <p class="github">@github</p>
+        </div>
+      </section>
+    </main>
 
     <script src="./script.js"></script>
   </body>
