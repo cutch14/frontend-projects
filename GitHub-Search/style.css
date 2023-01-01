@@ -29,15 +29,15 @@ html {
 /* Mobile Styling */
 
 body {
-    background-color: white;
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
 }
 
 main.main-container {
-    width: 37.5rem;
+    width: 100vw;
     height: 77.7rem;
     background-color: var(--lightModeBackground);
     margin: auto;
@@ -94,7 +94,7 @@ header.page-header > div.dark-mode-container > p.dark-mode-switch {
     font-weight: 700;
     font-size: 1.3rem;
     letter-spacing: 0.25rem;
-    color: var(--lightModeBlueGrey);
+    color: var(--lightModeWhite);
     text-transform: uppercase;
 }
 
@@ -295,21 +295,7 @@ section.main-user-container > section.social-container > div > p.location {
 
 @media only screen and (min-width: 650px) {
     
-body {
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-main.main-container {
-    width: 37.5rem;
-    height: 77.7rem;
-    background-color: var(--lightModeBackground);
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+main.main-container {   
     align-items: center;
     justify-content: center;
     gap: 2rem;
@@ -318,7 +304,7 @@ main.main-container {
 /* Header */
 
 header.page-header {
-    width: 32.7rem;
+    width: 57.3rem;
     height: 3.8rem;
     display: flex;
     justify-content: space-between;
@@ -326,120 +312,52 @@ header.page-header {
     margin-bottom: 3rem;
 }
 
-header.page-header > h1.title {
-    font-weight: 700;
-    font-size: 2.6rem;
-    color: var(--lightModeDarkBlue);
-}
-
-header.page-header > div.light-mode-container {
-    width: 7.8rem;
-    height: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header.page-header > div.light-mode-container > p.light-mode-switch {
-    font-weight: 700;
-    font-size: 1.3rem;
-    letter-spacing: 0.25rem;
-    color: var(--lightModeBlueGrey);
-    text-transform: uppercase;
-}
-
-header.page-header > div.dark-mode-container {
-    width: 7.8rem;
-    height: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    display: none;
-}
-
-header.page-header > div.dark-mode-container > p.dark-mode-switch {
-    font-weight: 700;
-    font-size: 1.3rem;
-    letter-spacing: 0.25rem;
-    color: var(--lightModeBlueGrey);
-    text-transform: uppercase;
-}
-
 /* Search box */
 
 section.search-container {
-    width: 32.7rem;
-    height: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-    background-color: var(--lightModeWhite);
-    border-radius: 1.5rem;
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-    position: relative;
+    width: 57.3rem;
+    height: 6.9rem;
+    justify-content: flex-start;
+    padding-left: 4rem;
+    gap: 2.5rem;
 }
 
 section.search-container > img.search-img {
-    width: 2.005rem;
-    height: 2rem;
+    width: 2.406rem;
+    height: 2.4rem;
 }
 
 section.search-container > input.search-input {
-    width: 19.4rem;
-    height: 4.5rem;
-    border: none;
-}
-
-section.search-container > input.search-input:focus {
-    outline: none;
+    width: 30.4rem;
+    height: 2.5rem;
 }
 
 section.search-container > input.search-input::placeholder {
-    font-family: "Space Mono";
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-
-section.search-container > p.error {
-    color: red;
-    font-weight: 700;
-    position: absolute;
-    right: 10rem;
-    display: none;
+    font-size: 1.6rem;
 }
 
 section.search-container > div.search-button {
-    width: 8.4rem;
-    height: 4.8rem;
-    border-radius: 1rem;
-    background-color: var(--lightModeBlue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--darkModewhite);
-    font-weight: 700;
-    font-size: 1.4rem;
+    width: 10.6rem;
+    height: 5rem;
+    font-size: 1.6rem;
+    margin-left: 3.8rem;
 }
 
 /* User display header */
 
 section.main-user-container {
-    width: 32.7rem;
-    height: 51.7rem;
-    background-color: var(--lightModeWhite);
-    border-radius: 1.5rem;
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-    display: flex;
+    width: 57.3rem;
+    height: 48.1rem;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 2.5rem;
+    padding: 4rem;
+    gap: 1.5rem;
 }
 
 section.main-user-container > section.main-user-display {
-    width: 23.3rem;
-    height: 7rem;
+    width: 33.4rem;
+    height: 11.7rem;
     display: flex;
     justify-content: space-between;
     align-self: flex-start;
@@ -447,64 +365,52 @@ section.main-user-container > section.main-user-display {
 }
 
 section.main-user-container > section.main-user-display > img.user-profile-img {
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
+    width: 11.7rem;
+    height: 11.7rem;
 }
 
 section.main-user-container > section.main-user-display > div.main-user-info {
-    width: 14.4rem;
-    height: 6.9rem;
+    width: 17.6rem;
+    height: 9.1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 section.main-user-container > section.main-user-display > div.main-user-info > h2.username-title {
-    width: 10.8rem;
-    height: 2.4rem;
-    font-weight: 700;
-    font-size: 1.6rem;
-    color: var(--lightModeDarkGrey);
+    width: 17.6rem;
+    height: 3.9rem;
+    font-size: 2.6rem;
 }
 
 section.main-user-container > section.main-user-display > div.main-user-info > h3.username-tag {
-    width: 6.4rem;
-    height: 1.9rem;
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: var(--lightModeBlue);
+    width: 7.9rem;
+    height: 2.4rem;
+    font-size: 1.6rem;
     margin-top: -1rem;
 }
 
 section.main-user-container > section.main-user-display > div.main-user-info > p.joined-info {
-    width: 14.4rem;
-    height: 1.9rem;
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: var(--lightModeGrey)
+    width: 16.6rem;
+    height: 2.2rem;
+    font-size: 1.5rem;
 }
 
 /* User bio */
 
 section.main-user-container > p.user-bio {
-    width: 27.9rem;
-    max-height: 7.5rem;
-    font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 2.5rem;
-    color: var(--lightModeBlueGrey);
-    text-overflow: ellipsis;
+    width: 49.3rem;
+    max-height: 5rem;
+    font-size: 1.5rem;
 }
 
 section.main-user-container > section.reach-container {
-    width: 27.9rem;
+    width: 49.3rem;
     height: 8.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 6.8rem;
     border-radius: 1rem;
-    background-color: var(--lightModeBackground);
+    padding-left: 4.4rem;
 }
 
 section.main-user-container > section.reach-container > div {
@@ -512,36 +418,33 @@ section.main-user-container > section.reach-container > div {
     height: 4.8rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
 section.main-user-container > section.reach-container > div > h4 {
-    font-weight: 400;
-    font-size: 1.1rem;
-    color: var(--lightModeBlueGrey);
+    font-size: 1.3rem;
 }
 
 section.main-user-container > section.reach-container > div > p {
-    font-weight: 700;
-    font-size: 1.6rem;
-    columns: var(--lightModeDarkGrey);
+    font-size: 2.2rem;
 }
 
 /* Socials */
 
 section.main-user-container > section.social-container {
-    width: 18.5rem;
-    height: 12.7rem;
+    width: 42.9rem;
+    height: 6.3rem;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 section.main-user-container > section.social-container > div {
-    max-width: 18.5rem;
-    height: 2rem;
+    max-width: 20.8rem;
+    height: 2.2rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -549,12 +452,178 @@ section.main-user-container > section.social-container > div {
 }
 
 section.main-user-container > section.social-container > div > p {
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: var(--lightModeBlueGrey);
+    font-size: 1.5rem;
 }
 
-section.main-user-container > section.social-container > div > p.location {
-    padding-left: .5rem;
+section.main-user-container > section.social-container > div.twitter-box,
+section.main-user-container > section.social-container > div.company-box {
+    padding-left: 3rem;
 }
+}
+
+@media only screen and (min-width: 950px) {
+    main.main-container {   
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    /* Header */
+    
+    header.page-header {
+        width: 57.3rem;
+        height: 3.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    
+    /* Search box */
+    
+    section.search-container {
+        width: 57.3rem;
+        height: 6.9rem;
+        justify-content: flex-start;
+        padding-left: 4rem;
+        gap: 2.5rem;
+    }
+    
+    section.search-container > img.search-img {
+        width: 2.406rem;
+        height: 2.4rem;
+    }
+    
+    section.search-container > input.search-input {
+        width: 30.4rem;
+        height: 2.5rem;
+    }
+    
+    section.search-container > input.search-input::placeholder {
+        font-size: 1.6rem;
+    }
+    
+    section.search-container > div.search-button {
+        width: 10.6rem;
+        height: 5rem;
+        font-size: 1.6rem;
+        margin-left: 3.8rem;
+    }
+    
+    /* User display header */
+    
+    section.main-user-container {
+        width: 57.3rem;
+        height: 48.1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem;
+        gap: 1.5rem;
+    }
+    
+    section.main-user-container > section.main-user-display {
+        width: 33.4rem;
+        height: 11.7rem;
+        display: flex;
+        justify-content: space-between;
+        align-self: flex-start;
+        align-items: center;
+    }
+    
+    section.main-user-container > section.main-user-display > img.user-profile-img {
+        width: 11.7rem;
+        height: 11.7rem;
+    }
+    
+    section.main-user-container > section.main-user-display > div.main-user-info {
+        width: 17.6rem;
+        height: 9.1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    section.main-user-container > section.main-user-display > div.main-user-info > h2.username-title {
+        width: 17.6rem;
+        height: 3.9rem;
+        font-size: 2.6rem;
+    }
+    
+    section.main-user-container > section.main-user-display > div.main-user-info > h3.username-tag {
+        width: 7.9rem;
+        height: 2.4rem;
+        font-size: 1.6rem;
+        margin-top: -1rem;
+    }
+    
+    section.main-user-container > section.main-user-display > div.main-user-info > p.joined-info {
+        width: 16.6rem;
+        height: 2.2rem;
+        font-size: 1.5rem;
+    }
+    
+    /* User bio */
+    
+    section.main-user-container > p.user-bio {
+        width: 49.3rem;
+        max-height: 5rem;
+        font-size: 1.5rem;
+    }
+    
+    section.main-user-container > section.reach-container {
+        width: 49.3rem;
+        height: 8.5rem;
+        justify-content: flex-start;
+        gap: 6.8rem;
+        border-radius: 1rem;
+        padding-left: 4.4rem;
+    }
+    
+    section.main-user-container > section.reach-container > div {
+        width: 8.5rem;
+        height: 4.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    section.main-user-container > section.reach-container > div > h4 {
+        font-size: 1.3rem;
+    }
+    
+    section.main-user-container > section.reach-container > div > p {
+        font-size: 2.2rem;
+    }
+    
+    /* Socials */
+    
+    section.main-user-container > section.social-container {
+        width: 42.9rem;
+        height: 6.3rem;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    section.main-user-container > section.social-container > div {
+        max-width: 20.8rem;
+        height: 2.2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    section.main-user-container > section.social-container > div > p {
+        font-size: 1.5rem;
+    }
+    
+    section.main-user-container > section.social-container > div.twitter-box,
+    section.main-user-container > section.social-container > div.company-box {
+        padding-left: 3rem;
+    }
 }
