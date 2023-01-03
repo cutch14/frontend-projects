@@ -15,29 +15,33 @@
     <title>GitHub user search app</title>
   </head>
   <body>
-    <main class="main-container">
+    <main class="main-container color-switch">
       <header class="page-header">
-        <h1 class="title">devfinder</h1>
-        <div class="light-mode-container">
+        <h1 class="title color-switch">devfinder</h1>
+        <div class="light-mode-container color-switch">
           <p class="light-mode-switch">Dark</p>
           <img src="./assets/icon-moon.svg" alt="" class="light-mode-img" />
         </div>
-        <div class="dark-mode-container">
+        <div class="dark-mode-container color-switch">
           <p class="dark-mode-switch">Light</p>
           <img src="./assets/icon-sun.svg" alt="" class="dark-mode-img" />
         </div>
       </header>
-      <section class="search-container">
-        <img src="./assets/icon-search.svg" alt="" class="search-img" />
+      <section class="search-container color-switch">
+        <img
+          src="./assets/icon-search.svg"
+          alt=""
+          class="search-img color-switch"
+        />
         <input
           type="text"
-          class="search-input"
+          class="search-input color-switch"
           placeholder="Search GitHub username..."
         />
         <p class="error">No Results</p>
         <div class="search-button">Search</div>
       </section>
-      <section class="main-user-container">
+      <section class="main-user-container color-switch">
         <section class="main-user-display">
           <img
             src="./assets/blank-profile-picture-g23d0c126a_640.png"
@@ -47,15 +51,15 @@
             height="48px"
           />
           <div class="main-user-info">
-            <h2 class="username-title">The Octocat</h2>
+            <h2 class="username-title color-switch">The Octocat</h2>
             <h3 class="username-tag">@octocat</h3>
-            <p class="joined-info">Joined 25 Jan 2011</p>
+            <p class="joined-info color-switch">Joined 25 Jan 2011</p>
           </div>
         </section>
-        <p class="user-bio">
+        <p class="user-bio color-switch">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </p>
-        <section class="reach-container">
+        <section class="reach-container color-switch">
           <div class="repo-container">
             <h4 class="repo-head">Repos</h4>
             <p class="repo-count">8</p>
@@ -70,19 +74,21 @@
           </div>
         </section>
         <section class="social-container">
-          <div class="location-box">
+          <div class="location-box color-switch">
             <img src="./assets/icon-location.svg" alt="" class="location-img" />
             <p class="location">San Francisco</p>
           </div>
-          <div class="website-box">
+          <div class="website-box color-switch">
             <img src="./assets/icon-website.svg" alt="" class="github-img" />
-            <p class="website">https://github.blog</p>
+            <a href="https://github.blog" class="website"
+              >https://github.blog</a
+            >
           </div>
-          <div class="twitter-box">
+          <div class="twitter-box color-switch">
             <img src="./assets/icon-twitter.svg" alt="" class="twitter-img" />
             <p class="twitter">Not Applicable</p>
           </div>
-          <div class="company-box">
+          <div class="company-box color-switch">
             <img src="./assets/icon-company.svg" alt="" />
             <p class="github">@github</p>
           </div>

@@ -81,6 +81,12 @@ header.page-header > div.light-mode-container > p.light-mode-switch {
     text-transform: uppercase;
 }
 
+header.page-header > div.light-mode-container:hover > p,
+header.page-header > div.light-mode-container:hover > img {
+    cursor: pointer;
+    filter: invert(8%) sepia(4%) saturate(7473%) hue-rotate(182deg) brightness(3%) contrast(80%);
+}
+
 header.page-header > div.dark-mode-container {
     width: 7.8rem;
     height: 2rem;
@@ -97,6 +103,12 @@ header.page-header > div.dark-mode-container > p.dark-mode-switch {
     color: var(--lightModeWhite);
     text-transform: uppercase;
 }
+
+header.page-header > div.dark-mode-container:hover > p, 
+header.page-header > div.dark-mode-container:hover > img {
+    cursor: pointer;
+    filter: brightness(70%);
+} 
 
 /* Search box */
 
@@ -153,6 +165,12 @@ section.search-container > div.search-button {
     color: var(--darkModewhite);
     font-weight: 700;
     font-size: 1.4rem;
+    transition: all 0.2s ease-in-out;
+}
+
+section.search-container > div.search-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 /* User display header */
@@ -258,7 +276,7 @@ section.main-user-container > section.reach-container > div > h4 {
 section.main-user-container > section.reach-container > div > p {
     font-weight: 700;
     font-size: 1.6rem;
-    columns: var(--lightModeDarkGrey);
+    color: var(--lightModeDarkGrey);
 }
 
 /* Socials */
@@ -285,6 +303,18 @@ section.main-user-container > section.social-container > div > p {
     font-weight: 400;
     font-size: 1.3rem;
     color: var(--lightModeBlueGrey);
+}
+
+section.main-user-container > section.social-container > div > a {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--lightModeBlueGrey);
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+section.main-user-container > section.social-container > div > a:hover {
+    text-decoration: underline;
 }
 
 section.main-user-container > section.social-container > div > p.location {
@@ -471,77 +501,62 @@ section.main-user-container > section.social-container > div.company-box {
     /* Header */
     
     header.page-header {
-        width: 57.3rem;
+        width: 73rem;
         height: 3.8rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
     }
     
     /* Search box */
     
     section.search-container {
-        width: 57.3rem;
+        width: 73rem;
         height: 6.9rem;
         justify-content: flex-start;
         padding-left: 4rem;
         gap: 2.5rem;
     }
-    
-    section.search-container > img.search-img {
-        width: 2.406rem;
-        height: 2.4rem;
-    }
-    
-    section.search-container > input.search-input {
-        width: 30.4rem;
-        height: 2.5rem;
-    }
-    
-    section.search-container > input.search-input::placeholder {
-        font-size: 1.6rem;
-    }
-    
+
+    section.search-container > div.search-input::placeholder {
+        font-size: 1.8rem;
+    } 
+      
     section.search-container > div.search-button {
         width: 10.6rem;
         height: 5rem;
         font-size: 1.6rem;
-        margin-left: 3.8rem;
+        margin-left: 19.3rem;
     }
     
     /* User display header */
     
     section.main-user-container {
-        width: 57.3rem;
-        height: 48.1rem;
+        width: 73rem;
+        height: 41.9rem;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding: 4rem;
+        padding: 4.5rem;
         gap: 1.5rem;
+        position: relative;
     }
     
     section.main-user-container > section.main-user-display {
-        width: 33.4rem;
+        width: 65rem;
         height: 11.7rem;
         display: flex;
         justify-content: space-between;
         align-self: flex-start;
-        align-items: center;
-    }
-    
-    section.main-user-container > section.main-user-display > img.user-profile-img {
-        width: 11.7rem;
-        height: 11.7rem;
+        align-items: flex-start;
     }
     
     section.main-user-container > section.main-user-display > div.main-user-info {
-        width: 17.6rem;
-        height: 9.1rem;
+        width: 50rem;
+        height: 6rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 0.7rem;
+        flex-wrap: wrap;
     }
     
     section.main-user-container > section.main-user-display > div.main-user-info > h2.username-title {
@@ -559,16 +574,22 @@ section.main-user-container > section.social-container > div.company-box {
     
     section.main-user-container > section.main-user-display > div.main-user-info > p.joined-info {
         width: 16.6rem;
-        height: 2.2rem;
+        height: 4.2rem;
         font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        margin-left: 12.2rem;
     }
     
     /* User bio */
     
     section.main-user-container > p.user-bio {
-        width: 49.3rem;
+        width: 48rem;
         max-height: 5rem;
         font-size: 1.5rem;
+        position: absolute;
+        top: 12rem;
+        left: 19.5rem;
     }
     
     section.main-user-container > section.reach-container {
@@ -578,6 +599,8 @@ section.main-user-container > section.social-container > div.company-box {
         gap: 6.8rem;
         border-radius: 1rem;
         padding-left: 4.4rem;
+        align-self: flex-end;
+        margin-top: 1rem;
     }
     
     section.main-user-container > section.reach-container > div {
@@ -607,6 +630,9 @@ section.main-user-container > section.social-container > div.company-box {
         flex-direction: column;
         justify-content: space-between;
         flex-wrap: wrap;
+        align-self: flex-end;
+        margin-right: 6.2rem;
+        margin-top: 1.2rem;
     }
     
     section.main-user-container > section.social-container > div {
@@ -626,4 +652,79 @@ section.main-user-container > section.social-container > div.company-box {
     section.main-user-container > section.social-container > div.company-box {
         padding-left: 3rem;
     }
+}
+
+/* Dark mode style */
+
+main.main-container.color-switch {
+    background-color: var(--darkModeBlack);
+}
+
+header.page-header > h1.title.color-switch {
+    color: var(--darkModewhite);
+}
+
+header.page-header > div.light-mode-container.color-switch {
+    display: none;
+}
+
+
+header.page-header > div.dark-mode-container.color-switch {
+    display: flex;
+}
+
+section.search-container.color-switch {
+    background-color: var(--darkModeDarkGrey);
+    box-shadow: none;
+}
+
+section.search-container > input.search-input.color-switch {
+    background-color: var(--darkModeDarkGrey);
+}
+
+section.search-container > input.search-input.color-switch::placeholder {
+    color: var(--darkModewhite);
+}
+
+section.main-user-container.color-switch {
+    background-color: var(--darkModeDarkGrey);
+    box-shadow: none;
+}
+
+section.main-user-container > section.main-user-display > div.main-user-info > h2.username-title.color-switch {
+    color: var(--darkModewhite);
+}
+
+section.main-user-container > section.main-user-display > div.main-user-info > p.joined-info.color-switch {
+    color: var(--darkModewhite);
+}
+
+section.main-user-container > p.user-bio.color-switch {
+    color: var(--darkModewhite);
+}
+
+section.main-user-container > section.reach-container.color-switch {
+    background-color: var(--darkModeBlack);
+}
+
+section.main-user-container > section.reach-container.color-switch > div > h4 {
+    color: var(--darkModewhite);
+}
+
+section.main-user-container > section.reach-container.color-switch > div > p {
+    color: var(--darkModewhite);
+}
+
+/* Socials */
+
+section.main-user-container > section.social-container > div.color-switch > img {
+    filter:brightness(1000%);
+}
+
+section.main-user-container > section.social-container > div.color-switch > p {
+    color: var(--darkModewhite);
+}
+
+section.main-user-container > section.social-container > div.color-switch > a {
+    color: var(--darkModewhite);
 }
