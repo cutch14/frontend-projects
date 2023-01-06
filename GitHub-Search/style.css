@@ -134,6 +134,8 @@ section.search-container > input.search-input {
     width: 19.4rem;
     height: 4.5rem;
     border: none;
+    font-size: 2rem;
+    color: var(--darkModeDarkGrey);
 }
 
 section.search-container > input.search-input:focus {
@@ -150,8 +152,13 @@ section.search-container > p.error {
     color: red;
     font-weight: 700;
     position: absolute;
-    right: 10rem;
+    right: 2rem;
+    top: 6.2rem;
     display: none;
+}
+
+section.search-container > p.error.active {
+    display: flex;
 }
 
 section.search-container > div.search-button {
@@ -212,7 +219,7 @@ section.main-user-container > section.main-user-display > div.main-user-info {
 }
 
 section.main-user-container > section.main-user-display > div.main-user-info > h2.username-title {
-    width: 10.8rem;
+    width: 20rem;
     height: 2.4rem;
     font-weight: 700;
     font-size: 1.6rem;
@@ -373,6 +380,15 @@ section.search-container > div.search-button {
     margin-left: 3.8rem;
 }
 
+section.search-container > p.error {
+    right: 3.3rem;
+    top: 7rem;
+}
+
+section.search-container > p.error.active {
+    display: flex;
+}
+
 /* User display header */
 
 section.main-user-container {
@@ -408,7 +424,7 @@ section.main-user-container > section.main-user-display > div.main-user-info {
 }
 
 section.main-user-container > section.main-user-display > div.main-user-info > h2.username-title {
-    width: 17.6rem;
+    width: 36rem;
     height: 3.9rem;
     font-size: 2.6rem;
 }
@@ -526,6 +542,15 @@ section.main-user-container > section.social-container > div.company-box {
         font-size: 1.6rem;
         margin-left: 19.3rem;
     }
+
+    section.search-container > p.error {
+        right: 3.3rem;
+        top: 7rem;
+    }
+    
+    section.search-container > p.error.active {
+        display: flex;
+    }
     
     /* User display header */
     
@@ -560,7 +585,7 @@ section.main-user-container > section.social-container > div.company-box {
     }
     
     section.main-user-container > section.main-user-display > div.main-user-info > h2.username-title {
-        width: 17.6rem;
+        width: 33rem;
         height: 3.9rem;
         font-size: 2.6rem;
     }
@@ -578,7 +603,7 @@ section.main-user-container > section.social-container > div.company-box {
         font-size: 1.5rem;
         display: flex;
         align-items: center;
-        margin-left: 12.2rem;
+        margin-left: -2.4rem;
     }
     
     /* User bio */
@@ -680,6 +705,7 @@ section.search-container.color-switch {
 
 section.search-container > input.search-input.color-switch {
     background-color: var(--darkModeDarkGrey);
+    color: var(--darkModewhite);
 }
 
 section.search-container > input.search-input.color-switch::placeholder {
