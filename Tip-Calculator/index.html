@@ -15,15 +15,12 @@
 
     <title>Tip calculator app</title>
   </head>
-  <script src="./script.js"></script>
   <body>
     <div class="title">SPLI<br />TTER</div>
     <section class="calculater-container">
       <div class="bill-container">
         <h3 class="bill-title">Bill</h3>
-        <span class="bill-label"
-          ><img src="./images/icon-dollar.svg" alt="" class="bill-image"
-        /></span>
+        <span class="bill-label">&#163;</span>
         <input
           type="number"
           name="bill-amount"
@@ -36,30 +33,31 @@
       <section class="tip-percentage-container">
         <h3 class="percentage-title">Select Tip %</h3>
         <div class="tip-percentage">
-          <button>5%</button>
-          <button>10%</button>
-          <button>15%</button>
-          <button>25%</button>
-          <button>50%</button>
+          <button data-tip="5">5%</button>
+          <button data-tip="10">10%</button>
+          <button data-tip="15">15%</button>
+          <button data-tip="25">25%</button>
+          <button data-tip="50">50%</button>
           <input
             type="number"
             name="custom-%"
             id="custom-%"
-            class="custom-%"
-            placeholder="CUSTOM"
+            class="custom-percentage"
+            placeholder="Custom"
           />
         </div>
       </section>
       <div class="people">
         <h3 class="people-title">Number of People</h3>
-        <label for="number-people"
+        <span class="number-people"
           ><img src="./images/icon-person.svg" alt="" class="people-img"
-        /></label>
+        /></span>
+        <p class="error">Cant be zero</p>
         <input
           type="number"
           name="number-people"
           id="number-people"
-          class="number-people"
+          class="number-people-input"
           placeholder="0"
         />
       </div>
@@ -78,7 +76,9 @@
           </div>
           <h4 class="tip-total">$0.00</h4>
         </div>
+        <button class="reset">RESET</button>
       </section>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>

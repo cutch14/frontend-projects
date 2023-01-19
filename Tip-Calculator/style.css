@@ -55,11 +55,14 @@ section.calculater-container {
     justify-content: space-evenly;
 }
 
+/* Bill section */
+
 div.bill-container {
     width: 31.1rem;
     height: 7.8rem;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 div.bill-container > h3.bill-title {
@@ -68,20 +71,167 @@ div.bill-container > h3.bill-title {
     font-weight: 700;
     font-size: 1.6rem;
     color: var(--darkGrayishCyan);
+    padding-left: .5rem;
 }
 
 div.bill-container > span.bill-label {
     display: inline-block;
-    width: 5rem;
-    height: 4.8rem;
+    width: 4.4rem;
+    height: 4.2rem;
+    border-radius: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--veryLightGrayishCyan);
+    position: absolute;
+    top: 3rem;
+    left: .4rem;
+    color: var(--grayishCyan);
 }
 
 div.bill-container > input.bill-amount {
-    width: 26.1rem;
+    width: 31.1rem;
+    height: 4.8rem;
+    background-color: var(--veryLightGrayishCyan);
+    outline: none;
+    border: none;
+    border-radius: .75rem;
+    text-align: right;
+    color: var(--veryDarkCyan);
+    padding-right: 2rem;
+}
+
+
+div.bill-container > input.bill-amount:hover {
+    cursor: pointer;
+}
+
+div.bill-container > input.bill-amount:focus {
+    border: .3rem solid var(--strongCyan);
+}
+
+div.bill-container > input.bill-amount::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+/* Tip precentage section */
+
+section.tip-percentage-container {
+    width: 31.1rem;
+    height: 21.6rem;
+}
+
+section.tip-percentage-container > h3.percentage-title {
+    width: 14rem;
+    height: 2.4rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--darkGrayishCyan);
+}
+
+section.tip-percentage-container > div.tip-percentage {
+    width: 31.1rem;
+    height: 17.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+section.tip-percentage-container > div.tip-percentage > button {
+    width: 14.6348rem;
+    height: 4.8rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--veryDarkCyan);
+    color: var(--white);
+    transition: all 0.2s ease-in-out;
+}
+
+section.tip-percentage-container > div.tip-percentage > button.active {
+    background-color: hsla(173, 61%, 77%, 1);
+    color: var(--veryDarkCyan);
+}
+
+section.tip-percentage-container > div.tip-percentage > button:hover {
+    cursor: pointer;
+    border: .4rem solid hsla(173, 61%, 77%, 1);
+}
+
+section.tip-percentage-container > div.tip-percentage > input {
+    width: 14.6348rem;
+    height: 4.8rem;
+    text-align: right;
+    padding-right: 2rem;
+    border: none;
+    background-color: var(--veryLightGrayishCyan);
+    font-weight: 700;
+    font-size: 2.4r
+}
+
+section.tip-percentage-container > div.tip-percentage > input:hover {
+    cursor: pointer;
+}
+
+section.tip-percentage-container > div.tip-percentage > input:focus {
+    border: var(--veryLightGrayishCyan);
+    outline-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+}
+
+section.tip-percentage-container > div.tip-percentage > input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+/* Number of people */
+
+div.people {
+    width: 31.1rem;
+    height: 7.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+div.people > h3.people-title {
+    width: 31.1rem;
+    height: 2.4rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--darkGrayishCyan);
+    padding-left: .5rem;
+}
+
+div.people > p.error {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    top: .15rem;
+    display: none;
+}
+
+div.people > p.error.active {
+    display: block;
+}
+
+div.people > span.number-people {
+    display: inline-block;
+    width: 4.4rem;
+    height: 4.2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--veryLightGrayishCyan);
+    position: absolute;
+    bottom: .6rem;
+    left: .6rem;
+}
+
+div.people > input.number-people-input {
+    width: 31.1rem;
     height: 4.8rem;
     background-color: var(--veryLightGrayishCyan);
     outline: none;
@@ -89,9 +239,309 @@ div.bill-container > input.bill-amount {
     text-align: right;
     color: var(--veryDarkCyan);
     padding-right: 2rem;
+    border-radius: .75rem;
 }
 
-div.bill-container > input.bill-amount::-webkit-inner-spin-button {
+div.people > input.number-people-input.active {
+    border: .2rem solid red;
+}
+
+div.people > input.number-people-input:hover {
+    cursor: pointer;
+}
+
+div.people > input.number-people-input:focus {
+    border: .3rem solid var(--strongCyan);
+}
+
+div.people > input.number-people-input::-webkit-inner-spin-button {
     appearance: none;
 }
 
+/* Tip results */
+
+section.tip-results {
+    width: 32.7rem;
+    height: 25.7rem;
+    background-color: var(--veryDarkCyan);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section.tip-results > div.amount-container {
+    width: 28.1rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.tip-results > div.amount-container > div.amount-sub-cont {
+    width: 9.8rem;
+    height: 4.4rem;
+}
+
+section.tip-results > div.amount-container > div.amount-sub-cont > h4.amount {
+    width: 9.8rem;
+    height: 2.4rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+section.tip-results > div.amount-container > div.amount-sub-cont > p.person {
+    width: 6.4rem;
+    height: 1.9rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--grayishCyan);
+}
+
+section.tip-results > div.amount-container > h4.tip-amount {
+    width: 9.6rem;
+    height: 4.7rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--strongCyan);
+    letter-spacing: 0.06666rem;
+}
+
+section.tip-results > div.total-container {
+    width: 28.1rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.tip-results > div.total-container > div.total-sub-cont {
+    width: 9.8rem;
+    height: 4.4rem;
+}
+
+section.tip-results > div.total-container > div.total-sub-cont > h4.total {
+    width: 9.8rem;
+    height: 2.4rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+section.tip-results > div.total-container > div.total-sub-cont > p.person {
+    width: 6.4rem;
+    height: 1.9rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--grayishCyan);
+}
+
+section.tip-results > div.total-container > h4.tip-total {
+    width: 9.6rem;
+    height: 4.7rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--strongCyan);
+    letter-spacing: 0.06666rem;
+}
+
+section.tip-results > button.reset {
+    width: 28.1rem;
+    height: 4.8rem;
+    border-radius: .5rem;
+    background-color: var(--strongCyan);
+    border: none;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--veryDarkCyan);
+    transition: all 0.2s ease-in-out;
+}
+
+section.tip-results > button.reset:hover {
+    cursor: pointer;
+    background-color: hsla(173, 61%, 77%, 1);
+}
+
+/* Desktop styling */
+
+@media only screen and (min-width: 800px) {
+    body {
+        max-width: 100vw;
+        max-height: 750px;
+        background-color: var(--lightGrayishCyan);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    div.title {
+        margin: 0 auto;
+    }
+
+    /* Main container */
+    
+    section.calculater-container {
+        width: 92rem;
+        height: 48.1rem;
+        border-radius: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    /* Bill section */
+    
+    div.bill-container {
+        width: 37.9rem;
+        height: 7.8rem;
+        gap: 1rem;
+    }
+    
+    div.bill-container > h3.bill-title {
+        width: 40rem;
+        height: 2.4rem;
+        padding-left: .5rem;
+    }
+    
+    div.bill-container > span.bill-label {
+        top: 3.7rem;
+        left: .4rem;
+    }
+    
+    div.bill-container > input.bill-amount {
+        width: 37.9rem;
+    }
+    
+    /* Tip percentage section */
+    
+    section.tip-percentage-container {
+        width: 37.9rem;
+        height: 15.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    section.tip-percentage-container > h3.percentage-title {
+        width: 14rem;
+        height: 2.4rem;
+    }
+    
+    section.tip-percentage-container > div.tip-percentage {
+        width: 37.9rem;
+        height: 11.2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: space-evenly;
+        gap: 1.2rem;
+    }
+    
+    section.tip-percentage-container > div.tip-percentage > button {
+        width: 11.7rem;
+        height: 4.8rem;
+    }
+
+    
+    section.tip-percentage-container > div.tip-percentage > input {
+        width: 11.7rem;
+        height: 4.8rem;
+        text-align: center;
+        padding-right: 0;
+    }
+    
+    /* Number of people */
+    
+    div.people {
+        width: 37.9rem;
+        height: 7.8rem;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    div.people > h3.people-title {
+        width: 31.1rem;
+        height: 2.4rem;
+    }
+    
+    div.people > p.error {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: red;
+        position: absolute;
+        right: 0;
+        top: .15rem;
+        display: none;
+    }
+    
+    div.people > span.number-people {
+        display: inline-block;
+        width: 4.4rem;
+        height: 3.8rem;
+        bottom: -.1rem;
+        left: 2.3rem;
+    }
+    
+    div.people > input.number-people-input {
+        width: 37.9rem;
+        height: 4.8rem;
+        padding-right: 2rem;
+        border-radius: .75rem;
+    }
+    
+    /* Tip results */
+    
+    section.tip-results {
+        width: 41.3rem;
+        height: 41.7rem;
+        background-color: var(--veryDarkCyan);
+        border-radius: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 4.3rem;
+        gap: 3rem;
+    }
+    
+    section.tip-results > div.amount-container {
+        width: 33.3rem;
+        height: 7.1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    section.tip-results > div.amount-container > h4.tip-amount {
+        width: 20rem;
+        height: 7.1rem;
+        font-size: 4.4rem;
+        text-align: right;
+    }
+    
+    section.tip-results > div.total-container {
+        width: 33.3rem;
+        height: 7.1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 7.5rem;
+    }
+
+    section.tip-results > div.total-container > h4.tip-total {
+        width: 20rem;
+        height: 7.1rem;
+        font-size: 4.4rem;
+        text-align: right;
+    }
+    
+    section.tip-results > button.reset {
+        width: 33.3rem;
+    }
+}
