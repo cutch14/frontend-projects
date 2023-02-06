@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Barlow", sans-serif;
+}
+
+:root {
+    --orange: #F16718;
+    --lightOrange: #FF9B62;
+    --blue: #162542;
+    --lightBlue: #7B8BAD;
+    --grey: #E8EFF2;
+    --white: #FFFFFF;
+}
+
+body {
+    width: 100vw;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.main-container {
+    width: 37.5rem;
+    min-height: 300.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Header */
+
+header.header {
+    width: 32.7rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.header > div.header-img {
+    width: 4rem;
+    height: 4rem;
+    background: url("./shared/logo.svg");
+    background-size: 4rem 4rem;
+}
+
+header.header > p.pre-order {
+    width: 15rem;
+    height: 4.8rem;
+    border-radius: .8rem;
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+/* Product container */
+
+section.product-container {
+    width: 37.5rem;
+    max-height: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 28.6rem 4rem 33.1rem 19.3rem 1rem 30rem;
+    row-gap: 2rem;
+}
+
+section.product-container > div.product-info {
+    width: 32.7rem;
+    height: 28.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 9.6rem 7.8rem 4.8rem;
+    align-content: space-between;
+    grid-row: 1 / 2;
+}
+
+section.product-container > div.product-info > h1.product-title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    font-weight: 900;
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+section.product-container > div.product-info > p.product-text {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: var(--lightBlue);
+}
+
+section.product-container > div.product-info > button.pre-order-btn {
+    grid-column: 1 /2;
+    grid-row: 3 / 4;
+    border-radius: .8rem;
+    background-color: var(--orange);
+    border: none;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+section.product-container > div.product-info > p.release-date {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--lightBlue);
+    justify-self: center;
+    align-self: center;
+}
+
+section.product-container > div.keyboard-img {
+    width: 35.2rem;
+    height: 33.1rem;
+    background: url("./mobile/image-keyboard.jpg");
+    background-size: 35.2rem 33.1rem;
+    border-radius: 2rem 0 0 2rem;
+    justify-self: flex-end;
+    grid-row: 3 / 4;
+}
+
+section.product-container > div.images {
+    width: 37.5rem;
+    height: 19.3rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    grid-row: 4 / 5;
+}
+
+section.product-container > div.images > div.orange-keyboard {
+    width: 12rem;
+    height: 19.3rem;
+    background: url("./mobile/image-phone-and-keyboard.jpg") no-repeat;
+    background-size: 12rem 19.3rem;
+    border-radius: 0 2rem 2rem 0;
+    position: relative;
+}
+
+section.product-container > div.images > div.orange-keyboard > div.overlay {
+    width: 12rem;
+    height: 19.3rem;
+    position: absolute;
+    background-color: var(--orange);
+    opacity: 0.8;
+    border-radius: 0 2rem 2rem 0;
+}
+
+section.product-container > div.images > div.comp-desk {
+    width: 22rem;
+    height: 19.3rem;
+    background: url("./mobile/image-glass-and-keyboard.jpg");
+    background-size: 22rem 19.3rem;
+    border-radius: 2rem;
+}  
+
+/* Product footer */
+
+section.product-container > div.product-footer {
+    width: 32.7rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-row: 6 / 7;
+}
+
+section.product-container > div.product-footer > h2.footer-title {
+    width: 25.5rem;
+    height: 10.8rem;
+    font-weight: 900;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--blue);
+    grid-row: 5 / 6;
+}
+
+section.product-container > div.product-footer > p.footer-text {
+    width: 32.7rem;
+    height: 10.4rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: var(--lightBlue);
+}
+
+/* Features container */
+
+section.features-container {
+    width: 32.7rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.features-container > div.features {
+    width: 32.7rem;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.features-container > div.features > div.img {
+    width: 6.5rem;
+    height: 6.5rem;
+    background-color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.6rem;
+}
+
+section.features-container > div.features > h3.features-title {
+    width: 20rem;
+    height: 5.6rem;
+    font-weight: 900;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--blue);
+    margin-top: 3.5rem;
+}
+
+section.features-container > div.features > p.features-text {
+    width: 32.7rem;
+    height: 10.4rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: var(--lightBlue);
+}
+
+/* Page footer */
+
+footer.page-footer {
+    width: 27.2rem;
+    height: 2.6rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--lightBlue);
+}
+
+/* Tablet styling */
+
+@media only screen and (min-width: 700px) {
+
+
+main.main-container {
+    width: 76.8rem;
+    min-height: 212.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Header */
+
+header.header {
+    width: 68.9rem;
+    height: 5.8rem;
+}
+
+header.header > p.pre-order {
+    width: 17.5rem;
+    height: 5.8rem;
+}
+
+/* Product container */
+
+section.product-container {
+    width: 68.9rem;
+    max-height: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 33.9rem 39rem;
+    grid-template-rows: 1fr 2rem 32rem 2rem 10.8rem;
+    row-gap: 2rem;
+}
+
+section.product-container > div.product-info {
+    width: 32.7rem;
+    height: 28.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 9.6rem 7.8rem 4.8rem;
+    align-content: space-between;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+section.product-container > div.product-info > h1.product-title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+section.product-container > div.product-info > p.product-text {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+section.product-container > div.product-info > button.pre-order-btn {
+    grid-column: 1 /2;
+    grid-row: 3 / 4;
+    border-radius: .8rem;
+    background-color: var(--orange);
+    border: none;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+section.product-container > div.product-info > p.release-date {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+section.product-container > div.keyboard-img {
+    width: 35.2rem;
+    height: 42.5rem;
+    background: url("./tablet/image-keyboard.jpg");
+    background-size: 47.8rem 42.5rem;
+    border-radius: 2rem 0 0 2rem;
+    justify-self: flex-end;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+section.product-container > div.images {
+    width: 76.8rem;
+    height: 32rem;
+    display: flex;
+    justify-content: center;
+    margin-left: -4rem;
+    gap: 3rem;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+}
+
+section.product-container > div.images > div.orange-keyboard {
+    width: 21.4rem;
+    height: 32rem;
+    background: url("./tablet/image-phone-and-keyboard.jpg") no-repeat;
+    background-size: 21.4rem 32rem;
+    border-radius: 2rem;
+    position: relative;
+}
+
+section.product-container > div.images > div.orange-keyboard > div.overlay {
+    width: 21.4rem;
+    height: 32rem;
+    position: absolute;
+    background-color: var(--orange);
+    opacity: 0.8;
+    border-radius: 2rem;
+}
+
+section.product-container > div.images > div.comp-desk {
+    width: 44.5rem;
+    height: 32rem;
+    background: url("./tablet/image-glass-and-keyboard.jpg");
+    background-size: 44.5rem 32rem;
+    border-radius: 2rem;
+}  
+
+/* Product footer */
+
+section.product-container > div.product-footer {
+    width: 100%;
+    height: 10.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    grid-row: 5 / 6;
+    grid-column: 1 / 3;
+    gap: 4rem;
+}
+
+section.product-container > div.product-footer > h2.footer-title {
+    width: 25.5rem;
+    height: 10.8rem;
+    grid-row: 5 / 6;
+    text-align: left;
+}
+
+section.product-container > div.product-footer > p.footer-text {
+    width: 39.8rem;
+    height: 7.8rem;
+    text-align: left;
+}
+
+/* Features container */
+
+section.features-container {
+    width: 69rem;
+    height: 65rem;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section.features-container > div.features {
+    width: 28rem;
+    height: 28.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+section.features-container > div.features > div.img {
+    width: 6.5rem;
+    height: 6.5rem;
+}
+
+section.features-container > div.features > h3.features-title {
+    width: 20rem;
+    height: 5.6rem;
+    text-align: left;
+    margin-top: 0;
+}
+
+section.features-container > div.features > p.features-text {
+    width: 32.7rem;
+    height: 10.4rem;
+    text-align: left;
+}
+
+/* Page footer */
+
+footer.page-footer {
+    width: 27.2rem;
+    height: 2.6rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--lightBlue);
+}
+
+}
