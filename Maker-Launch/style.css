@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    font-family: "Manrope", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --blueGreen: #3EE9E5;
+    --greyBlue: #093F68;
+    --grey: #777F98;
+    --white: #FFFFFF;
+    --black: #080C20;
+    --errorRed: #FF2965;
+}
+
+body {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+}
+
+main.main-container {
+    width: 37.5rem;
+    min-height: 385.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5rem;
+}
+
+/* Header */
+
+header.page-header {
+    width: 12rem;
+    height: 3.5rem;
+}
+
+/* Page title */
+
+section.title-container {
+    width: 37.5rem;
+    height: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.title-container > div.image-mobile {
+    width: 37.5rem;
+    height: 23.3rem;
+    background-image: url("./assets/illustration-hero-mobile.png");
+    background-size: 42rem 23.3rem;
+    background-position: -1rem;
+}
+
+section.title-container > h1.title {
+    width: 30.7rem;
+    height: 12.2rem;
+    font-weight: 800;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+section.title-container > h1.title > span.color {
+    color: var(--blueGreen);
+}
+
+section.title-container > h1.title > span.break {
+    display: block;
+}
+
+section.title-container > p.title-text {
+    width: 32.7rem;
+    height: 10rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: var(--grey);
+}
+
+section.title-container > img.mouse {
+    width: 2.6rem;
+    height: 4.2rem;
+}
+
+/* About section */
+
+section.about-container {
+    width: 32.7rem;
+    height: 113.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.about-container > div.about {
+    height: 23rem;
+    width: 32.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.about-container > div.about > div {
+    width: 12rem;
+    height: 12.4rem;
+    background-color: var(--greyBlue);
+    border-radius: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.about-container > div.about > div > img.passion-img {
+    width: 6.6rem;
+    height: 8rem;
+    margin-left: 1.5rem;
+    margin-top: .8rem;
+}
+
+section.about-container > div.about > div > img.freedom-img {
+    width: 5.6rem;
+    height: 6.7rem;
+}
+
+section.about-container > div.about > div > img.lifestyle-img {
+    width: 6rem;
+    height: 7.1rem;
+    margin-left: -.3rem;
+}
+
+section.about-container > div.about > div > img.anywhere-img {
+    width: 7.8rem;
+    height: 5.6rem;
+}
+
+section.about-container > div.about > h4 {
+    width: 32.7rem;
+    height: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+section.about-container > div.about > p {
+    width: 32.7rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: var(--grey);
+}
+
+/* Pricing section */
+
+section.pricing-header {
+    width: 32.7rem;
+    height: 13.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.pricing-header > h4.pricing-title {
+    width: 21.3rem;
+    height: 3.3rem;
+    font-weight: 800;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+section.pricing-header > p.pricing-text {
+    width: 32.1rem;
+    height: 7.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: var(--grey);
+}
+
+section.pricing {
+    width: 32.7rem;
+    height: 116.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.pricing > div {
+    width: 32.7rem;
+    height: 43.6rem;
+    background-color: var(--greyBlue);
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    padding-top: 3rem;
+}
+
+section.pricing > div > img {
+    width: 4.6rem;
+    height: 4.6rem;
+    position: absolute;
+    left: 3rem;
+    top: -2.3rem;
+}
+
+section.pricing > div > h5 {
+    width: 26rem;
+    height: 2.5rem;
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+section.pricing > div > p {
+    width: 26rem;
+    height: 7.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: var(--grey);
+}
+
+section.pricing > div > p.price {
+    width: 26rem;
+    height: 5.5rem;
+    font-weight: 800;
+    font-size: 4rem;
+    color: var(--white);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section.pricing > div > div.features {
+    width: 26rem;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+section.pricing > div > div.features > p:before {
+    content: url("./assets/icon-check.svg");
+    filter: brightness(500%);
+    margin-right: 1rem;
+}
+
+section.pricing > div > div.features > p {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+/* Second price box style */
+
+section.pricing > div.pricing-paid {
+    background-color: var(--blueGreen);
+}
+
+section.pricing > div.pricing-paid > img {
+    height: 6.5rem;
+    top: -3.5rem;
+}
+
+section.pricing > div.pricing-paid > h5 {
+    color: var(--black);
+}
+
+section.pricing > div.pricing-paid > p {
+    color: var(--black);
+}
+
+section.pricing > div.pricing-paid > p.price {
+    color: var(--black);
+}
+
+section.pricing > div.pricing-paid > p.price > span {
+    color: var(--grey);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+section.pricing > div.pricing-paid > div.features > p:before {
+    filter: brightness(20%);
+}
+
+section.pricing > div.pricing-paid > div.features > p {
+    color: var(--black);
+}
+
+/* Page footer */
+
+footer.page-footer {
+    width: 32.7rem;
+    height: 21.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+} 
+
+footer.page-footer > h5.footer-title {
+    width: 24.8rem;
+    height: 6.7rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.4rem;
+}
+
+footer.page-footer > div.email-container {
+    width: 32.7rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer.page-footer > div.email-container > input {
+    width: 32.7rem;
+    height: 4.8rem;
+    background-color: var(--greyBlue);
+    border: none;
+    border-radius: 2.4rem;
+    color: var(--grey);
+    padding-left: 2.5rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+footer.page-footer > div.email-container > p.error {
+    color: var(--errorRed);
+}
+
+footer.page-footer > div.email-container > input:focus {
+    outline: none;
+}
+
+footer.page-footer > div.email-container > button {
+    width: 32.7rem;
+    height: 4.8rem;
+    background-color: var(--blueGreen);
+    border: none;
+    border-radius: 2.4rem;
+    color: var(--greyBlue);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+/* ************** */
+/* Mobile styling */
+/* ************** */
+
