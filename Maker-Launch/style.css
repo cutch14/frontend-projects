@@ -181,6 +181,7 @@ section.pricing-header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-top: 10rem;
 }
 
 section.pricing-header > h4.pricing-title {
@@ -359,7 +360,17 @@ footer.page-footer > div.email-container > input {
     font-size: 1.5rem;
 }
 
+footer.page-footer > div.email-container > input.active {
+    border: .2rem solid var(--errorRed);
+}
+
 footer.page-footer > div.email-container > p.error {
+    display: none;
+    color: var(--errorRed);
+}
+
+footer.page-footer > div.email-container > p.error.active {
+    display: block;
     color: var(--errorRed);
 }
 
@@ -376,9 +387,232 @@ footer.page-footer > div.email-container > button {
     color: var(--greyBlue);
     font-weight: 800;
     font-size: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+footer.page-footer > div.email-container > button:hover {
+    cursor: pointer;
+    border: .2rem solid var(--blueGreen);
+    background-color: var(--black);
+    color: var(--white);
 }
 
 /* ************** */
 /* Mobile styling */
 /* ************** */
 
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+    main.main-container {
+        width: 76.8rem;
+        min-height: 300.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 5rem;
+    }
+    
+    /* Header */
+    
+    header.page-header {
+        align-self: flex-start;
+        margin-left: 4rem;
+    }
+    
+    /* Page title */
+    
+    section.title-container {
+        width: 76.8rem;
+        height: 35.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+    }
+    
+    section.title-container > div.image-mobile {
+        display: none;
+    }
+
+    section.title-container > div.image-left {
+        position: absolute;
+        width: 15rem;
+        height: 35.6rem;
+        left: 0;
+        background: url("./assets/illustration-hero-left.svg");
+        background-size: 31.4rem 35.6rem;
+        background-position: -16rem;
+    }
+
+    section.title-container > div.image-right {
+        position: absolute;
+        width: 15rem;
+        height: 35.6rem;
+        right: 0;
+        background: url("./assets/illustration-hero-right.svg");
+        background-size: 31.4rem 35.6rem;
+        background-position: 31.5em;
+    }
+
+    section.title-container > div.bg-squiggle {
+        position: absolute;
+        width: 38.6rem;
+        height: 26.8rem;
+        background: url("./assets/bg-hero-squiggle.svg");
+        background-size: 38.6rem 26.8rem;
+    }
+    
+    section.title-container > h1.title {
+        width: 45.7rem;
+        height: 8.1rem;
+    }
+    
+    section.title-container > h1.title > span.color {
+        color: var(--blueGreen);
+    }
+    
+    section.title-container > h1.title > span.break {
+        display: inline;
+    }
+    
+    section.title-container > p.title-text {
+        width: 45rem;
+        height: 7.5rem;
+    }
+    
+    /* About section */
+    
+    section.about-container {
+        width: 57.3rem;
+        height: 61.4rem;
+    }
+    
+    section.about-container > div.about {
+        height: 12.4rem;
+        width: 51.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    section.about-container > div.about:nth-child(odd) {
+        align-self: flex-start;
+    }
+
+    section.about-container > div.about:nth-child(even) {
+        align-self: flex-end;
+    }
+    
+    section.about-container > div.about > h4 {
+        width: 32.7rem;
+        height: 2.5rem;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: 800;
+        font-size: 1.8rem;
+    }
+    
+    section.about-container > div.about > p {
+        width: 32.7rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        color: var(--grey);
+    }
+    
+    /* Pricing section */
+    
+    section.pricing-header {
+        width: 57.3rem;
+        height: 11rem;
+        margin-top: 10rem;
+    }
+    
+    section.pricing-header > p.pricing-text {
+        width: 57.3rem;
+        height: 5rem;
+    }
+    
+    section.pricing {
+        width: 44.5rem;
+        height: 100rem;
+        justify-content: space-between;
+    }
+    
+    section.pricing > div {
+        width: 44.5rem;
+        height: 44.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3rem;
+        position: relative;
+        padding-top: 1rem;
+        padding-left: 4rem;
+    }
+    
+    section.pricing > div > p {
+        width: 36.9rem;
+        height: 5rem;
+    }
+    
+    /* Second price box style */
+    
+    section.pricing > div.pricing-paid {
+        background-color: var(--blueGreen);
+        height: 48.2rem;
+    }
+    
+    /* Page footer */
+    
+    footer.page-footer {
+        width: 76.8rem;
+        height: 14rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+        background: url("./assets/bg-footer-squiggle.svg");
+        background-size: 102.2rem 14rem;
+        background-position: -25rem;
+    } 
+    
+    footer.page-footer > h5.footer-title {
+        width: 33.6rem;
+        height: 3.3rem;
+        text-align: center;
+        font-weight: 800;
+        font-size: 2.4rem;
+    }
+    
+    footer.page-footer > div.email-container {
+        width: 47.6rem;
+        height: 4.8rem;
+        display: flex;
+        flex-direction: row;
+        align-items: space-between;
+        justify-content: space-between;
+    }
+    
+    footer.page-footer > div.email-container > input {
+        width: 32rem;
+        height: 4.8rem;
+    }
+    
+    footer.page-footer > div.email-container > button {
+        width: 14rem;
+        height: 4.8rem;
+    }
+}
