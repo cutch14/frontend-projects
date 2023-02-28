@@ -1,7 +1,1079 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+html {
+    font-size: 62.5%;
+    font-family: "Ubuntu", sans-serif;
+}
 
+:root {
+    --lightRed: hsl(356, 100%, 66%);
+    --veryLightRed: hsl(355, 100%, 74%);
+    --veryDarkBlue: hsl(208, 49%, 24%);
+    --white: hsl(0, 0%, 100%);
+    --grayishBlue: hsl(240, 2%, 79%);
+    --veryDarkGrayishBlue: hsl(207, 13%, 34%);
+    --veryDarkBlackBlue: hsl(240, 10%, 16%);
+    /* BG gradient mobile */
+    --veryLightRed: hsl(13, 100%, 72%);
+    --lightRed: hsl(353, 100%, 62%);
+    /* BG gradient body */
+    --veryDarkGrayBlue: hsl(237, 17%, 21%);
+    --veryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
 
 /* ************ */
 /* Mobile Styling */
 /* ************ */
+
+main.main-container {
+    width: 37.5rem;
+    height: 468.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Hide desktop menu */
+
+header.desktop-header {
+    display: none;
+}
+
+header.mobile-header {
+    width: 37.5rem;
+    height: 60rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10rem;
+    padding-top: 5rem;
+    background-image: url("./images/bg-pattern-intro-mobile.svg"), 
+    linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+    background-size: 200%;
+    border-radius: 0 0 0 10rem;
+}
+
+header.mobile-header > div.header-title {
+    width: 32.7rem;
+    height: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.mobile-header > div.header-title > img {
+    width: 8.2rem;
+    height: 3.2rem;
+}
+
+header.mobile-header > div.header-title > div.burger {
+    width: 3.2rem;
+    height: 1.8rem;
+    background-image: url("./images/icon-hamburger.svg");
+    transition: all 0.2s ease-in-out;
+}
+
+header.mobile-header > div.header-title > div.burger:hover {
+    cursor: pointer;
+}
+
+header.mobile-header > div.header-title > div.burger.active {
+    width: 2.6rem;
+    height: 2.6rem;
+    background-image: url("./images/icon-close.svg");
+    background-repeat: no-repeat;
+}
+
+header.mobile-header > div.header-info {
+    width: 32.7rem;
+    height: 24.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+header.mobile-header > div.header-info > h1.header-title {
+    width: 32.7rem;
+    height: 11rem;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-size: 3.6rem;
+    text-align: center;
+    line-height: 5.55rem;
+    color: var(--white);
+}
+
+header.mobile-header > div.header-info > p.header-text {
+    width: 32.7rem;
+    height: 5.6rem;
+    text-align: center;
+    font-family: "Overpass";
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.758rem;
+    color: var(--white);
+    margin-top: -3rem;
+}
+
+header.mobile-header > div.header-info > div.foot-of-header {
+    width: 29rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+header.mobile-header > div.header-info > div.foot-of-header > button.start,
+header.mobile-header > div.header-info > div.foot-of-header > button.learn {
+    width: 13.7rem;
+    height: 4.8rem;
+    border-radius: 2.8rem;
+    border: .2rem solid var(--white);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+header.mobile-header > div.header-info > div.foot-of-header > button.start:hover,
+header.mobile-header > div.header-info > div.foot-of-header > button.learn:hover {
+    cursor: pointer;
+}
+
+header.mobile-header > div.header-info > div.foot-of-header > button.start {
+    background-color: var(--white);
+    color: var(--lightRed);
+}
+
+header.mobile-header > div.header-info > div.foot-of-header > button.learn {
+    background-color: transparent;
+    color: var(--white);
+}
+
+/* Mobile menu */
+
+header.mobile-header > section.menu {
+    width: 32.4rem;
+    height: 51.1rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3rem 0;
+    gap: 2rem;
+    align-items: center;
+    background: var(--white);
+    border-radius: .5rem;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+    top: 18rem;
+    display: none;
+}
+
+header.mobile-header > section.menu.active {
+    display: flex;
+}
+
+header.mobile-header > section.menu > div {
+    width: 27.6rem;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header.mobile-header > section.menu > div > div.title-container {
+    width: 25rem;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+header.mobile-header > section.menu > div > div.title-container > h3 {
+    font-family: "Overpass";
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+header.mobile-header > section.menu > div > div.title-container > h3:hover {
+    cursor: pointer;
+}
+
+header.mobile-header > section.menu > div > div:nth-child(2) {
+    width: 27.6rem;
+    max-height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(223, 221, 221);
+    border-radius: .5rem;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--veryDarkBlue);
+    gap: .7rem;
+    display: none;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}  
+
+header.mobile-header > section.menu > div > div:nth-child(2) > p:hover {
+    cursor: pointer;
+}
+
+header.mobile-header > section.menu > div > div > div.chevron {
+    width: .8rem;
+    height: .4rem;
+    background: url("./images/icon-arrow-dark.svg");
+    background-repeat: no-repeat;
+    background-size: .8rem .4rem;
+}
+
+header.mobile-header > section.menu > div.active > div:nth-child(2) {
+    display: flex;
+    opacity: 1;
+}
+
+header.mobile-header > section.menu > div.active > div > div.chevron {
+    transform: rotate(180deg);
+}
+
+header.mobile-header > section.menu > footer.sign-log {
+    width: 27.6rem;
+    height: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 2rem;
+    border-top: .01rem solid var(--grayishBlue);
+}
+
+header.mobile-header > section.menu > footer.sign-log > p.login {
+    font-family: "Overpass";
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: var(--veryDarkBlue);
+    height: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.mobile-header > section.menu > footer.sign-log > p.sign-up {
+    width: 13.7rem;
+    height: 4.8rem;
+    font-family: "Overpass";
+    background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.8rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+/* First information section */
+
+section.info-one {
+    width: 32.7rem;
+    height: 108.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.info-one > h3.title {
+    width: 32.7rem;
+    height: 4.3rem;
+    text-align: center;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-size: 2.8rem;
+    color: var(--veryDarkBlue);
+}
+
+section.info-one > div.box-one-img {
+    width: 32.6rem;
+    height: 32.6rem;
+}
+
+section.info-one > div.box-one-img > div.bg-img {
+    width: 32.6rem;
+    height: 32.6rem;
+    background: url("./images/illustration-editor-mobile.svg");
+    background-size: 37.6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section.info-one > div.editor-box {
+    width: 31.8rem;
+    height: 33.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.info-one > div.editor-box > h4.editor-title {
+    width: 31.8rem;
+    height: 6.6rem;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--veryDarkBlue);
+}
+
+section.info-one > div.editor-box > p.editor-text {
+    width: 31.8rem;
+    height: 25.2rem;
+    font-family: "Overpass";
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    text-align: center;
+    color: var(--veryDarkGrayishBlue);
+}
+
+section.info-one > div.content-box {
+    width: 31.8rem;
+    height: 25.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.info-one > div.content-box > h4.content-title {
+    width: 31.8rem;
+    height: 7.5rem;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--veryDarkBlue);
+}
+
+section.info-one > div.content-box > p.content-text {
+    width: 31.8rem;
+    height: 16.8rem;
+    font-family: "Overpass";
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    text-align: center;
+    color: var(--veryDarkGrayishBlue);
+}
+
+/* Information section two */
+
+section.info-two {
+    width: 37.5rem;
+    max-height: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+section.info-two > img.phones-img {
+    width: 32.8rem;
+    height: 34.7rem;
+    position: absolute;
+    top: -15rem;
+}
+
+section.info-two > div.structure-box {
+    width: 37.5rem;
+    min-height: 62.5rem;
+    background: url("./images/bg-pattern-circles.svg");
+    background-size: 60rem 60rem;
+    background-position-y: -25rem;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    height: 30rem;
+    background-color: var(--veryDarkGrayBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+    padding-bottom: 8.5rem;
+    border-radius: 0 10rem;
+}
+
+section.info-two > div.structure-box > h4.structure-text {
+    width: 32.7rem;
+    height: 12.2rem;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 6.128rem;
+    text-align: center;
+    color: var(--white);
+}
+
+section.info-two > div.structure-box > p.structure-text {
+    width: 30.7rem;
+    height: 17.9rem;
+    font-family: "Overpass";
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    text-align: center;
+    color: var(--grayishBlue);
+}
+
+/* Information section three */
+
+section.info-three {
+    width: 32.8rem;
+    height: 92.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.info-three > div.laptop-img {
+    width: 32.8rem;
+    height: 32.6rem;
+    background-image: url("./images/illustration-laptop-mobile.svg");
+    background-position: center;
+    filter: drop-shadow(0px 20px 40px rgba(108, 141, 228, 0.243444));
+}
+
+section.info-three > article {
+    width: 32.8rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.info-three > article > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section.info-three > article > div > h4 {
+    width: 31.8rem;
+    height: 4.5rem;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--veryDarkBlue);
+}
+
+section.info-three > article > div > p {
+    width: 31.8rem;
+    max-height: 25.2rem;
+    font-family: "Overpass";
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--veryDarkGrayishBlue);
+}
+
+/* Footer */
+
+footer.page-footer {
+    width: 37.5rem;
+    height: 90rem;
+    background-color: var(--veryDarkBlackBlue);
+    border-radius: 0 10rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer.page-footer > img.footer-logo {
+    width: 10.1rem;
+    height: 4rem;
+}
+
+footer.page-footer > div {
+    width: 32.8rem;
+    max-height: 21.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer.page-footer > div > h5 {
+    width: 11.1rem;
+    height: 3.3rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: var(--white);
+    text-align: center;
+}
+
+footer.page-footer > div > div > p {
+    width: 32.8rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--grayishBlue);
+    font-size: 1.4rem;
+}
+
+footer.page-footer > div > h5,
+footer.page-footer > div > div > p {
+    cursor: pointer;
+}
+
+/* *************** */
+/* Desktop styling */
+/* *************** */
+
+@media only screen and (min-width: 50rem) {
+    main.main-container {
+        width: 37.5rem;
+        height: 468.9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    /* Hide desktop menu */
+    
+    header.desktop-header {
+        display: none;
+    }
+    
+    header.mobile-header {
+        width: 37.5rem;
+        height: 60rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10rem;
+        padding-top: 5rem;
+        background-image: url("./images/bg-pattern-intro-mobile.svg"), 
+        linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+        background-size: 200%;
+        border-radius: 0 0 0 10rem;
+    }
+    
+    header.mobile-header > div.header-title {
+        width: 32.7rem;
+        height: 3.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header.mobile-header > div.header-title > img {
+        width: 8.2rem;
+        height: 3.2rem;
+    }
+    
+    header.mobile-header > div.header-title > div.burger {
+        width: 3.2rem;
+        height: 1.8rem;
+        background-image: url("./images/icon-hamburger.svg");
+        transition: all 0.2s ease-in-out;
+    }
+    
+    header.mobile-header > div.header-title > div.burger:hover {
+        cursor: pointer;
+    }
+    
+    header.mobile-header > div.header-title > div.burger.active {
+        width: 2.6rem;
+        height: 2.6rem;
+        background-image: url("./images/icon-close.svg");
+        background-repeat: no-repeat;
+    }
+    
+    header.mobile-header > div.header-info {
+        width: 32.7rem;
+        height: 24.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    
+    header.mobile-header > div.header-info > h1.header-title {
+        width: 32.7rem;
+        height: 11rem;
+        font-family: "Overpass";
+        font-weight: 600;
+        font-size: 3.6rem;
+        text-align: center;
+        line-height: 5.55rem;
+        color: var(--white);
+    }
+    
+    header.mobile-header > div.header-info > p.header-text {
+        width: 32.7rem;
+        height: 5.6rem;
+        text-align: center;
+        font-family: "Overpass";
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.758rem;
+        color: var(--white);
+        margin-top: -3rem;
+    }
+    
+    header.mobile-header > div.header-info > div.foot-of-header {
+        width: 29rem;
+        height: 4.8rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    header.mobile-header > div.header-info > div.foot-of-header > button.start,
+    header.mobile-header > div.header-info > div.foot-of-header > button.learn {
+        width: 13.7rem;
+        height: 4.8rem;
+        border-radius: 2.8rem;
+        border: .2rem solid var(--white);
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+    
+    header.mobile-header > div.header-info > div.foot-of-header > button.start:hover,
+    header.mobile-header > div.header-info > div.foot-of-header > button.learn:hover {
+        cursor: pointer;
+    }
+    
+    header.mobile-header > div.header-info > div.foot-of-header > button.start {
+        background-color: var(--white);
+        color: var(--lightRed);
+    }
+    
+    header.mobile-header > div.header-info > div.foot-of-header > button.learn {
+        background-color: transparent;
+        color: var(--white);
+    }
+    
+    /* Mobile menu */
+    
+    header.mobile-header > section.menu {
+        width: 32.4rem;
+        height: 51.1rem;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 3rem 0;
+        gap: 2rem;
+        align-items: center;
+        background: var(--white);
+        border-radius: .5rem;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+        top: 18rem;
+        display: none;
+    }
+    
+    header.mobile-header > section.menu.active {
+        display: flex;
+    }
+    
+    header.mobile-header > section.menu > div {
+        width: 27.6rem;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header.mobile-header > section.menu > div > div.title-container {
+        width: 25rem;
+        height: 2.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+    }
+    
+    header.mobile-header > section.menu > div > div.title-container > h3 {
+        font-family: "Overpass";
+        font-weight: 600;
+        font-size: 1.8rem;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    header.mobile-header > section.menu > div > div.title-container > h3:hover {
+        cursor: pointer;
+    }
+    
+    header.mobile-header > section.menu > div > div:nth-child(2) {
+        width: 27.6rem;
+        max-height: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(223, 221, 221);
+        border-radius: .5rem;
+        font-family: "Overpass";
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: var(--veryDarkBlue);
+        gap: .7rem;
+        display: none;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+    }  
+    
+    header.mobile-header > section.menu > div > div:nth-child(2) > p:hover {
+        cursor: pointer;
+    }
+    
+    header.mobile-header > section.menu > div > div > div.chevron {
+        width: .8rem;
+        height: .4rem;
+        background: url("./images/icon-arrow-dark.svg");
+        background-repeat: no-repeat;
+        background-size: .8rem .4rem;
+    }
+    
+    header.mobile-header > section.menu > div.active > div:nth-child(2) {
+        display: flex;
+        opacity: 1;
+    }
+    
+    header.mobile-header > section.menu > div.active > div > div.chevron {
+        transform: rotate(180deg);
+    }
+    
+    header.mobile-header > section.menu > footer.sign-log {
+        width: 27.6rem;
+        height: 12.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 2rem;
+        border-top: .01rem solid var(--grayishBlue);
+    }
+    
+    header.mobile-header > section.menu > footer.sign-log > p.login {
+        font-family: "Overpass";
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: var(--veryDarkBlue);
+        height: 4.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header.mobile-header > section.menu > footer.sign-log > p.sign-up {
+        width: 13.7rem;
+        height: 4.8rem;
+        font-family: "Overpass";
+        background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2.8rem;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: var(--white);
+    }
+    
+    /* First information section */
+    
+    section.info-one {
+        width: 32.7rem;
+        height: 108.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    section.info-one > h3.title {
+        width: 32.7rem;
+        height: 4.3rem;
+        text-align: center;
+        font-family: "Overpass";
+        font-weight: 600;
+        font-size: 2.8rem;
+        color: var(--veryDarkBlue);
+    }
+    
+    section.info-one > div.box-one-img {
+        width: 32.6rem;
+        height: 32.6rem;
+    }
+    
+    section.info-one > div.box-one-img > div.bg-img {
+        width: 32.6rem;
+        height: 32.6rem;
+        background: url("./images/illustration-editor-mobile.svg");
+        background-size: 37.6rem;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    section.info-one > div.editor-box {
+        width: 31.8rem;
+        height: 33.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    section.info-one > div.editor-box > h4.editor-title {
+        width: 31.8rem;
+        height: 6.6rem;
+        font-family: "Overpass";
+        font-weight: 600;
+        font-size: 2.8rem;
+        text-align: center;
+        color: var(--veryDarkBlue);
+    }
+    
+    section.info-one > div.editor-box > p.editor-text {
+        width: 31.8rem;
+        height: 25.2rem;
+        font-family: "Overpass";
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        text-align: center;
+        color: var(--veryDarkGrayishBlue);
+    }
+    
+    section.info-one > div.content-box {
+        width: 31.8rem;
+        height: 25.9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    section.info-one > div.content-box > h4.content-title {
+        width: 31.8rem;
+        height: 7.5rem;
+        font-family: "Overpass";
+        font-weight: 600;
+        font-size: 2.8rem;
+        text-align: center;
+        color: var(--veryDarkBlue);
+    }
+    
+    section.info-one > div.content-box > p.content-text {
+        width: 31.8rem;
+        height: 16.8rem;
+        font-family: "Overpass";
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        text-align: center;
+        color: var(--veryDarkGrayishBlue);
+    }
+    
+    /* Information section two */
+    
+    section.info-two {
+        width: 37.5rem;
+        max-height: 80rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    section.info-two > img.phones-img {
+        width: 32.8rem;
+        height: 34.7rem;
+        position: absolute;
+        top: -15rem;
+    }
+    
+    section.info-two > div.structure-box {
+        width: 37.5rem;
+        min-height: 62.5rem;
+        background: url("./images/bg-pattern-circles.svg");
+        background-size: 60rem 60rem;
+        background-position-y: -25rem;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        height: 30rem;
+        background-color: var(--veryDarkGrayBlue);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 3rem;
+        padding-bottom: 8.5rem;
+        border-radius: 0 10rem;
+    }
+    
+    section.info-two > div.structure-box > h4.structure-text {
+        width: 32.7rem;
+        height: 12.2rem;
+        font-family: "Overpass";
+        font-weight: 600;
+        font-size: 4rem;
+        line-height: 6.128rem;
+        text-align: center;
+        color: var(--white);
+    }
+    
+    section.info-two > div.structure-box > p.structure-text {
+        width: 30.7rem;
+        height: 17.9rem;
+        font-family: "Overpass";
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        text-align: center;
+        color: var(--grayishBlue);
+    }
+    
+    /* Information section three */
+    
+    section.info-three {
+        width: 32.8rem;
+        height: 92.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    section.info-three > div.laptop-img {
+        width: 32.8rem;
+        height: 32.6rem;
+        background-image: url("./images/illustration-laptop-mobile.svg");
+        background-position: center;
+        filter: drop-shadow(0px 20px 40px rgba(108, 141, 228, 0.243444));
+    }
+    
+    section.info-three > article {
+        width: 32.8rem;
+        height: 60rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    section.info-three > article > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    section.info-three > article > div > h4 {
+        width: 31.8rem;
+        height: 4.5rem;
+        font-family: "Overpass";
+        font-weight: 600;
+        font-size: 2.8rem;
+        text-align: center;
+        color: var(--veryDarkBlue);
+    }
+    
+    section.info-three > article > div > p {
+        width: 31.8rem;
+        max-height: 25.2rem;
+        font-family: "Overpass";
+        font-weight: 400;
+        font-size: 1.6rem;
+        text-align: center;
+        color: var(--veryDarkGrayishBlue);
+    }
+    
+    /* Footer */
+    
+    footer.page-footer {
+        width: 37.5rem;
+        height: 90rem;
+        background-color: var(--veryDarkBlackBlue);
+        border-radius: 0 10rem 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    footer.page-footer > img.footer-logo {
+        width: 10.1rem;
+        height: 4rem;
+    }
+    
+    footer.page-footer > div {
+        width: 32.8rem;
+        max-height: 21.9rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    footer.page-footer > div > h5 {
+        width: 11.1rem;
+        height: 3.3rem;
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: var(--white);
+        text-align: center;
+    }
+    
+    footer.page-footer > div > div > p {
+        width: 32.8rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        color: var(--grayishBlue);
+        font-size: 1.4rem;
+    }
+    
+    footer.page-footer > div > h5,
+    footer.page-footer > div > div > p {
+        cursor: pointer;
+    }
+}
