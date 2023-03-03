@@ -148,19 +148,28 @@ header.mobile-header > div.header-info > div.foot-of-header > button.learn {
     font-size: 1.6rem;
 }
 
-header.mobile-header > div.header-info > div.foot-of-header > button.start:hover,
-header.mobile-header > div.header-info > div.foot-of-header > button.learn:hover {
-    cursor: pointer;
-}
-
 header.mobile-header > div.header-info > div.foot-of-header > button.start {
     background-color: var(--white);
     color: var(--lightRed);
+    transition: all 0.2s ease-in-out;
+}
+
+header.mobile-header > div.header-info > div.foot-of-header > button.start:hover {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--veryLightRed);
+    border-color: var(--veryLightRed);
 }
 
 header.mobile-header > div.header-info > div.foot-of-header > button.learn {
     background-color: transparent;
     color: var(--white);
+}
+
+header.mobile-header > div.header-info > div.foot-of-header > button.learn:hover {
+    cursor: pointer;
+    color: var(--lightRed);
+    background-color: var(--white);
 }
 
 /* Mobile menu */
@@ -549,9 +558,13 @@ footer.page-footer > div > div > p {
     font-size: 1.4rem;
 }
 
-footer.page-footer > div > h5,
-footer.page-footer > div > div > p {
+footer.page-footer > div > h5:hover,
+footer.page-footer > div > div > p:hover {
     cursor: pointer;
+}
+
+footer.page-footer > div > div > p:hover {
+    text-decoration: underline;
 }
 
 /* *************** */
@@ -559,23 +572,31 @@ footer.page-footer > div > div > p {
 /* *************** */
 
 @media only screen and (min-width: 50rem) {
+
+    body {
+        width: 144rem;
+        height: 339.4rem;
+    }
+
     main.main-container {
-        width: 37.5rem;
-        height: 468.9rem;
+        width: 144rem;
+        height: 339.4rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
-    
-    /* Hide desktop menu */
-    
-    header.desktop-header {
+
+    /* Hide mobile menu */
+
+    header.mobile-header {
         display: none;
     }
+
+    /* Display desktop menu */
     
-    header.mobile-header {
-        width: 37.5rem;
+    header.desktop-header {
+        width: 144rem;
         height: 60rem;
         position: relative;
         display: flex;
@@ -590,237 +611,239 @@ footer.page-footer > div > div > p {
         border-radius: 0 0 0 10rem;
     }
     
-    header.mobile-header > div.header-title {
-        width: 32.7rem;
+    header.desktop-header > div.header-title {
+        width: 120rem;
         height: 3.2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
     
-    header.mobile-header > div.header-title > img {
-        width: 8.2rem;
-        height: 3.2rem;
+    header.desktop-header > div.header-title > img {
+        width: 10.1rem;
+        height: 4rem;
     }
-    
-    header.mobile-header > div.header-title > div.burger {
-        width: 3.2rem;
-        height: 1.8rem;
-        background-image: url("./images/icon-hamburger.svg");
+
+    /* Menu headers */
+
+    header.desktop-header > div.header-title > div.menu-icons {
+        width: 40rem;
+        height: 2.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: -30rem;
+    }
+
+    header.desktop-header > div.header-title > div.menu-icons > h3 {
+        width: 9.5rem;
+        height: 2.2rem;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: var(--white);
+        opacity: 0.8;
         transition: all 0.2s ease-in-out;
     }
-    
-    header.mobile-header > div.header-title > div.burger:hover {
+
+    header.desktop-header > div.header-title > div.menu-icons > h3:hover {
         cursor: pointer;
+        color: var(--white);
+        opacity: 1;
+        text-decoration: underline;
+    }
+
+    header.desktop-header > div.header-title > div.menu-icons > h3::after {
+        content: " ";
+        display: inline-block;
+        width: 1rem;
+        height: .7rem;
+        background: url("./images/icon-arrow-light.svg");
+        background-size: 1rem .7rem;
+        margin-left: 1rem;
+    }
+
+    header.desktop-header > div.header-title > div.menu-icons > h3.active::after {
+        transform: rotate(180deg);
+    }
+
+    /* Menu dropdowns */
+
+    header.desktop-header > div.header-title > div.menu-options {
+        position: absolute;
+        display: flex;
+        width: 45rem;
+        top: 5rem;
+        left: 15rem;
+    }
+
+    header.desktop-header > div.header-title > div.menu-options > div {
+        width: 16.8rem;
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--white);
+        padding: 1rem;
+        border-radius: .5rem;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+        transition: all 0.2s ease-in-out;
+        display: none;
+        position: relative;
     }
     
-    header.mobile-header > div.header-title > div.burger.active {
-        width: 2.6rem;
-        height: 2.6rem;
-        background-image: url("./images/icon-close.svg");
-        background-repeat: no-repeat;
+    header.desktop-header > div.header-title > div.menu-options > div.active {
+        display: flex;
+        position: absolute;
+    }
+
+    header.desktop-header > div.header-title > div.menu-options > div.product {
+        left: -2.5rem;
+    }
+
+    header.desktop-header > div.header-title > div.menu-options > div.company {
+        left: 14.5rem;
+    }
+
+    header.desktop-header > div.header-title > div.menu-options > div.connect {
+        left: 31.5rem;
+    }
+
+    
+
+    header.desktop-header > div.header-title > div.menu-options > div > p {
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    header.desktop-header > div.header-title > div.menu-options > div > p:hover {
+        cursor: pointer;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    header.desktop-header > div.header-title > div.sign-log {
+        width: 22rem;
+        height: 4.8rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header.desktop-header > div.header-title > div.sign-log > button.login {
+        width: 5rem;
+        height: 4.8rem;
+        background-color: transparent;
+        border: none;
+        color: var(--white);
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+
+    header.desktop-header > div.header-title > div.sign-log > button.sign-up {
+        width: 13.7rem;
+        height: 4.8rem;
+        background-color: white;
+        color: var(--lightRed);
+        border: none;
+        border-radius: 2.8rem;
+        font-weight: 700;
+        font-size: 1.6rem;
+        transition: all 0.2s ease-in-out;
+    }
+
+    header.desktop-header > div.header-title > div.sign-log > button.sign-up:hover {
+        cursor: pointer;
+        background-color: var(--veryLightRed);
+        color: white;
     }
     
-    header.mobile-header > div.header-info {
-        width: 32.7rem;
-        height: 24.8rem;
+    header.desktop-header > div.header-info {
+        width: 92rem;
+        height: 21.9rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
+        margin-top: 8rem;
     }
     
-    header.mobile-header > div.header-info > h1.header-title {
-        width: 32.7rem;
-        height: 11rem;
+    header.desktop-header > div.header-info > h1.header-title {
+        width: 92rem;
+        height: 9.8rem;
         font-family: "Overpass";
         font-weight: 600;
-        font-size: 3.6rem;
+        font-size: 6.4rem;
         text-align: center;
         line-height: 5.55rem;
         color: var(--white);
     }
     
-    header.mobile-header > div.header-info > p.header-text {
-        width: 32.7rem;
-        height: 5.6rem;
+    header.desktop-header > div.header-info > p.header-text {
+        width: 49.1rem;
+        height: 3.1rem;
         text-align: center;
         font-family: "Overpass";
         font-weight: 400;
-        font-size: 1.8rem;
+        font-size: 2rem;
         line-height: 2.758rem;
         color: var(--white);
-        margin-top: -3rem;
+        margin-top: -8rem;
     }
     
-    header.mobile-header > div.header-info > div.foot-of-header {
+    header.desktop-header > div.header-info > div.foot-of-header {
         width: 29rem;
         height: 4.8rem;
         display: flex;
         justify-content: space-between;
     }
     
-    header.mobile-header > div.header-info > div.foot-of-header > button.start,
-    header.mobile-header > div.header-info > div.foot-of-header > button.learn {
+    header.desktop-header > div.header-info > div.foot-of-header > button.start,
+    header.desktop-header > div.header-info > div.foot-of-header > button.learn {
         width: 13.7rem;
         height: 4.8rem;
         border-radius: 2.8rem;
         border: .2rem solid var(--white);
         font-weight: 700;
         font-size: 1.6rem;
+        transition: all 0.2s ease-in-out;
     }
     
-    header.mobile-header > div.header-info > div.foot-of-header > button.start:hover,
-    header.mobile-header > div.header-info > div.foot-of-header > button.learn:hover {
-        cursor: pointer;
-    }
-    
-    header.mobile-header > div.header-info > div.foot-of-header > button.start {
+    header.desktop-header > div.header-info > div.foot-of-header > button.start {
         background-color: var(--white);
         color: var(--lightRed);
     }
     
-    header.mobile-header > div.header-info > div.foot-of-header > button.learn {
+    header.desktop-header > div.header-info > div.foot-of-header > button.learn {
         background-color: transparent;
         color: var(--white);
-    }
+    } 
     
-    /* Mobile menu */
-    
-    header.mobile-header > section.menu {
-        width: 32.4rem;
-        height: 51.1rem;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 3rem 0;
-        gap: 2rem;
-        align-items: center;
-        background: var(--white);
-        border-radius: .5rem;
-        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
-        top: 18rem;
-        display: none;
-    }
-    
-    header.mobile-header > section.menu.active {
-        display: flex;
-    }
-    
-    header.mobile-header > section.menu > div {
-        width: 27.6rem;
-        max-height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    header.mobile-header > section.menu > div > div.title-container {
-        width: 25rem;
-        height: 2.8rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: .5rem;
-    }
-    
-    header.mobile-header > section.menu > div > div.title-container > h3 {
-        font-family: "Overpass";
-        font-weight: 600;
-        font-size: 1.8rem;
-        text-align: center;
-        transition: all 0.2s ease-in-out;
-    }
-    
-    header.mobile-header > section.menu > div > div.title-container > h3:hover {
+    header.desktop-header > div.header-info > div.foot-of-header > button.start:hover,
+    header.desktop-header > div.header-info > div.foot-of-header > button.learn:hover {
         cursor: pointer;
     }
-    
-    header.mobile-header > section.menu > div > div:nth-child(2) {
-        width: 27.6rem;
-        max-height: 100%;
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgb(223, 221, 221);
-        border-radius: .5rem;
-        font-family: "Overpass";
-        font-weight: 600;
-        font-size: 1.6rem;
-        color: var(--veryDarkBlue);
-        gap: .7rem;
-        display: none;
-        opacity: 0;
-        transition: all 0.2s ease-in-out;
-    }  
-    
-    header.mobile-header > section.menu > div > div:nth-child(2) > p:hover {
-        cursor: pointer;
-    }
-    
-    header.mobile-header > section.menu > div > div > div.chevron {
-        width: .8rem;
-        height: .4rem;
-        background: url("./images/icon-arrow-dark.svg");
-        background-repeat: no-repeat;
-        background-size: .8rem .4rem;
-    }
-    
-    header.mobile-header > section.menu > div.active > div:nth-child(2) {
-        display: flex;
-        opacity: 1;
-    }
-    
-    header.mobile-header > section.menu > div.active > div > div.chevron {
-        transform: rotate(180deg);
-    }
-    
-    header.mobile-header > section.menu > footer.sign-log {
-        width: 27.6rem;
-        height: 12.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        bottom: 2rem;
-        border-top: .01rem solid var(--grayishBlue);
-    }
-    
-    header.mobile-header > section.menu > footer.sign-log > p.login {
-        font-family: "Overpass";
-        font-weight: 600;
-        font-size: 1.8rem;
-        color: var(--veryDarkBlue);
-        height: 4.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    header.mobile-header > section.menu > footer.sign-log > p.sign-up {
-        width: 13.7rem;
-        height: 4.8rem;
-        font-family: "Overpass";
-        background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 2.8rem;
-        font-weight: 700;
-        font-size: 1.6rem;
+
+    header.desktop-header > div.header-info > div.foot-of-header > button.start:hover {
+        background-color: var(--veryLightRed);
+        border-color: var(--veryLightRed);
         color: var(--white);
     }
-    
+
+    header.desktop-header > div.header-info > div.foot-of-header > button.learn:hover {
+        background-color: var(--white);
+        color: var(--lightRed);
+    }
+
+    /* Desktop menu */
+       
     /* First information section */
     
     section.info-one {
-        width: 32.7rem;
-        height: 108.6rem;
+        width: 144rem;
+        height: 88.2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -914,8 +937,8 @@ footer.page-footer > div > div > p {
     /* Information section two */
     
     section.info-two {
-        width: 37.5rem;
-        max-height: 80rem;
+        width: 144rem;
+        max-height: 40rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -973,8 +996,8 @@ footer.page-footer > div > div > p {
     /* Information section three */
     
     section.info-three {
-        width: 32.8rem;
-        height: 92.6rem;
+        width: 144rem;
+        height: 78.6rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1027,12 +1050,12 @@ footer.page-footer > div > div > p {
     /* Footer */
     
     footer.page-footer {
-        width: 37.5rem;
-        height: 90rem;
+        width: 144rem;
+        height: 35.9rem;
         background-color: var(--veryDarkBlackBlue);
         border-radius: 0 10rem 0 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
     }
