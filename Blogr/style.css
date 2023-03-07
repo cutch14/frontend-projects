@@ -661,6 +661,7 @@ footer.page-footer > div > div > p:hover {
         background: url("./images/icon-arrow-light.svg");
         background-size: 1rem .7rem;
         margin-left: 1rem;
+        transition: transform 0.2s ease-in-out;
     }
 
     header.desktop-header > div.header-title > div.menu-icons > h3.active::after {
@@ -679,7 +680,8 @@ footer.page-footer > div > div > p:hover {
 
     header.desktop-header > div.header-title > div.menu-options > div {
         width: 16.8rem;
-        height: 20rem;
+        height: 0;
+        opacity: 0;
         display: flex;
         flex-direction: column;
         gap: .5rem;
@@ -697,6 +699,8 @@ footer.page-footer > div > div > p:hover {
     header.desktop-header > div.header-title > div.menu-options > div.active {
         display: flex;
         position: absolute;
+        height: 20rem;
+        opacity: 1;
     }
 
     header.desktop-header > div.header-title > div.menu-options > div.product {
@@ -836,9 +840,9 @@ footer.page-footer > div > div > p:hover {
         background-color: var(--white);
         color: var(--lightRed);
     }
-
-    /* Desktop menu */
-       
+    
+    /* *************************************************************************************** */
+    /* *************************************************************************************** */
     /* First information section */
     
     section.info-one {
@@ -846,151 +850,123 @@ footer.page-footer > div > div > p:hover {
         height: 88.2rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background: url("./images/illustration-editor-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: 80rem;
+        gap: 9rem;
+        padding-top: 7.5rem;
     }
     
     section.info-one > h3.title {
-        width: 32.7rem;
-        height: 4.3rem;
-        text-align: center;
-        font-family: "Overpass";
+        width: 144rem;
+        height: 6.1rem;
         font-weight: 600;
-        font-size: 2.8rem;
-        color: var(--veryDarkBlue);
+        font-size: 4rem;
+        letter-spacing: -.12rem;
     }
     
     section.info-one > div.box-one-img {
-        width: 32.6rem;
-        height: 32.6rem;
-    }
-    
-    section.info-one > div.box-one-img > div.bg-img {
-        width: 32.6rem;
-        height: 32.6rem;
-        background: url("./images/illustration-editor-mobile.svg");
-        background-size: 37.6rem;
-        background-repeat: no-repeat;
-        background-position: center;
+        display: none;
     }
     
     section.info-one > div.editor-box {
-        width: 31.8rem;
-        height: 33.4rem;
+        width: 54rem;
+        height: 21.1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        margin-left: 12rem;
     }
     
     section.info-one > div.editor-box > h4.editor-title {
-        width: 31.8rem;
-        height: 6.6rem;
-        font-family: "Overpass";
-        font-weight: 600;
-        font-size: 2.8rem;
-        text-align: center;
-        color: var(--veryDarkBlue);
+        width: 54rem;
+        height: 4.1rem;
+        text-align: left;
     }
     
     section.info-one > div.editor-box > p.editor-text {
-        width: 31.8rem;
-        height: 25.2rem;
-        font-family: "Overpass";
-        font-weight: 400;
-        font-size: 1.6rem;
-        line-height: 2.8rem;
-        text-align: center;
-        color: var(--veryDarkGrayishBlue);
+        width: 54rem;
+        height: 15.4rem;
+        text-align: left;
     }
     
     section.info-one > div.content-box {
-        width: 31.8rem;
-        height: 25.9rem;
+        width: 54rem;
+        height: 16.9rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        margin-left: 12rem;
     }
     
     section.info-one > div.content-box > h4.content-title {
-        width: 31.8rem;
-        height: 7.5rem;
-        font-family: "Overpass";
-        font-weight: 600;
-        font-size: 2.8rem;
-        text-align: center;
-        color: var(--veryDarkBlue);
+        width: 54rem;
+        height: 4.1rem;
+        text-align: left;
     }
     
     section.info-one > div.content-box > p.content-text {
-        width: 31.8rem;
-        height: 16.8rem;
-        font-family: "Overpass";
-        font-weight: 400;
-        font-size: 1.6rem;
-        line-height: 2.8rem;
-        text-align: center;
-        color: var(--veryDarkGrayishBlue);
+        width: 54rem;
+        height: 11.2rem;
+        text-align: left;
     }
     
     /* Information section two */
     
     section.info-two {
         width: 144rem;
-        max-height: 40rem;
+        height: 40rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         position: relative;
     }
     
     section.info-two > img.phones-img {
-        width: 32.8rem;
-        height: 34.7rem;
+        width: 52.2rem;
+        height: 54.9rem;
         position: absolute;
-        top: -15rem;
+        top: -6rem;
+        left: 15rem;
     }
     
     section.info-two > div.structure-box {
-        width: 37.5rem;
-        min-height: 62.5rem;
+        width: 144rem;
+        min-height: 40rem;
         background: url("./images/bg-pattern-circles.svg");
-        background-size: 60rem 60rem;
-        background-position-y: -25rem;
-        background-position-x: center;
+        background-size: 101rem 101rem;
+        background-position-y: -55rem;
+        background-position-x: -22rem;
         background-repeat: no-repeat;
         height: 30rem;
         background-color: var(--veryDarkGrayBlue);
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
+        align-items: flex-end;
+        justify-content: center;
         gap: 3rem;
-        padding-bottom: 8.5rem;
+        padding-bottom: 0;
+        padding-right: 18rem;
         border-radius: 0 10rem;
     }
     
     section.info-two > div.structure-box > h4.structure-text {
-        width: 32.7rem;
-        height: 12.2rem;
-        font-family: "Overpass";
-        font-weight: 600;
-        font-size: 4rem;
-        line-height: 6.128rem;
-        text-align: center;
-        color: var(--white);
+        width: 54rem;
+        height: 6.1rem;
+        text-align: left;
+        letter-spacing: -.12rem;
     }
     
     section.info-two > div.structure-box > p.structure-text {
-        width: 30.7rem;
-        height: 17.9rem;
-        font-family: "Overpass";
-        font-weight: 400;
-        font-size: 1.6rem;
-        line-height: 2.8rem;
-        text-align: center;
-        color: var(--grayishBlue);
+        width: 54rem;
+        height: 11.2rem;
+        text-align: left;
     }
     
     /* Information section three */
@@ -999,52 +975,70 @@ footer.page-footer > div > div > p:hover {
         width: 144rem;
         height: 78.6rem;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: space-evenly;
+        justify-content: flex-start;
     }
     
     section.info-three > div.laptop-img {
-        width: 32.8rem;
-        height: 32.6rem;
-        background-image: url("./images/illustration-laptop-mobile.svg");
-        background-position: center;
+        width: 69.9rem;
+        height: 78.6rem;
+        background-image: url("./images/illustration-laptop-desktop.svg");
+        background-position: -27.5rem;
         filter: drop-shadow(0px 20px 40px rgba(108, 141, 228, 0.243444));
     }
     
     section.info-three > article {
-        width: 32.8rem;
-        height: 60rem;
+        width: 54rem;
+        height: 41.6rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
+        align-items: flex-start;
+        justify-content: space-between;
     }
     
     section.info-three > article > div {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 1.5rem;
     }
-    
-    section.info-three > article > div > h4 {
-        width: 31.8rem;
-        height: 4.5rem;
-        font-family: "Overpass";
-        font-weight: 600;
-        font-size: 2.8rem;
-        text-align: center;
-        color: var(--veryDarkBlue);
+
+    section.info-three > article > div.box-one {
+        width: 54rem;
+        height: 21.1rem;
     }
-    
-    section.info-three > article > div > p {
-        width: 31.8rem;
-        max-height: 25.2rem;
-        font-family: "Overpass";
-        font-weight: 400;
-        font-size: 1.6rem;
-        text-align: center;
-        color: var(--veryDarkGrayishBlue);
+
+    section.info-three > article > div.box-one > h4 {
+        width: 54rem;
+        height: 4.1rem;
+        text-align: left;
+    }
+
+    section.info-three > article > div.box-one > p {
+        width: 54rem;
+        height: 15.4rem;
+        text-align: left;
+        line-height: 2.8rem;
+    }
+
+    section.info-three > article > div.box-two {
+        width: 54rem;
+        height: 14.1rem;
+    }
+
+    section.info-three > article > div.box-two > h4 {
+        width: 54rem;
+        height: 4.1rem;
+        text-align: left;
+    }
+
+    section.info-three > article > div.box-two > p {
+        width: 54rem;
+        height: 8.4rem;
+        text-align: left;
+        line-height: 2.8rem;
     }
     
     /* Footer */
@@ -1052,12 +1046,13 @@ footer.page-footer > div > div > p:hover {
     footer.page-footer {
         width: 144rem;
         height: 35.9rem;
-        background-color: var(--veryDarkBlackBlue);
-        border-radius: 0 10rem 0 0;
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 8rem;
+        padding-left: 10rem;
+        gap: 14rem;
     }
     
     footer.page-footer > img.footer-logo {
@@ -1066,37 +1061,32 @@ footer.page-footer > div > div > p:hover {
     }
     
     footer.page-footer > div {
-        width: 32.8rem;
+        width: 20rem;
         max-height: 21.9rem;
         display: flex;
         flex-direction: column;
-        gap: 3rem;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-evenly;
     }
     
     footer.page-footer > div > h5 {
-        width: 11.1rem;
+        width: 20rem;
         height: 3.3rem;
         font-weight: 500;
         font-size: 1.8rem;
         color: var(--white);
-        text-align: center;
+        text-align: left;
     }
     
     footer.page-footer > div > div > p {
-        width: 32.8rem;
+        width: 20rem;
         height: 3rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-evenly;
         color: var(--grayishBlue);
         font-size: 1.4rem;
-    }
-    
-    footer.page-footer > div > h5,
-    footer.page-footer > div > div > p {
-        cursor: pointer;
+        text-align: left;
     }
 }

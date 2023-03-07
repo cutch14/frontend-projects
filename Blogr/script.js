@@ -29,6 +29,7 @@ const desktopMenuIcons = document.querySelectorAll(".menu-icons");
 const desktopDropdowns = document.querySelectorAll(".desktop-menu");
 
 function displayDesktopMenu(e) {
+    e.target.classList.toggle('active');
     let dropdownID = e.target.dataset.title;
     let selectedDropdown = document.querySelector(`div > .desktop-menu.${dropdownID}`);
     selectedDropdown.classList.toggle('active');
