@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&family=Overpass:wght@300;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Commissioner";
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --moderateCyan: hsl(176, 50%, 47%);
+    --darkCyan: hsl(176, 72%, 28%);
+    --black: hsl(0, 0%, 0%);
+    --darkGray: hsl(0, 0%, 48%);
+}
