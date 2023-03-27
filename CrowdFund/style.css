@@ -17,3 +17,223 @@ html {
     --black: hsl(0, 0%, 0%);
     --darkGray: hsl(0, 0%, 48%);
 }
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/* Main page content */
+
+main.main-container {
+    position: relative;
+    width: 37.5rem;
+    height: 271.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: url("./images/image-hero-mobile.jpg");
+    background-size: 37.5rem 30rem;
+    background-repeat: no-repeat;
+    background-color: #FAFAFA;
+}
+
+header.header {
+    width: 37.5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+}
+
+header.header > div.header-info {
+    width: 32.7rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.header > div.header-info > h1.header-title {
+    width: 20rem;
+    height: 3rem;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header.header > div.header-info > div.burger-menu {
+    width: 1.6rem;
+    height: 1.5rem;
+    background: url(./images/icon-hamburger.svg);
+    background-size: 1.6rem 1.5rem;
+}
+
+/* Page title section */
+
+section.page-title {
+    width: 32.7rem;
+    height: 28.4rem;
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+section.page-title > h1.title {
+    width: 23.9rem;
+    height: 4.8rem;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+}
+
+section.page-title > p.title-text {
+    width: 28rem;
+    height: 4.8rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    color: var(--darkGray);
+}
+
+section.page-title > img.title-logo {
+    width: 5.6rem;
+    height: 5.6rem;
+    position: absolute;
+    top: -2.8rem;
+    left: 13.5rem;
+}
+
+section.page-title > div.title-footer {
+    width: 27.9rem;
+    height: 5.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.page-title > div.title-footer > button.back {
+    width: 21.4rem;
+    height: 5.6rem;
+    border: none;
+    border-radius: 3.35rem;
+    background-color: var(--moderateCyan);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+}
+
+section.page-title > div.title-footer > div.bookmark > div.bookmark-text {
+    display: none;
+}
+
+/* Pledges section */
+
+section.pledges {
+    width: 32.7rem;
+    height: 41.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: .8rem;
+    background-color: #FFFFFF;
+}
+
+section.pledges > div.backed,
+section.pledges > div.backers,
+section.pledges > div.days {
+    height: 6.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.pledges > div.backed {
+    width: 12.9rem;
+}
+
+section.pledges > div.backers {
+    width: 8.7rem;
+}
+
+section.pledges > div.days {
+    width: 5.5rem;
+}
+
+section.pledges > div > h2 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--black);
+}
+
+section.pledges > div > p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--darkGray);
+}
+
+section.pledges > div.line-break {
+    width: 8rem;
+    height: 0.1rem;
+    background-color: rgb(181, 176, 176);
+}
+
+section.pledges > div.slider-container {
+    width: 27.9rem;
+    height: 1.2rem;
+    border-radius: 3.35rem;
+    background-color: #FAFAFA;
+}
+
+section.pledges > div.slider-container > div.slider-total {
+    width: 21.87rem;
+    height: 1.2rem;
+    background-color: var(--darkCyan);
+    border-radius: 3.35rem;
+}
+
+/* Faded overlay for selected menu background */
+
+div.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.1;
+    display: none;
+}
+
+/* Menu options modal */
+
+section.dropdown-menu {
+    position: absolute;
+    display: none;
+}
+
+/* Popup selected option box */
+
+section.selection-modal {
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+/* Thanks for support modal */
+
+section.success-modal {
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
