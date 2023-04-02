@@ -70,6 +70,26 @@ header.header > div.header-info > div.burger-menu {
     background-size: 1.6rem 1.5rem;
 }
 
+/* Faded overlay for selected menu background */
+
+div.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.1;
+    display: none;
+}
+
+/* Menu options modal */
+
+section.dropdown-menu {
+    position: absolute;
+    display: none;
+}
+
 /* Page title section */
 
 section.page-title {
@@ -201,24 +221,111 @@ section.pledges > div.slider-container > div.slider-total {
     border-radius: 3.35rem;
 }
 
-/* Faded overlay for selected menu background */
+/* About & pledge select info section */
 
-div.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.1;
-    display: none;
+section.about {
+    width: 32.7rem;
+    height: 165.5rem;
+    border-radius: .8rem;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-/* Menu options modal */
+section.about .sold-out {
+    opacity: 0.5;
+}
 
-section.dropdown-menu {
-    position: absolute;
-    display: none;
+section.about > article.about-info {
+    width: 27.9rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.about > article.about-info > h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+section.about > article.about-info > p {
+    color: var(--darkGray);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+/* Pledge selection containers */
+
+section.about > div.select-box {
+    width: 27.9rem;
+    height: 37rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 3rem;
+    border: .1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: .8rem;
+}
+
+section.about > div.select-box > div.select-box-title-container {
+    width: 17rem;
+    height: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.about > div.select-box > div.select-box-title-container > h3 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--black);
+}
+
+section.about > div.select-box > div.select-box-title-container > p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--moderateCyan);
+}
+
+section.about > div.select-box > p.select-box-text {
+    width: 23.1rem;
+    height: 12rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--darkGray);
+}
+
+section.about > div.select-box > p.amount-left {
+    width: 8.3rem;
+    height: 4rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+section.about > div.select-box > p.amount-left > span {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--darkGray);
+}
+
+section.about > div.select-box > button.select {
+    width: 15.7rem;
+    height: 4.8rem;
+    border: none;
+    border-radius: 3.35rem;
+    background-color: var(--moderateCyan);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #FFFFFF;
 }
 
 /* Popup selected option box */
