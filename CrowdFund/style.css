@@ -45,6 +45,8 @@ header.header {
     display: flex;
     justify-content: center;
     padding: 2.5rem 1.5rem;
+    margin-top: -5rem;
+    margin-bottom: 15rem;
 }
 
 header.header > div.header-info {
@@ -267,7 +269,7 @@ section.about > div.select-box {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    padding: 3rem;
+    padding-left: 3rem;
     border: .1rem solid rgba(0, 0, 0, 0.15);
     border-radius: .8rem;
 }
@@ -331,10 +333,201 @@ section.about > div.select-box > button.select {
 /* Popup selected option box */
 
 section.selection-modal {
+    width: 32.7rem;
+    min-height: 135.9rem;
     position: absolute;
-    top: 0;
+    top: 12.1rem;
     display: none;
 }
+
+section.selection-modal.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+}
+
+section.selection-modal.active > header.modal-header {
+    width: 28rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.selection-modal.active > header.modal-header > div {
+    width: 28rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.selection-modal.active > header.modal-header > div > h3 {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+section.selection-modal.active > header.modal-header > div > img {
+    width: 1.414rem;
+    height: 1.414rem;
+}
+
+section.selection-modal.active > header.modal-header > p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--darkGray);
+}
+
+section.selection-modal.active > section.pledge-container {
+    width: 27.9rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+    border: .1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.8rem;
+    padding: 3rem;
+}
+
+section.selection-modal.active > section.pledge-container.selected {
+    border-color: var(--moderateCyan);
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > div.check {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: .1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > div.check > div.checked-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--moderateCyan);
+    border-radius: 50%;
+    display: none;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > div.pledge-header-title-box {
+    width: 18rem;
+    height: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > div.pledge-header-title-box >
+h5 {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > div.pledge-header-title-box > h6 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--moderateCyan);
+}
+
+section.selection-modal.active > section.pledge-container > p.pledge-text {
+    width: 23.1rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--darkGray);
+}
+
+section.selection-modal.active > section.pledge-container > p.rewards-remaining {
+    width: 7rem;
+    height: 2.2rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+section.selection-modal.active > section.pledge-container > p.rewards-remaining > span {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--darkGray);
+    padding-left: .5rem;
+}
+
+/* Selected pledge footer */
+
+section.selection-modal.active > section.pledge-container > section.selected-pledge {
+    display: none;
+}
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge {
+    width: 27.9rem;
+    height: 11.2rem;
+    margin-left: -3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > p {
+    width: 11.2rem;
+    height: 2.8rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--darkGray);
+}
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div {
+    width: 23.1rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-amount {
+    width: 10rem;
+    height: 4.8rem;
+    border-radius: 3.35rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--darkGray);
+}
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-amount > span {
+    color: var(--black);
+    padding-left: .8rem;
+ }
+
+ section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-continue {
+    width: 11.5rem;
+    height: 4.8rem;
+    border-radius: 3.35rem;
+    border: none;
+    background-color: var(--moderateCyan);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+ }
 
 /* Thanks for support modal */
 
