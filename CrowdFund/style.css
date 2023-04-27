@@ -72,9 +72,14 @@ header.header > div.header-info > div.burger-menu {
     background-size: 1.6rem 1.5rem;
 }
 
+header.header > div.header-info > div.burger-menu:hover {
+    cursor: pointer;
+}
+
 header.header > div.header-info > div.burger-menu.active {
     background: url(./images/icon-close-menu.svg);
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
 /* Faded overlay for selected menu background */
@@ -88,22 +93,28 @@ div.overlay {
     background-color: black;
     opacity: 0.1;
     display: none;
+    transition: all 500ms ease-in-out;
 }
 
 div.overlay.menu-active {
     display: block;
-    background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 10%);
-    opacity: 0.6
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 20%);
+    opacity: 0.6;
+    z-index: 1;
 }
 
 /* Menu options modal */
 
 section.dropdown-menu {
     position: absolute;
-    display: none;
+    top: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 500ms ease-in-out;
 }
 
 section.dropdown-menu.active {
+    opacity: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -114,6 +125,7 @@ section.dropdown-menu.active {
     border-radius: .8rem;
     top: 8rem;
     z-index: 1;
+    transform: translateY(0%);
 }
 
 section.dropdown-menu.active > div {
@@ -127,6 +139,12 @@ section.dropdown-menu.active > p {
     font-weight: 500;
     font-size: 1.8rem;
     padding-left: 3rem;
+    transition: transform 150ms ease-in;
+}
+
+section.dropdown-menu.active > p:hover {
+    cursor: pointer;
+    transform: scale(110%);
 }
 
 /* Page title section */
@@ -187,6 +205,12 @@ section.page-title > div.title-footer > button.back {
     font-weight: 700;
     font-size: 1.6rem;
     color: #FFFFFF;
+    transition: all 250ms ease-in;
+}
+
+section.page-title > div.title-footer > button.back:hover {
+    background-color: var(--darkCyan);
+    cursor: pointer;
 }
 
 section.page-title > div.title-footer > div.bookmark > div.bookmark-text {
@@ -365,6 +389,12 @@ section.about > div.select-box > button.select {
     font-weight: 700;
     font-size: 1.4rem;
     color: #FFFFFF;
+    transition: background-color 250ms ease-in-out;
+}
+
+section.about > div.select-box > button.select:hover {
+    cursor: pointer;
+    background-color: var(--darkCyan);
 }
 
 /* Popup selected option box */
@@ -468,10 +498,17 @@ section.selection-modal.active > section.pledge-container > div.pledge-header > 
     justify-content: space-evenly;
 }
 
-section.selection-modal.active > section.pledge-container > div.pledge-header > div.pledge-header-title-box >
-h5 {
+section.selection-modal.active > section.pledge-container > div.pledge-header > 
+div.pledge-header-title-box > h5 {
     font-weight: 700;
     font-size: 1.4rem;
+    transition: color 150ms ease-in-out;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > 
+div.pledge-header-title-box > h5:hover {
+    cursor: pointer;
+    color: var(--moderateCyan);
 }
 
 section.selection-modal.active > section.pledge-container > div.pledge-header > div.pledge-header-title-box > h6 {
@@ -546,7 +583,13 @@ section.selection-modal.active > section.pledge-container.selected > section.sel
     font-weight: 700;
     font-size: 1.4rem;
     color: var(--darkGray);
+    transition: all 150ms ease-in-out;
 }
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-amount:hover {
+    cursor: pointer;
+ }
 
 section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
  button.selected-pledge-amount > span {
@@ -564,6 +607,13 @@ section.selection-modal.active > section.pledge-container.selected > section.sel
     font-weight: 700;
     font-size: 1.4rem;
     color: #FFFFFF;
+    transition: all 150ms ease-in-out;
+ }
+
+ section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-continue:hover {
+    cursor: pointer;
+    background-color: var(--darkCyan);
  }
 
 /* Thanks for support modal */
@@ -618,4 +668,648 @@ section.success-modal > button.success-btn {
     font-weight: 700;
     font-size: 1.4rem;
     color: #FFFFFF;
+    transition: all 150ms ease-in-out;
+}
+
+section.success-modal > button.success-btn:hover {
+    cursor: pointer;
+    background-color: var(--darkCyan);
+}
+
+/* ///////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////// */
+/*  Desktop Styling */
+/* ///////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////// */
+
+@media only screen and (min-width: 700px) {
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/* Main page content */
+
+main.main-container {
+    position: relative;
+    width: 144rem;
+    height: 215.8rem;
+    background: url("./images/image-hero-desktop.jpg");
+    background-size: 128rem 40rem;
+    background-repeat: no-repeat;
+}
+
+header.header {
+    width: 15rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    padding: 2.5rem 1.5rem;
+    margin-top: .5rem;
+    margin-bottom: 15rem;
+    margin-left: 15rem;
+}
+
+header.header > div.header-info {
+    width: 12.8rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+header.header > div.header-info > h1.header-title {
+    width: 20rem;
+    height: 3rem;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header.header > div.header-info > div.burger-menu {
+    display: none;
+}
+
+/* Overlay for selected state */
+
+div.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.1;
+    display: none;
+    transition: all 500ms ease-in-out;
+}
+
+/* Menu options modal */
+
+section.dropdown-menu {
+    position: absolute;
+    margin-top: -3.5rem;
+    left: 89rem;
+    opacity: 1;
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 28.5rem;
+    height: 1.6rem;
+    background-color: none;
+    border-radius: .8rem;
+    top: 8rem;
+    z-index: 1;
+}
+
+section.dropdown-menu > div {
+    display: none;
+}
+
+section.dropdown-menu > p {
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding-left: 0rem;
+    color: #FFFFFF;
+    transition: transform 250ms ease-in-out;
+}
+
+section.dropdown-menu > p:hover {
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+/* Page title section */
+
+section.page-title {
+    width: 32.7rem;
+    height: 28.4rem;
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+section.page-title > h1.title {
+    width: 23.9rem;
+    height: 4.8rem;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+}
+
+section.page-title > p.title-text {
+    width: 28rem;
+    height: 4.8rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    color: var(--darkGray);
+}
+
+section.page-title > img.title-logo {
+    width: 5.6rem;
+    height: 5.6rem;
+    position: absolute;
+    top: -2.8rem;
+    left: 13.5rem;
+}
+
+section.page-title > div.title-footer {
+    width: 27.9rem;
+    height: 5.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.page-title > div.title-footer > button.back {
+    width: 21.4rem;
+    height: 5.6rem;
+    border: none;
+    border-radius: 3.35rem;
+    background-color: var(--moderateCyan);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    transition: all 250ms ease-in;
+}
+
+section.page-title > div.title-footer > button.back:hover {
+    background-color: var(--darkCyan);
+    cursor: pointer;
+}
+
+section.page-title > div.title-footer > div.bookmark > div.bookmark-text {
+    display: none;
+}
+
+/* Pledges section */
+
+section.pledges {
+    width: 32.7rem;
+    height: 41.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: .8rem;
+    background-color: #FFFFFF;
+}
+
+section.pledges > div.backed,
+section.pledges > div.backers,
+section.pledges > div.days {
+    height: 6.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.pledges > div.backed {
+    width: 12.9rem;
+}
+
+section.pledges > div.backers {
+    width: 8.7rem;
+}
+
+section.pledges > div.days {
+    width: 5.5rem;
+}
+
+section.pledges > div > h2 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--black);
+}
+
+section.pledges > div > p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--darkGray);
+}
+
+section.pledges > div.line-break {
+    width: 8rem;
+    height: 0.1rem;
+    background-color: rgb(181, 176, 176);
+}
+
+section.pledges > div.slider-container {
+    width: 27.9rem;
+    height: 1.2rem;
+    border-radius: 3.35rem;
+    background-color: #FAFAFA;
+}
+
+section.pledges > div.slider-container > div.slider-total {
+    width: 21.87rem;
+    height: 1.2rem;
+    background-color: var(--darkCyan);
+    border-radius: 3.35rem;
+}
+
+/* About & pledge select info section */
+
+section.about {
+    width: 32.7rem;
+    height: 165.5rem;
+    border-radius: .8rem;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.about .sold-out {
+    opacity: 0.5;
+}
+
+section.about > article.about-info {
+    width: 27.9rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.about > article.about-info > h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+section.about > article.about-info > p {
+    color: var(--darkGray);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+/* Pledge selection containers */
+
+section.about > div.select-box {
+    width: 27.9rem;
+    height: 37rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-left: 3rem;
+    border: .1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: .8rem;
+}
+
+section.about > div.select-box > div.select-box-title-container {
+    width: 17rem;
+    height: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.about > div.select-box > div.select-box-title-container > h3 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--black);
+}
+
+section.about > div.select-box > div.select-box-title-container > p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--moderateCyan);
+}
+
+section.about > div.select-box > p.select-box-text {
+    width: 23.1rem;
+    height: 12rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--darkGray);
+}
+
+section.about > div.select-box > p.amount-left {
+    width: 8.3rem;
+    height: 4rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+section.about > div.select-box > p.amount-left > span {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--darkGray);
+}
+
+section.about > div.select-box > button.select {
+    width: 15.7rem;
+    height: 4.8rem;
+    border: none;
+    border-radius: 3.35rem;
+    background-color: var(--moderateCyan);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    transition: background-color 250ms ease-in-out;
+}
+
+section.about > div.select-box > button.select:hover {
+    cursor: pointer;
+    background-color: var(--darkCyan);
+}
+
+/* Popup selected option box */
+
+section.selection-modal {
+    width: 32.7rem;
+    min-height: 135.9rem;
+    position: absolute;
+    top: 12.1rem;
+    display: none;
+}
+
+section.selection-modal.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+}
+
+section.selection-modal.active > header.modal-header {
+    width: 28rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.selection-modal.active > header.modal-header > div {
+    width: 28rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.selection-modal.active > header.modal-header > div > h3 {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+section.selection-modal.active > header.modal-header > div > img {
+    width: 1.414rem;
+    height: 1.414rem;
+}
+
+section.selection-modal.active > header.modal-header > p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--darkGray);
+}
+
+section.selection-modal.active > section.pledge-container {
+    width: 27.9rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+    border: .1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.8rem;
+    padding: 3rem;
+}
+
+section.selection-modal.active > section.pledge-container.selected {
+    border-color: var(--moderateCyan);
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > div.check {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: .1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > div.check > div.checked-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--moderateCyan);
+    border-radius: 50%;
+    display: none;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > div.pledge-header-title-box {
+    width: 18rem;
+    height: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > 
+div.pledge-header-title-box > h5 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    transition: color 150ms ease-in-out;
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > 
+div.pledge-header-title-box > h5:hover {
+    cursor: pointer;
+    color: var(--moderateCyan);
+}
+
+section.selection-modal.active > section.pledge-container > div.pledge-header > div.pledge-header-title-box > h6 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--moderateCyan);
+}
+
+section.selection-modal.active > section.pledge-container > p.pledge-text {
+    width: 23.1rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--darkGray);
+}
+
+section.selection-modal.active > section.pledge-container > p.rewards-remaining {
+    width: 7rem;
+    height: 2.2rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+section.selection-modal.active > section.pledge-container > p.rewards-remaining > span {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--darkGray);
+    padding-left: .5rem;
+}
+
+/* Selected pledge footer */
+
+section.selection-modal.active > section.pledge-container > section.selected-pledge {
+    display: none;
+}
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge {
+    width: 27.9rem;
+    height: 11.2rem;
+    margin-left: -3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > p {
+    width: 11.2rem;
+    height: 2.8rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--darkGray);
+}
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div {
+    width: 23.1rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-amount {
+    width: 10rem;
+    height: 4.8rem;
+    border-radius: 3.35rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--darkGray);
+    transition: all 150ms ease-in-out;
+}
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-amount:hover {
+    cursor: pointer;
+ }
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-amount > span {
+    color: var(--black);
+    padding-left: .8rem;
+ }
+
+ section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-continue {
+    width: 11.5rem;
+    height: 4.8rem;
+    border-radius: 3.35rem;
+    border: none;
+    background-color: var(--moderateCyan);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    transition: all 150ms ease-in-out;
+ }
+
+ section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-continue:hover {
+    cursor: pointer;
+    background-color: var(--darkCyan);
+ }
+
+/* Thanks for support modal */
+
+section.success-modal {
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+section.success-modal.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 32.7rem;
+    height: 38.2rem;
+    background-color: #FFFFFF;
+    top: 14rem;
+    border-radius: .8rem;
+}
+
+section.success-modal > img.success-image {
+    width: 6.4rem;
+    height: 6.4rem;
+}
+
+section.success-modal > h6.success-title {
+    width: 27.9rem;
+    height: 2.2rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+section.success-modal > p.success-text {
+    width: 27.9rem;
+    height: 9.6rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--darkGray);
+    text-align: center;
+}
+
+section.success-modal > button.success-btn {
+    width: 10.7rem;
+    height: 4.8rem;
+    border: none;
+    border-radius: 3.35rem;
+    background-color: var(--moderateCyan);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    transition: all 150ms ease-in-out;
+}
+
+section.success-modal > button.success-btn:hover {
+    cursor: pointer;
+    background-color: var(--darkCyan);
+}
+
 }
