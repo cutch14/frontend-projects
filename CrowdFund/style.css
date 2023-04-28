@@ -21,6 +21,8 @@ html {
 body {
     display: flex;
     justify-content: center;
+    margin: auto;
+    width: 37.5rem;
 }
 
 /* Main page content */
@@ -687,6 +689,7 @@ section.success-modal > button.success-btn:hover {
 body {
     display: flex;
     justify-content: center;
+    width: 144rem;
 }
 
 /* Main page content */
@@ -696,8 +699,9 @@ main.main-container {
     width: 144rem;
     height: 215.8rem;
     background: url("./images/image-hero-desktop.jpg");
-    background-size: 128rem 40rem;
+    background-size: 144rem 40rem;
     background-repeat: no-repeat;
+    background-color: #FAFAFA;
 }
 
 header.header {
@@ -707,7 +711,7 @@ header.header {
     justify-content: center;
     align-self: flex-start;
     padding: 2.5rem 1.5rem;
-    margin-top: .5rem;
+    margin-top: -6rem;
     margin-bottom: 15rem;
     margin-left: 15rem;
 }
@@ -750,8 +754,8 @@ div.overlay {
 
 section.dropdown-menu {
     position: absolute;
-    margin-top: -3.5rem;
-    left: 89rem;
+    margin-top: -3.7rem;
+    left: 102rem;
     opacity: 1;
     transform: translateY(0%);
     display: flex;
@@ -786,8 +790,8 @@ section.dropdown-menu > p:hover {
 /* Page title section */
 
 section.page-title {
-    width: 32.7rem;
-    height: 28.4rem;
+    width: 73rem;
+    height: 29.7rem;
     position: relative;
     background-color: #FFFFFF;
     border-radius: .8rem;
@@ -799,34 +803,24 @@ section.page-title {
 }
 
 section.page-title > h1.title {
-    width: 23.9rem;
-    height: 4.8rem;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    text-align: center;
+    width: 45.3rem;
+    height: 3.4rem;
+    font-size: 2.8rem;
 }
 
 section.page-title > p.title-text {
-    width: 28rem;
-    height: 4.8rem;
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-    text-align: center;
-    color: var(--darkGray);
+    width: 50.7rem;
+    height: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
 }
 
 section.page-title > img.title-logo {
-    width: 5.6rem;
-    height: 5.6rem;
-    position: absolute;
-    top: -2.8rem;
-    left: 13.5rem;
+    left: 33.7rem;
 }
 
 section.page-title > div.title-footer {
-    width: 27.9rem;
+    width: 63.4rem;
     height: 5.6rem;
     display: flex;
     justify-content: space-between;
@@ -849,82 +843,74 @@ section.page-title > div.title-footer > button.back:hover {
     cursor: pointer;
 }
 
+section.page-title > div.title-footer > div.bookmark {
+    width: 17.4rem;
+    height: 5.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3.35rem;
+    background-color: #d2d0d0;
+    padding-right: 2.4rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--darkGray);
+}
+
+section.page-title > div.title-footer > div.bookmark:hover {
+    cursor: pointer;
+}
+
 section.page-title > div.title-footer > div.bookmark > div.bookmark-text {
-    display: none;
+    display: flex;
 }
 
 /* Pledges section */
 
 section.pledges {
-    width: 32.7rem;
-    height: 41.2rem;
-    display: flex;
-    flex-direction: column;
+    width: 73rem;
+    height: 21.2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: .8rem;
-    background-color: #FFFFFF;
+    padding: 2rem 0;
 }
 
 section.pledges > div.backed,
 section.pledges > div.backers,
 section.pledges > div.days {
+    width: 15rem;
     height: 6.6rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
-section.pledges > div.backed {
-    width: 12.9rem;
-}
-
-section.pledges > div.backers {
-    width: 8.7rem;
-}
-
-section.pledges > div.days {
-    width: 5.5rem;
-}
-
-section.pledges > div > h2 {
-    font-weight: 700;
-    font-size: 3.2rem;
-    color: var(--black);
-}
-
 section.pledges > div > p {
-    font-weight: 400;
-    font-size: 1.4rem;
-    color: var(--darkGray);
+    font-size: 1.5rem;
 }
 
 section.pledges > div.line-break {
-    width: 8rem;
-    height: 0.1rem;
+    width: 0.1rem;
+    height: 8rem;
     background-color: rgb(181, 176, 176);
 }
 
 section.pledges > div.slider-container {
-    width: 27.9rem;
-    height: 1.2rem;
-    border-radius: 3.35rem;
-    background-color: #FAFAFA;
+    width: 63.4rem;
 }
 
 section.pledges > div.slider-container > div.slider-total {
-    width: 21.87rem;
-    height: 1.2rem;
-    background-color: var(--darkCyan);
-    border-radius: 3.35rem;
+    width: 49.6rem;
 }
 
 /* About & pledge select info section */
 
 section.about {
-    width: 32.7rem;
-    height: 165.5rem;
+    width: 73rem;
+    height: 119.7rem;
     border-radius: .8rem;
     background-color: #FFFFFF;
     display: flex;
@@ -938,99 +924,57 @@ section.about .sold-out {
 }
 
 section.about > article.about-info {
-    width: 27.9rem;
-    height: 40rem;
+    width: 63.4rem;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 2rem 0;
 }
 
 section.about > article.about-info > h2 {
-    font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 section.about > article.about-info > p {
-    color: var(--darkGray);
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
+    font-size: 1.6rem;
+    line-height: 3rem;
 }
 
 /* Pledge selection containers */
 
 section.about > div.select-box {
-    width: 27.9rem;
-    height: 37rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    padding-left: 3rem;
-    border: .1rem solid rgba(0, 0, 0, 0.15);
-    border-radius: .8rem;
+    width: 63.4rem;
+    height: 24.8rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0rem;
+    padding: 2rem 3rem;
 }
 
 section.about > div.select-box > div.select-box-title-container {
-    width: 17rem;
-    height: 4.2rem;
+    width: 57rem;
+    height: 2.2rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
 }
 
 section.about > div.select-box > div.select-box-title-container > h3 {
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--black);
+    font-size: 1.8rem;
 }
 
 section.about > div.select-box > div.select-box-title-container > p {
-    font-weight: 500;
-    font-size: 1.4rem;
-    color: var(--moderateCyan);
+    font-size: 1.5rem;
 }
 
 section.about > div.select-box > p.select-box-text {
-    width: 23.1rem;
-    height: 12rem;
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-    color: var(--darkGray);
-}
-
-section.about > div.select-box > p.amount-left {
-    width: 8.3rem;
-    height: 4rem;
-    font-weight: 700;
-    font-size: 3.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-section.about > div.select-box > p.amount-left > span {
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: var(--darkGray);
-}
-
-section.about > div.select-box > button.select {
-    width: 15.7rem;
-    height: 4.8rem;
-    border: none;
-    border-radius: 3.35rem;
-    background-color: var(--moderateCyan);
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: #FFFFFF;
-    transition: background-color 250ms ease-in-out;
-}
-
-section.about > div.select-box > button.select:hover {
-    cursor: pointer;
-    background-color: var(--darkCyan);
+    width: 57rem;
+    height: 6rem;
+    font-size: 1.6rem;
+    line-height: 3rem;
 }
 
 /* Popup selected option box */
