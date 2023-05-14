@@ -408,6 +408,11 @@ section.about > div.select-box > button.select:hover {
     background-color: var(--darkCyan);
 }
 
+section.about > div.select-box > button.select.sold-out:hover {
+    cursor: none;
+    background-color: var(--darkCyan);
+}
+
 /* Popup selected option box */
 
 section.selection-modal {
@@ -451,6 +456,10 @@ section.selection-modal.active > header.modal-header > div > h3 {
 section.selection-modal.active > header.modal-header > div > img {
     width: 1.414rem;
     height: 1.414rem;
+}
+
+section.selection-modal.active > header.modal-header > div > img:hover {
+    cursor: pointer;
 }
 
 section.selection-modal.active > header.modal-header > p {
@@ -500,6 +509,10 @@ section.selection-modal.active > section.pledge-container > div.pledge-header > 
     background-color: var(--moderateCyan);
     border-radius: 50%;
     display: none;
+}
+
+section.selection-modal.active > section.pledge-container.selected > div.pledge-header > div.check > div.checked-icon {
+    display: block;
 }
 
 section.selection-modal.active > section.pledge-container > div.pledge-header > div.pledge-header-title-box {
@@ -586,7 +599,7 @@ section.selection-modal.active > section.pledge-container.selected > section.sel
 }
 
 section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
- button.selected-pledge-amount {
+ input.selected-pledge-amount {
     width: 10rem;
     height: 4.8rem;
     border-radius: 3.35rem;
@@ -596,22 +609,39 @@ section.selection-modal.active > section.pledge-container.selected > section.sel
     font-size: 1.4rem;
     color: var(--darkGray);
     transition: all 150ms ease-in-out;
+    padding-left: 4rem;
 }
 
 section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
- button.selected-pledge-amount:hover {
+ input.selected-pledge-amount::-webkit-inner-spin-button,
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ input.selected-pledge-amount::-webkit-outer-spin-button {
+    display: none;
+ }
+
+ section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ input.selected-pledge-amount:focus {
+    cursor: pointer;
+    border-color: var(--moderateCyan);
+    outline: var(--moderateCyan);
+ }
+
+section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ input.selected-pledge-amount:hover {
     cursor: pointer;
     border-color: var(--moderateCyan);
  }
 
 section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
- button.selected-pledge-amount > span {
+ input.selected-pledge-amount > span {
     color: var(--black);
     padding-left: .8rem;
  }
 
  section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
- button.selected-pledge-continue {
+ button.selected-pledge-continue,
+ section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-continue-no-reward {
     width: 11.5rem;
     height: 4.8rem;
     border-radius: 3.35rem;
@@ -624,7 +654,9 @@ section.selection-modal.active > section.pledge-container.selected > section.sel
  }
 
  section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
- button.selected-pledge-continue:hover {
+ button.selected-pledge-continue:hover,
+ section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
+ button.selected-pledge-continue-no-reward:hover {
     cursor: pointer;
     background-color: var(--darkCyan);
  }
