@@ -44,6 +44,7 @@
         <div class="title-footer">
           <button class="back">Back this project</button>
           <div class="bookmark">
+            <div class="bookmark-overlay"></div>
             <img
               src="./images/icon-bookmark.svg"
               alt=""
@@ -56,12 +57,12 @@
       <!-- Pledges -->
       <section class="pledges">
         <div class="backed">
-          <h2 class="backed-total">$89,914</h2>
+          <h2 class="backed-total"></h2>
           <p class="backed-goal">of $100,000 backed</p>
         </div>
         <div class="line-break"></div>
         <div class="backers">
-          <h2 class="backers-total">5,007</h2>
+          <h2 class="backers-total"></h2>
           <p class="backers-text">total backers</p>
         </div>
         <div class="line-break"></div>
@@ -100,7 +101,10 @@
             launch our promotional campaign, and you’ll be added to a special
             Backer member list.
           </p>
-          <p class="amount-left bamboo-left bamboo">101<span> left</span></p>
+          <div class="bamboo-left-container amount-left-container">
+            <p class="amount-left bamboo-left"></p>
+            <p class="left">left</p>
+          </div>
           <button class="select" data-option="bamboo">Select Reward</button>
         </div>
         <div class="select-box black" data-option="black">
@@ -113,7 +117,10 @@
             you. You’ll be added to our Backer member list. Shipping is
             included.
           </p>
-          <p class="amount-left black-left">64<span> left</span></p>
+          <div class="black-left-container amount-left-container">
+            <p class="amount-left black-left"></p>
+            <p class="left">left</p>
+          </div>
           <button class="select" data-option="black">Select Reward</button>
         </div>
         <div class="select-box mahogony sold-out" data-option="mahogony">
@@ -126,7 +133,10 @@
             personal thank you. You’ll be added to our Backer member list.
             Shipping is included.
           </p>
-          <p class="amount-left bamboo-left">0 <span>left</span></p>
+          <div class="black-left-container amount-left-container">
+            <p class="amount-left black-left">0</p>
+            <p class="left">left</p>
+          </div>
           <button class="select sold-out" data-option="bamboo">
             Out of Stock
           </button>
@@ -189,9 +199,10 @@
           launch our promotional campaign, and you’ll be added to a special
           Backer member list.
         </p>
-        <p class="rewards-remaining bamboo-pledge-left">
-          101<span> left</span>
-        </p>
+        <div class="rewards-remaining-container amount-left-container">
+          <p class="amount-left bamboo-pledge-left"></p>
+          <p class="left">left</p>
+        </div>
         <!-- Selected pledge start -->
         <section class="selected-pledge bamboo">
           <p class="selected-pledge-text">Enter your pledge</p>
@@ -227,7 +238,10 @@
           You get a Black Special Edition computer stand and a personal thank
           you. You’ll be added to our Backer member list. Shipping is included.
         </p>
-        <p class="rewards-remaining black-pledge-left">64<span> left</span></p>
+        <div class="rewards-remaining-container amount-left-container">
+          <p class="amount-left black-pledge-left"></p>
+          <p class="left">left</p>
+        </div>
         <!-- Selected pledge start -->
         <section class="selected-pledge black">
           <p class="selected-pledge-text">Enter your pledge</p>
@@ -248,7 +262,7 @@
         </section>
         <!-- Selected pledge end -->
       </section>
-      <section class="pledge-container mahogany">
+      <section class="pledge-container mahogany sold-out">
         <div class="pledge-header">
           <div class="check"><div class="checked-icon"></div></div>
           <div class="pledge-header-title-box">

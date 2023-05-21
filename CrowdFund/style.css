@@ -173,6 +173,10 @@ section.page-title {
     gap: 2rem;
 }
 
+section.page-title.active {
+    opacity: 0.1;
+}
+
 section.page-title > h1.title {
     width: 23.9rem;
     height: 4.8rem;
@@ -222,6 +226,29 @@ section.page-title > div.title-footer > button.back {
 section.page-title > div.title-footer > button.back:hover {
     background-color: var(--darkCyan);
     cursor: pointer;
+}
+
+section.page-title > div.title-footer > div.bookmark {
+    position: relative;
+    width: 19rem;
+}
+
+section.page-title > div.title-footer > div.bookmark > img {
+    margin-left: -1.2rem;
+}
+
+section.page-title > div.title-footer > div.bookmark > div.bookmark-overlay {
+    opacity: 0;
+}
+
+section.page-title > div.title-footer > div.bookmark.selected > div.bookmark-overlay {
+    position: absolute;
+    width: 18.5rem;
+    height: 5.6rem;
+    background-color: var(--moderateCyan);
+    border-radius: 3.35rem;
+    opacity: 0.4;
+    left: -1.2rem;
 }
 
 section.page-title > div.title-footer > div.bookmark > div.bookmark-text {
@@ -282,17 +309,18 @@ section.pledges > div.line-break {
 }
 
 section.pledges > div.slider-container {
-    width: 27.9rem;
+    width: 86.85%;
     height: 1.2rem;
     border-radius: 3.35rem;
     background-color: #FAFAFA;
 }
 
 section.pledges > div.slider-container > div.slider-total {
-    width: 21.87rem;
+    width: 0;
     height: 1.2rem;
     background-color: var(--darkCyan);
     border-radius: 3.35rem;
+    transition: width 500ms ease-in-out;
 }
 
 /* About & pledge select info section */
@@ -375,7 +403,13 @@ section.about > div.select-box > p.select-box-text {
     color: var(--darkGray);
 }
 
-section.about > div.select-box > p.amount-left {
+section.about > div.select-box > div.amount-left-container {
+    display: flex;
+    align-items: center;
+    width: 8rem;
+}
+
+section.about > div.select-box > div.amount-left-container > p.amount-left {
     width: 8.3rem;
     height: 4rem;
     font-weight: 700;
@@ -385,7 +419,7 @@ section.about > div.select-box > p.amount-left {
     gap: 0.8rem;
 }
 
-section.about > div.select-box > p.amount-left > span {
+section.about > div.select-box > div.amount-left-container > p.left {
     font-weight: 400;
     font-size: 1.5rem;
     color: var(--darkGray);
@@ -406,6 +440,10 @@ section.about > div.select-box > button.select {
 section.about > div.select-box > button.select:hover {
     cursor: pointer;
     background-color: var(--darkCyan);
+}
+
+section.about > div.select-box.sold-out > button.select:hover {
+    pointer-events: none;
 }
 
 section.about > div.select-box > button.select.sold-out:hover {
@@ -481,6 +519,10 @@ section.selection-modal.active > section.pledge-container {
     padding: 3rem;
 }
 
+section.selection-modal.active > section.pledge-container.sold-out {
+    opacity: 0.6;
+}
+
 section.selection-modal.active > section.pledge-container.selected {
     border-color: var(--moderateCyan);
 }
@@ -530,6 +572,12 @@ div.pledge-header-title-box > h5 {
     transition: color 150ms ease-in-out;
 }
 
+section.selection-modal.active > section.pledge-container.sold-out > div.pledge-header > 
+div.pledge-header-title-box > h5:hover {
+    pointer-events: none;
+    color: var(--darkGray);
+}
+
 section.selection-modal.active > section.pledge-container > div.pledge-header > 
 div.pledge-header-title-box > h5:hover {
     cursor: pointer;
@@ -550,7 +598,15 @@ section.selection-modal.active > section.pledge-container > p.pledge-text {
     color: var(--darkGray);
 }
 
-section.selection-modal.active > section.pledge-container > p.rewards-remaining {
+section.selection-modal.active > section.pledge-container > div.rewards-remaining-container {
+    display: flex;
+    width: 6rem;
+    align-items: center;
+    margin-top: -1rem;
+}
+
+section.selection-modal.active > section.pledge-container > div.rewards-remaining-container > 
+p.amount-left {
     width: 7rem;
     height: 2.2rem;
     font-weight: 700;
@@ -558,7 +614,7 @@ section.selection-modal.active > section.pledge-container > p.rewards-remaining 
     color: var(--black);
 }
 
-section.selection-modal.active > section.pledge-container > p.rewards-remaining > span {
+section.selection-modal.active > section.pledge-container > div.rewards-remaining-container > p.left {
     font-weight: 400;
     font-size: 1.5rem;
     color: var(--darkGray);
@@ -651,6 +707,11 @@ section.selection-modal.active > section.pledge-container.selected > section.sel
     font-size: 1.4rem;
     color: #FFFFFF;
     transition: all 150ms ease-in-out;
+ }
+
+ section.selection-modal.active > section.pledge-container.selected.sold-out > section.selected-pledge > div >
+ button.selected-pledge-continue {
+    pointer-events: none;
  }
 
  section.selection-modal.active > section.pledge-container.selected > section.selected-pledge > div >
@@ -939,14 +1000,6 @@ section.pledges > div.line-break {
     width: 0.1rem;
     height: 8rem;
     background-color: rgb(181, 176, 176);
-}
-
-section.pledges > div.slider-container {
-    width: 63.4rem;
-}
-
-section.pledges > div.slider-container > div.slider-total {
-    width: 49.6rem;
 }
 
 /* About & pledge select info section */
