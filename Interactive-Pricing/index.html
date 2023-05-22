@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Interactive pricing component</title>
+  </head>
+  <body>
+    <main class="main-body">
+      <section class="header-container">
+        <header class="header">
+          <h1 class="title">Simple, traffic-based pricing</h1>
+          <h3 class="header-text">
+            Sign-up for our 30-day trial. No credit card required.
+          </h3>
+        </header>
+      </section>
+      <section class="content-container">
+        <section class="slider-container">
+          <h4 class="page-views">Pageviews</h4>
+          <input type="range" name="slider" id="slider" class="slider range" />
+          <div class="price-container">
+            <h4 class="price">$</h4>
+            <p class="per-month">/month</p>
+          </div>
+          <div class="billing-container">
+            <p class="monthly-bill">Monthly Billing</p>
+            <div class="switch-billing-box">
+              <div class="switch"></div>
+            </div>
+            <p class="yearly-bill">Yearly Billing</p>
+            <p class="discount">25% discount</p>
+          </div>
+        </section>
+        <section class="foot">
+          <div class="info">
+            <h5 class="unlimited info-text">Unlimited websites</h5>
+            <h5 class="hundred info-text">100% data ownership</h5>
+            <h5 class="email info-text">Email reports</h5>
+          </div>
+          <button class="start">Start my trial</button>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

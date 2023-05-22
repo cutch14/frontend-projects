@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&family=Manrope:wght@600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    /* Full Slider Bar */
+    --softCyan : hsl(174, 77%, 80%);
+    /* Slider Backround */
+    --strongCyan : hsl(174, 86%, 45%);
+    /* Discount Background */
+    --lightGrayishRed : hsl(14, 92%, 95%);
+    /* Discount Text */
+    --lightRed : hsl(15, 100%, 70%);
+    /* CTA Text */
+    --paleBlue : hsl(226, 100%, 87%);
+    /* Pricing Component Background */
+    --white : hsl (0, 0%, 100%);
+    /* Main Background */
+    --veryPaleBlue : hsl(230, 100%, 99%);
+    /* Empty Slider Bar */
+    --lightGrayishBlue : hsl(224, 65%, 95%);
+    /* Toggle Background */
+    --lightGrayishBlue : hsl(223, 50%, 87%);
+    /* Text */
+    --grayishBlue : hsl(225, 20%, 60%);
+    /* Text & CTA Background */
+    --darkDesaturatedBlue : hsl(227, 35%, 25%);
+}
+
+
+
+/* Hide the default appearance */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Track styles */
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Thumb styles */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    margin-top: -16px;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
