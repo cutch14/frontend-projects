@@ -331,6 +331,153 @@ section.content-container > section.slider-container > input[type="range"] {
   /* //////// Desktop styling ///////////////////////// */
   /* ////////////////////////////////////////////////// */
 
-  @media only screen and (min-width: 65rem) {
+  @media only screen and (min-width: 700px) {
+    main.main-body {
+      width: 144rem;
+      height: 80rem;
+      padding-top: 5rem;
+    }
     
+    /* Header */
+    
+    section.header-container {
+      width: 39.5rem;
+      height: 14.5rem;
+    }
+    
+    section.header-container > h1.title {
+      font-size: 2.8rem;
+    }
+    
+    section.header-container > h3.header-text {
+      width: 36.7rem;
+      font-size: 1.5rem;
+    }
+    
+    /* Slider container */
+    
+    section.content-container {
+      width: 54rem;
+      height: 39.7rem;
+      position: absolute;
+      top: 25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    
+    section.content-container > section.slider-container {
+      width: 54rem;
+      height: 30rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 3rem;
+    }
+    
+    section.content-container > section.slider-container > h4.page-views {
+      width: 22rem;
+      height: 1.6rem;
+      font-size: 1.4rem;
+      text-align: start;
+      letter-spacing: 0.2rem;
+      order: 0;
+    }
+    
+    
+    
+    
+    /* Hide the default appearance */
+    section.content-container > section.slider-container > input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 44rem;
+        height: .8rem;
+        border-radius: 0.5rem;
+        order: 2;
+      }
+      
+      /* Track styles */
+      section.content-container > section.slider-container > input[type="range"]::-webkit-slider-runnable-track {
+        height: .8rem;
+        border-radius: 5px;
+        background-color: var(--softCyan);
+      }
+      
+      /* Thumb styles */
+      section.content-container > section.slider-container > input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-top: -16px;
+        background-color: var(--softCyan);
+        box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+        transition: all 0.2s ease-in-out;
+      }
+    
+      section.content-container > section.slider-container > input[type="range"]::-webkit-slider-thumb:hover {
+        cursor: pointer;
+        background-color: var(--strongCyan);
+      }
+      
+      section.content-container > section.slider-container > input[type="range"]::-moz-range-thumb {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      
+      section.content-container > section.slider-container > input[type="range"]::-ms-thumb {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    
+      section.content-container > section.slider-container > div.price-container {
+        width: 22rem;
+        height: 5.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        order: 1;
+        gap: 1rem;
+      }  
+    
+      section.content-container > section.slider-container > div.price-container > h4.price {
+        font-size: 4rem;
+        letter-spacing: -.01rem;
+      }
+    
+      section.content-container > section.slider-container > div.price-container > p.per-month {
+        font-size: 1.6rem;
+      }
+    
+      section.content-container > section.slider-container > div.billing-container {
+        width: 50rem;
+        height: 2.2rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+        order: 2;
+        margin-left: -10.5rem;
+      }
+       
+      section.content-container > section.slider-container > div.billing-container > p.discount {
+        width: 8rem;
+      }
+    
+      /* slider container - footer */
+      
+      section.content-container > section.foot {
+        width: 54rem;
+        height: 19.7rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+      } 
   }
