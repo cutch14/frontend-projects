@@ -63,8 +63,6 @@ function updatePrice() {
     // update page
     pageViews.innerHTML = `${rangeValue.toLocaleString()} pageviews`;
     monthlyPrice.innerHTML = `$${logPrice}`;
-
-    console.log(logPrice);
 };
 
 rangeInput.addEventListener('input', updatePrice);
