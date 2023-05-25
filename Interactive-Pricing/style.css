@@ -233,6 +233,7 @@ section.content-container > section.slider-container > input[type="range"] {
   section.content-container > section.slider-container > div.billing-container > 
   div.switch-billing-box.selected {
     background-color: var(--softCyan);
+    transition: all 0.2s ease-in-out;
   }
 
   section.content-container > section.slider-container > div.billing-container > 
@@ -242,6 +243,7 @@ section.content-container > section.slider-container > input[type="range"] {
     background-color: var(--veryPaleBlue);
     border-radius: 5rem;
     margin-left: 0.4rem;
+    transition: all 0.2s ease-in-out;
   }
 
   section.content-container > section.slider-container > div.billing-container > 
