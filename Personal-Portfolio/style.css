@@ -311,12 +311,12 @@ main.main-content > section.projects-container > div.project-display > div.proje
 }
 
 main.main-content > section.projects-container > div.project-display > div.first-project-img {
-    background: url("./images/thumbnail-project-2-small.webp"); 
+    background: url("./images/interactive-pricing.png"); 
     background-size: 343px 253px;
 }
 
 main.main-content > section.projects-container > div.project-display > div.second-project-img {
-    background: url("./images/news-homepage.png");
+    background: url("./images/crowdfund.png");
     background-size: 343px 253px;
 }
 
