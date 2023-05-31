@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --blue: #345FF6;
+    --gunmetal: #253347;
+    --darkElectricBlue: #5E6E85;
+    --borders: #D8E2E7;
+    --white: #FFFFFF;
+}
+
+body {
+    width: 37.5rem;
+    margin: auto;
+    background-color: var(--borders);
+}
+
+main {
+    width: 37.5rem;
+    max-height: 441.8rem;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 6rem;
+}
+
+.section-one {
+    width: 37.5rem;
+    max-height: 112rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3rem 0;
+    gap: 4.2rem;
+}
+
+.background {
+    width: 37.5rem;
+    height: 64rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(290.1deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
+    border-radius: 0 0 3.5rem 3.5rem;
+    z-index: 0
+}
+
+/* Page title */
+
+.head-img {
+    width: 4rem;
+    height: 4rem;
+    z-index: 1;
+}
+
+.page-header {
+    width: 32.7rem;
+    height: 34.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.page-title {
+    width: 32.7rem;
+    height: 15.9rem;
+    font-weight: 600;
+    font-size: 4.8rem;
+    line-height: 5.3rem;
+    letter-spacing: 0.005rem;
+    text-align: center;
+    color: var(--gunmetal);
+}
+
+.title-subtext {
+    width: 32.7rem;
+    height: 14.4rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--darkElectricBlue);
+    text-align: center;
+}
+
+/* Calculator section */
+
+.calculator-container {
+    width: 32.8rem;
+    max-height: 64.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    background-color: var(--white);
+    padding: 2rem;
+    z-index: 1;
+    border-radius: 1.6rem;
+    box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+}
+
+.calculator-title {
+    width: 32.7rem;
+    height: 2.9rem;
+    font-weight: 600;
+    font-size: 2.4rem;
+    letter-spacing: 0.005rem;
+    text-align: center;
+    color: var(--gunmetal);
+    margin-bottom: 2rem;
+}
+
+.select-measurement {
+    width: 28rem;
+    height: 3.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type="radio"] {
+    width: 3.1rem;
+    height: 3.1rem;
+    margin-right: -6rem;
+}
+
+label[for="metric"], label[for="imperial"] {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/* metric input to toggle */
+
+.metric-inputs {
+    width: 28rem;
+    height: 21.2rem;
+    padding-top: 1rem;
+    position: relative;
+    display: none;
+}
+
+label[for="height-cm"], label[for="weight-kg"] {
+    width: 5rem;
+    height: 2.1rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--darkElectricBlue);
+}
+
+.height-cm, .weight-kg {
+    width: 28rem;
+    height: 6.9rem;
+    margin: .5rem 0 1.2rem 0;
+    border-radius: 1.2rem;
+    padding: 2rem 2.4rem;
+    background: var(--white);
+    border: .1rem solid var(--borders);
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: var(--gunmetal);
+}
+
+.height-cm::-webkit-inner-spin-button, .weight-kg::-webkit-inner-spin-button {
+    display: none;
+}
+
+.height-cm:focus, .weight-kg:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+
+span.cm, span.kg {
+    position: absolute;
+    width: 3.5rem;
+    height: 2.9rem;
+    margin-left: -5rem;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: var(--blue);
+}
+
+span.cm {
+    top: 5rem;
+    right: 2rem;
+}
+
+span.kg {
+    top: 15.4rem;
+    right: 1.8rem;
+}
+
+/* imperial input to toggle */
+
+.imperial-inputs {
+    width: 28rem;
+    height: 21.2rem;
+    padding-top: 1rem;
+    position: relative;
+}
+
+label[for="height-ft"], label[for="weight-st"] {
+    width: 5rem;
+    height: 2.1rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--darkElectricBlue);
+}
+
+.height-ft, .height-inch, .weight-st, .weight-lbs {
+    width: 13.2rem;
+    height: 6.9rem;
+    margin: .5rem 0 1.2rem 0;
+    border-radius: 1.2rem;
+    padding: 2rem 2.4rem;
+    background: var(--white);
+    border: .1rem solid var(--borders);
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: var(--gunmetal);
+}
+
+.height-ft, .weight-st {
+    margin-right: 1rem;
+}
+
+.height-ft:focus, .height-inch:focus, .weight-st:focus, .weight-lbs:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+.height-ft::-webkit-inner-spin-button, .height-inch::-webkit-inner-spin-button, 
+.weight-st::-webkit-inner-spin-button, .weight-lbs::-webkit-inner-spin-button {
+    display: none;
+}
+
+span.ft, span.inch, span.st, span.lbs {
+    position: absolute;
+    width: 3.5rem;
+    height: 2.9rem;
+    margin-left: -5rem;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: var(--blue);
+} 
+
+span.ft, span.inch {
+    top: 5rem;
+}
+
+span.st, span.lbs {
+    top: 15.5rem;
+}
+
+/* get BMI and BMI results elements */
+
+.get-bmi {
+    width: 28rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #345FF7 0%, #587DFF 100%);
+    border-radius: 1.6rem;
+    padding: 3.8rem;
+    opacity: 0;
+    display: none;
+}
+
+.get-bmi.active {
+    display: flex;
+    opacity: 1;
+}
+
+.welcome {
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: var(--white);
+}
+
+.enter-details {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.bmi-box {
+    width: 28rem;
+    height: 25.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #345FF7 0%, #587DFF 100%);
+    border-radius: 1.6rem;
+    padding: 3rem;
+    display: none;
+    opacity: 0;
+}
+
+.bmi-box.active {
+    display: flex;
+    opacity: 1;
+}
+
+.bmi-results {
+    width: 21.6rem;
+    height: 8.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.result-header {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+.bmi-number {
+    font-weight: 600;
+    font-size: 4.8rem;
+    color: var(--white);
+}
+
+.bmi-result-text {
+    width: 21.6rem;
+    height: 8.4rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--white);
+    line-height: 2.1rem;
+}
+
+/* section two */
+
+.section-two {
+    width: 37.5rem;
+    height: 74.439rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.eating-img {
+    width: 37.5rem;
+    height: 35.438rem;
+}
+
+.bmi-meaning {
+    width: 32.8rem;
+    height: 34.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bmi-meaning-title {
+    width: 32.8rem;
+    font-weight: 600;
+    font-size: 3.2rem;
+    color: var(--gunmetal);
+}
+
+.bmi-meaning-text {
+    width: 32.8rem;
+    height: 24rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--darkElectricBlue);
+}
+
+/* section three */
+
+.section-three {
+    width: 37.5rem;
+    height: 87.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4rem;
+    background: linear-gradient(290.1deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
+}
+
+.section-three > div {
+    width: 32.7rem;
+    max-height: 24.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.section-three > div > img {
+    width: 6.4rem;
+    height: 6.4rem;
+}
+
+.section-three > div > h4 {
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: var(--gunmetal);
+}
+
+.section-three > div > p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--darkElectricBlue);
+    line-height: 2.4rem;
+}
+
+/* section four */
+
+.section-four {
+    width: 37.5rem;
+    height: 136.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.limitations {
+    width: 32.7rem;
+    height: 21.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.limitations-title {
+    font-weight: 600;
+    font-size: 3.2rem;
+    color: var(--gunmetal);
+}
+
+.limitations-text {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--darkElectricBlue);
+    text-align: center;
+}
+
+.limitations-info-containers {
+    width: 32.7rem;
+    height: 109.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.limitations-info-containers > div {
+    width: 32.7rem;
+    max-height: 24rem;
+    background-color: var(--white);
+    box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0;
+    border-radius: 1.6rem;
+}
+
+.limitations-info-containers > div.gender {
+    height: 21.6rem;
+}
+
+.limitations-info-containers > div.age {
+    height: 16.8rem;
+}
+
+.limitations-info-containers > div.muscle {
+    height: 19.2rem;
+}
+
+.limitations-info-containers > div.pregnancy {
+    height: 24rem;
+}
+
+.limitations-info-containers > div.race {
+    height: 21.6rem;
+}
+
+.limitations-info-containers > div > img {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.limitations-info-containers > div > h5 {
+    width: 23.1rem;
+    height: 2.4rem;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: -5%;
+    color: var(--gunmetal);
+}
+
+.limitations-info-containers > div > p {
+    width: 27.9rem;
+    max-height: 14.4rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--darkElectricBlue);
+}

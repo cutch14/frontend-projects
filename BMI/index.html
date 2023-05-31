@@ -17,8 +17,9 @@
   <body>
     <main class="main">
       <section class="section-one">
+        <div class="background"></div>
+        <img src="./images/logo.svg" alt="" class="head-img" />
         <header class="page-header">
-          <img src="./images/logo.svg" alt="" class="head-img" />
           <h1 class="page-title">Body Mass Index Calculator</h1>
           <p class="title-subtext">
             Better understand your weight in relation to your height using our
@@ -47,27 +48,56 @@
             <label for="imperial">Imperial</label>
           </div>
           <div class="metric-inputs">
-            <label for="height">Height</label>
-            <input type="text" name="height" class="height-cm" />
-            <span class="cm-text">cm</span>
-            <label for="weight">Weight</label>
-            <input type="text" name="weight" class="weight-kg" />
-            <span class="kg"></span>
+            <label for="height-cm">Height</label>
+            <br />
+            <input
+              type="number"
+              name="height"
+              id="height-cm"
+              class="height-cm"
+            />
+            <span class="cm">cm</span>
+            <label for="weight-kg">Weight</label>
+            <br />
+            <input
+              type="number"
+              name="weight"
+              id="weight-kg"
+              class="weight-kg"
+            />
+            <span class="kg">kg</span>
           </div>
           <div class="imperial-inputs">
-            <label for="height">Height</label>
-            <input type="text" name="height" class="height-ft" />
+            <label for="height-ft">Height</label>
+            <br />
+            <input
+              type="number"
+              name="height"
+              id="height-ft"
+              class="height-ft"
+            />
             <span class="ft">ft</span>
-            <input type="text" class="height-inch" />
+            <input
+              type="number"
+              name="height"
+              id="height-inch"
+              class="height-inch"
+            />
             <span class="inch">in</span>
             <br />
-            <label for="weight">Weight</label>
-            <input type="text" name="weight" class="weight-st" />
+            <label for="weight-st">Weight</label>
+            <br />
+            <input
+              type="number"
+              name="weight"
+              id="weight-st"
+              class="weight-st"
+            />
             <span class="st">st</span>
-            <input type="text" name="weight" class="weight-lbs" />
+            <input type="number" name="weight" class="weight-lbs" />
             <span class="lbs">lbs</span>
           </div>
-          <div class="get-bmi">
+          <div class="get-bmi active">
             <h2 class="welcome">Welcome!</h2>
             <p class="enter-details">
               Enter your height and weight and you'll see your BMI result here
@@ -86,24 +116,25 @@
         </section>
       </section>
       <section class="section-two">
-        <img
-          src="./images/image-man-eating.webp"
-          alt="man eating"
-          class="eating-img"
-        />
-        <div class="bmi-meaing">
-          <h4 class="bmi-meaning-title">What your BMI result means</h4>
-          <p class="bmi-meaning-text">
-            A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
-            Maintaining a healthy weight may lower your chances of experiencing
-            health issues later on, such as obesity and type 2 diabetes. Aim for
-            a nutritious diet with reduced fat and sugar content, incorporating
-            ample fruits and vegetables. Additionally, strive for regular
-            physical activity, ideally about 30 minutes daily for five days a
-            week.
-          </p>
-        </div>
-        <div class="improve-bmi-box">
+          <img
+            src="./images/image-man-eating.webp"
+            alt="man eating"
+            class="eating-img"
+          />
+          <div class="bmi-meaning">
+            <h4 class="bmi-meaning-title">What your BMI result means</h4>
+            <p class="bmi-meaning-text">
+              A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+              Maintaining a healthy weight may lower your chances of
+              experiencing health issues later on, such as obesity and type 2
+              diabetes. Aim for a nutritious diet with reduced fat and sugar
+              content, incorporating ample fruits and vegetables. Additionally,
+              strive for regular physical activity, ideally about 30 minutes
+              daily for five days a week.
+            </p>
+          </div>
+      </section>
+        <section class="section-three">
           <div class="healthy">
             <img
               src="./images/icon-eating.svg"
@@ -132,9 +163,9 @@
               wellness, promoting overall restoration and rejuvenation.
             </p>
           </div>
-        </div>
+        </section>
       </section>
-      <section class="section-three">
+      <section class="section-four">
         <div class="limitations">
           <h4 class="limitations-title">Limitations of BMI</h4>
           <p class="limitations-text">
@@ -144,7 +175,6 @@
             may not be beneficial to use.
           </p>
         </div>
-      </section>
       <section class="limitations-info-containers">
         <div class="gender">
           <img
@@ -202,6 +232,9 @@
           </p>
         </div>
       </section>
+    </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
