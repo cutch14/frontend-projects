@@ -33,6 +33,7 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     gap: 6rem;
+    overflow-x: hidden;
 }
 
 .section-one {
@@ -154,6 +155,10 @@ label[for="metric"], label[for="imperial"] {
     display: none;
 }
 
+.metric-inputs.active {
+    display: block;
+}
+
 label[for="height-cm"], label[for="weight-kg"] {
     width: 5rem;
     height: 2.1rem;
@@ -212,6 +217,11 @@ span.kg {
     height: 21.2rem;
     padding-top: 1rem;
     position: relative;
+    display: none;
+}
+
+.imperial-inputs.active {
+    display: block;
 }
 
 label[for="height-ft"], label[for="weight-st"] {
@@ -484,6 +494,10 @@ span.st, span.lbs {
     border-radius: 1.6rem;
 }
 
+.limitations-info-containers > div.swoosh-box {
+    display: none;
+}
+
 .limitations-info-containers > div.gender {
     height: 21.6rem;
 }
@@ -526,3 +540,502 @@ span.st, span.lbs {
     line-height: 2.4rem;
     color: var(--darkElectricBlue);
 }
+
+/* ////////////////////////////////////////// */
+/* ////////////////////////////////////////// */
+/* tablet styling */
+/* ////////////////////////////////////////// */
+/* ////////////////////////////////////////// */
+
+@media only screen and (min-width: 700px) and (max-width: 950px) {
+    body {
+        width: 76.8rem;
+    }
+    
+    main {
+        width: 76.8rem;
+        max-height: 441.8rem;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 6rem;
+    }
+    
+    .section-one {
+        width: 76.8rem;
+        max-height: 82.1rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 3rem 0 0 0;
+        gap: 4.2rem;
+    }
+    
+    .background {
+        width: 76.8rem;
+        height: 64rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(290.1deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
+        border-radius: 0 0 3.5rem 3.5rem;
+        z-index: 0
+    }
+    
+    /* Page title */
+    
+    .page-header {
+        width: 68.6rem;
+        height: 20.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+    }
+    
+    .page-title {
+        width: 38.6rem;
+        height: 10.6rem;
+        font-weight: 600;
+        font-size: 4.8rem;
+        line-height: 5.3rem;
+        letter-spacing: 0.005rem;
+        text-align: center;
+        color: var(--gunmetal);
+    }
+    
+    .title-subtext {
+        width: 68.6rem;
+        height: 7.2rem;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: var(--darkElectricBlue);
+        text-align: center;
+    }
+    
+    /* Calculator section */
+    
+    .calculator-container {
+        width: 68.6rem;
+        max-height: 46.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2.5rem;
+        background-color: var(--white);
+        padding: 3rem;
+        z-index: 1;
+        border-radius: 1.6rem;
+        box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+    }
+    
+    .calculator-title {
+        width: 62.2rem;
+        height: 2.9rem;
+        font-weight: 600;
+        font-size: 2.4rem;
+        letter-spacing: 0.005rem;
+        text-align: left;
+        color: var(--gunmetal);
+        margin-bottom: 2rem;
+        padding-left: 0.6rem;
+    }
+    
+    .select-measurement {
+        width: 61.5rem;
+        height: 3.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 22rem;
+    }
+    
+    input[type="radio"] {
+        width: 3.1rem;
+        height: 3.1rem;
+        margin-right: -6rem;
+    }
+    
+    label[for="metric"], label[for="imperial"] {
+        font-weight: 600;
+        font-size: 1.6rem;
+        margin-left: -15rem;
+    }
+    
+    /* metric input to toggle */
+    
+    .metric-inputs {
+        width: 62.2rem;
+        height: 9.8rem;
+        padding-top: 1rem;
+        position: relative;
+        display: none;
+    }
+
+    .metric-inputs.active {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -2rem;
+    }
+    
+    label[for="height-cm"], label[for="weight-kg"] {
+        width: 5rem;
+        height: 2.1rem;
+        position: absolute;
+        top: -0.5rem;
+    }
+
+    label[for="height-cm"] {
+        left: 1.5rem;
+    }
+
+    label[for="weight-kg"] {
+        left: 33rem;
+    }
+    
+    .height-cm, .weight-kg {
+        width: 29.9rem;
+        height: 6.9rem;
+        margin: .5rem 0 0 0;
+        border-radius: 1.2rem;
+        padding: 2rem 2.4rem;
+    }
+    
+    span.cm, span.kg {
+        position: absolute;
+        top: 3.4rem;
+    }
+    
+    span.cm {
+        left: 30rem;
+    }
+    
+    span.kg {
+        right: 1.6rem;
+    }
+    
+    /* imperial input to toggle */
+    
+    .imperial-inputs {
+        width: 62.2rem;
+        height: 9.8rem;
+        padding-top: 1rem;
+        position: relative;
+        display: none;
+        position: relative;
+        justify-content: space-evenly;
+    }
+
+    .imperial-inputs.active {
+        display: flex;
+    }
+    
+    label[for="height-ft"], label[for="weight-st"] {
+        position: absolute;
+    }
+
+    label[for="height-ft"] {
+        top: -0.5rem;
+        left: 1rem;
+    }
+
+    label[for="weight-st"] {
+        top: -0.5rem;
+        left: 32.3rem;
+    }
+    
+    .height-ft, .height-inch, .weight-st, .weight-lbs {
+        width: 15rem;
+        height: 6.9rem;
+        margin: .5rem 0 1.2rem 0;
+        border-radius: 1.2rem;
+        padding: 2rem 0;
+        background: var(--white);
+        border: .1rem solid var(--borders);
+        font-weight: 600;
+        font-size: 2.4rem;
+        color: var(--gunmetal);
+    }
+    
+    .height-ft, .weight-st {
+        margin-right: 0rem;
+    }
+    
+    span.ft, span.inch {
+        top: 3.5rem;
+    }
+
+    span.ft {
+        left: 17rem;
+    }
+
+    span.inch {
+        left: 32rem;
+    }
+    
+    span.st, span.lbs {
+        top: 3.5rem;
+    }
+
+    span.st {
+        left: 48rem;
+    }
+
+    span.lbs {
+        left: 62rem;
+    }
+    
+    /* get BMI and BMI results elements */
+    
+    .get-bmi {
+        width: 62.2rem;
+        height: 15rem;
+        border-radius: 8.6rem 99.9rem 99.9rem 8.6rem;
+        opacity: 0;
+        display: none;
+    }
+    
+    .get-bmi.active {
+        display: flex;
+        opacity: 1;
+    }
+    
+    .welcome {
+        font-size: 2.4rem;
+    }
+    
+    .enter-details {
+        font-size: 1.4rem;
+    }
+    
+    .bmi-box {
+        width: 62.2rem;
+        height: 14.9rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background: linear-gradient(90deg, #345FF7 0%, #587DFF 100%);
+        border-radius: 5.6rem 99.9rem 99.9rem 5.6rem;
+        padding: 3rem;
+        display: none;
+        opacity: 0;
+    }
+    
+    .bmi-box.active {
+        display: flex;
+        opacity: 1;
+    }
+    
+    .bmi-results {
+        width: 21.6rem;
+        height: 8.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .result-header {
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: var(--white);
+    }
+    
+    .bmi-number {
+        font-weight: 600;
+        font-size: 4.8rem;
+        color: var(--white);
+    }
+    
+    .bmi-result-text {
+        width: 26.7rem;
+        height: 6.3rem;
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: var(--white);
+        line-height: 150%;
+    }
+    
+    /* section two */
+    
+    .section-two {
+        width: 84.1rem;
+        height: 41.1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: -14rem;
+    }
+    
+    .eating-img {
+        width: 43.5rem;
+        height: 41.1rem;
+    }
+    
+    .bmi-meaning {
+        width: 33.1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    /* section three */
+    
+    .section-three {
+        width: 76.8rem;
+        height: 50.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 4rem;
+        background: linear-gradient(290.1deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
+    }
+    
+    .section-three > div {
+        width: 68.6rem;
+        max-height: 10.1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .section-three > div > img {
+        width: 6.4rem;
+        height: 6.4rem;
+        margin-top: 1.5rem;
+    }
+    
+    .section-three > div > h4 {
+        width: 58.2rem;
+        height: 2.9rem;
+        font-weight: 600;
+        font-size: 2.4rem;
+        color: var(--gunmetal);
+    }
+    
+    .section-three > div > p {
+        width: 58.2rem;
+        height: 4.8rem;
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: var(--darkElectricBlue);
+        line-height: 2.4rem;
+    }
+    
+    /* section four */
+    
+    .section-four {
+        width: 68.6rem;
+        height: 96.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 3rem;
+    }
+    
+    .limitations {
+        width: 68.6rem;
+        height: 13.9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .limitations-title {
+        font-weight: 600;
+        font-size: 3.2rem;
+        color: var(--gunmetal);
+    }
+    
+    .limitations-text {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: var(--darkElectricBlue);
+        text-align: center;
+    }
+    
+    .limitations-info-containers {
+        width: 68.6rem;
+        height: 76.8rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: space-evenly;
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
+    
+    .limitations-info-containers > div {
+        width: 33.5rem;
+        max-height: 25.6rem;
+        background-color: var(--white);
+        box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        border-radius: 1.6rem;
+        gap: 1rem;
+    }
+    
+    .limitations-info-containers > div.gender {
+        height: 23.2rem;
+    }
+    
+    .limitations-info-containers > div.age {
+        height: 23.2rem;
+    }
+    
+    .limitations-info-containers > div.muscle {
+        height: 25.6rem;
+    }
+    
+    .limitations-info-containers > div.pregnancy {
+        height: 25.6rem;
+    }
+    
+    .limitations-info-containers > div.race {
+        height: 23.2rem;
+    }
+    
+    .limitations-info-containers > div > img {
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-left: -2.5rem;
+    }
+    
+    .limitations-info-containers > div > h5 {
+        width: 22.3rem;
+        height: 2.4rem;
+        font-weight: 600;
+        font-size: 2rem;
+        letter-spacing: -5%;
+        color: var(--gunmetal);
+    }
+    
+    .limitations-info-containers > div > p {
+        width: 27.5rem;
+        height: 14.4rem;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: var(--darkElectricBlue);
+    }
+}
+
+/* ///////////////////////////////////////// */
+/* ///////////////////////////////////////// */
+/* desktop styling */
+/* ///////////////////////////////////////// */
+/* ///////////////////////////////////////// */
