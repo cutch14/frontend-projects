@@ -34,6 +34,7 @@ main {
     justify-content: space-evenly;
     gap: 6rem;
     overflow-x: hidden;
+    position: relative;
 }
 
 .section-one {
@@ -541,6 +542,10 @@ span.st, span.lbs {
     color: var(--darkElectricBlue);
 }
 
+.left-swoosh, .right-swoosh {
+    display: none;
+}
+
 /* ////////////////////////////////////////// */
 /* ////////////////////////////////////////// */
 /* tablet styling */
@@ -1039,3 +1044,479 @@ span.st, span.lbs {
 /* desktop styling */
 /* ///////////////////////////////////////// */
 /* ///////////////////////////////////////// */
+
+@media only screen and (min-width: 951px) {
+    body {
+        width: 144rem;
+        margin: auto;
+    }
+    
+    main {
+        width: 144rem;
+        max-height: 277.6rem;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10rem;
+        padding: 0 0 8rem 0;
+        overflow-x: hidden;
+    }
+
+    .left-swoosh {
+        display: block;
+        position: absolute;
+        width: 8.5rem;
+        height: 20rem;
+        top: 70rem;
+        right: 10rem;
+    }
+    
+    .section-one {
+        width: 127.6rem;
+        max-height: 73.7rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: space-evenly;
+        align-self: start;
+        padding: 3rem 0 0 12rem;
+        gap: 4.2rem;
+    }
+    
+    .background {
+        width: 97.8rem;
+        height: 73.7rem;
+    }
+    
+    /* Page title */
+    
+    .head-img {
+        width: 6.4rem;
+        height: 6.4rem;
+        z-index: 1;
+    }
+    
+    .page-header {
+        width: 56.4rem;
+        height: 47.1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        z-index: 1;
+        gap: 5.5rem;
+    }
+    
+    .page-title {
+        width: 56.4rem;
+        height: 14rem;
+        font-size: 6.4rem;
+        line-height: 7.4rem;
+        letter-spacing: 0.005rem;
+        text-align: left;
+    }
+
+    .line-break::before {
+        content: "\A";
+        white-space: pre;
+    }
+    
+    .title-subtext {
+        width: 46.5rem;
+        height: 9.6rem;
+        text-align: left;
+    }
+    
+    /* Calculator section */
+    
+    .calculator-container {
+        width: 56.4rem;
+        max-height: 60.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2.5rem;
+        background-color: var(--white);
+        padding: 3rem;
+        z-index: 1;
+        border-radius: 1.6rem;
+        box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+        margin-left: 0rem;
+        margin-top: 20rem;
+    }
+    
+    .calculator-title {
+        width: 50rem;
+        height: 2.9rem;
+        font-weight: 600;
+        font-size: 2.4rem;
+        letter-spacing: 0.005rem;
+        text-align: left;
+        color: var(--gunmetal);
+        margin-bottom: 2rem;
+        padding-left: 0.6rem;
+    }
+    
+    .select-measurement {
+        width: 50rem;
+        height: 3.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 22rem;
+    }
+    
+    input[type="radio"] {
+        width: 3.1rem;
+        height: 3.1rem;
+        margin-right: -6rem;
+    }
+    
+    label[for="metric"], label[for="imperial"] {
+        font-weight: 600;
+        font-size: 1.6rem;
+        margin-left: -15rem;
+    }
+    
+    /* metric input to toggle */
+    
+    .metric-inputs {
+        width: 50rem;
+        height: 9.8rem;
+        padding-top: 1rem;
+        position: relative;
+        display: none;
+    }
+
+    .metric-inputs.active {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -2rem;
+    }
+    
+    label[for="height-cm"], label[for="weight-kg"] {
+        width: 5rem;
+        height: 2.1rem;
+        position: absolute;
+        top: -0.5rem;
+    }
+
+    label[for="height-cm"] {
+        left: 1.5rem;
+    }
+
+    label[for="weight-kg"] {
+        left: 27rem;
+    }
+    
+    .height-cm, .weight-kg {
+        width: 23.8rem;
+        height: 6.9rem;
+        margin: .5rem 0 0 0;
+        border-radius: 1.2rem;
+        padding: 2rem 2.4rem;
+    }
+    
+    span.cm, span.kg {
+        position: absolute;
+        top: 3.4rem;
+    }
+    
+    span.cm {
+        left: 24rem;
+    }
+    
+    span.kg {
+        right: 1.6rem;
+    }
+    
+    /* imperial input to toggle */
+    
+    .imperial-inputs {
+        width: 50rem;
+        height: 22rem;
+        padding-top: 1rem;
+        position: relative;
+        display: none;
+        position: relative;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .imperial-inputs.active {
+        display: flex;
+    }
+    
+    label[for="height-ft"], label[for="weight-st"] {
+        position: absolute;
+    }
+
+    label[for="height-ft"] {
+        top: -0.5rem;
+        left: 1rem;
+    }
+
+    label[for="weight-st"] {
+        top: 10rem;
+        left: 1rem;
+    }
+    
+    .height-ft, .height-inch, .weight-st, .weight-lbs {
+        width: 23.8rem;
+        height: 6.9rem;
+    }
+        
+    span.ft, span.inch {
+        top: 3.5rem;
+    }
+
+    span.ft {
+        left: 25rem;
+    }
+
+    span.inch {
+        left: 50rem;
+    }
+    
+    span.st, span.lbs {
+        top: 13.8rem;
+    }
+
+    span.st {
+        left: 25rem;
+    }
+
+    span.lbs {
+        left: 49rem;
+    }
+    
+    /* get BMI and BMI results elements */
+    
+    .get-bmi {
+        width: 50rem;
+        height: 13rem;
+        border-radius: 8.6rem 99.9rem 99.9rem 8.6rem;
+        opacity: 0;
+        display: none;
+    }
+    
+    .get-bmi.active {
+        display: flex;
+        opacity: 1;
+    }
+    
+    .welcome {
+        font-size: 2.4rem;
+    }
+    
+    .enter-details {
+        font-size: 1.4rem;
+    }
+    
+    .bmi-box {
+        width: 50rem;
+        height: 16.6rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background: linear-gradient(90deg, #345FF7 0%, #587DFF 100%);
+        border-radius: 5.6rem 99.9rem 99.9rem 5.6rem;
+        padding: 3rem;
+        display: none;
+        opacity: 0;
+    }
+    
+    .bmi-box.active {
+        display: flex;
+        opacity: 1;
+    }
+    
+    .bmi-results {
+        width: 20.6rem;
+        height: 10.2rem;
+    }
+        
+    .bmi-number {
+        font-size: 6.4rem;
+    }
+    
+    .bmi-result-text {
+        width: 20.6rem;
+        height: 8.4rem;
+    }
+    
+    /* section two */
+    
+    .section-two {
+        width: 116rem;
+        height: 53.3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .eating-img {
+        width: 56.4rem;
+        height: 53.3rem;
+    }
+    
+    .bmi-meaning {
+        width: 46.5rem;
+        height: 30.9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10rem;
+    }
+    
+    .bmi-meaning-title {
+        width: 46.5rem;
+        height: 10.8rem;
+        font-size: 4.8rem;
+    }
+    
+    .bmi-meaning-text {
+        width: 46.5rem;
+        height: 16.8rem;
+    }
+    
+    /* section three */
+    
+    .section-three {
+        width: 139.2rem;
+        height: 40.2rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 4rem;
+        border-radius: 3.6rem;
+    }
+    
+    .section-three > div {
+        width: 36.5rem;
+        max-height: 23.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    /* section four */
+    
+    .section-four {
+        width: 128rem;
+        height: 70.4rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+    }
+    
+    .limitations {
+        width: 56.4rem;
+        height: 18.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    .limitations-title {
+        font-size: 4.8rem;
+    }
+    
+    .limitations-text {
+        position: absolute;
+        width: 56.4rem;
+        height: 9.6rem;
+        left: 0;
+        bottom: 0;
+        text-align: left;
+    }
+    
+    .limitations-info-containers {
+        width: 96.1rem;
+        height: 70.4rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+    }
+    
+    .limitations-info-containers > div {
+        width: 36.5rem;
+        max-height: 24rem;
+        background-color: var(--white);
+        box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 3rem 0;
+        border-radius: 1.6rem;
+    }
+    
+    .limitations-info-containers > div.gender {
+        height: 23.2rem;
+        margin-left: 18rem;
+    }
+    
+    .limitations-info-containers > div.age {
+        height: 18.4rem;
+    }
+    
+    .limitations-info-containers > div.muscle {
+        height: 18.4rem;
+    }
+    
+    .limitations-info-containers > div.pregnancy {
+        height: 23.2rem;
+        position: absolute;
+        top: 46.9rem;
+        left: -18rem;
+    }
+    
+    .limitations-info-containers > div.race {
+        height: 23.2rem;
+    }
+
+    .limitations-info-containers > div > img {
+        margin-left: 1rem;
+    }
+        
+    .limitations-info-containers > div > h5 {
+        width: 23.1rem;
+        height: 2.4rem;
+        font-weight: 600;
+        font-size: 2rem;
+        letter-spacing: -5%;
+        color: var(--gunmetal);
+        margin-right: 4rem;
+    }
+    
+    .limitations-info-containers > div > p {
+        width: 30.1rem;
+        max-height: 12rem;
+    }
+
+    img.right-swoosh {
+        display: block;
+        width: 9.4rem;
+        height: 12.2rem;
+        position: absolute;
+        bottom: 40rem;
+        left: 25rem;
+    }
+}

@@ -20,7 +20,7 @@
         <div class="background"></div>
         <img src="./images/logo.svg" alt="" class="head-img" />
         <header class="page-header">
-          <h1 class="page-title">Body Mass Index Calculator</h1>
+          <h1 class="page-title">Body Mass <span class="line-break">Index Calculator</span></h1>
           <p class="title-subtext">
             Better understand your weight in relation to your height using our
             body mass index (BM) calculator. While BMI is not the sole
@@ -97,13 +97,13 @@
             <input type="number" name="weight" class="weight-lbs" />
             <span class="lbs">lbs</span>
           </div>
-          <div class="get-bmi">
+          <div class="get-bmi active">
             <h2 class="welcome">Welcome!</h2>
             <p class="enter-details">
               Enter your height and weight and you'll see your BMI result here
             </p>
           </div>
-          <div class="bmi-box active">
+          <div class="bmi-box">
             <div class="bmi-results">
               <h3 class="result-header">Your BMI is...</h3>
               <h4 class="bmi-number">23.4</h4>
@@ -197,9 +197,6 @@
             BMI to underestimate body fat content.
           </p>
         </div>
-        <div class="swoosh-box">
-          <img src="./images/pattern-curved-line-left.svg" alt="" class="swoosh-img">
-        </div>
         <div class="muscle">
           <img
             src="./images/icon-muscle.svg"
@@ -236,6 +233,8 @@
         </div>
       </section>
     </section>
+    <img src="./images/pattern-curved-line-right.svg" alt="swoosh" class="right-swoosh">
+    <img src="./images/pattern-curved-line-left.svg" alt="swoosh" class="left-swoosh">
     </main>
 
     <script src="script.js"></script>
