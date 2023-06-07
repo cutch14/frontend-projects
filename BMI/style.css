@@ -154,10 +154,13 @@ label[for="metric"], label[for="imperial"] {
     padding-top: 1rem;
     position: relative;
     display: none;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
 }
 
 .metric-inputs.active {
-    display: block;
+    display: flex;
+    opacity: 1;
 }
 
 label[for="height-cm"], label[for="weight-kg"] {
@@ -219,10 +222,12 @@ span.kg {
     padding-top: 1rem;
     position: relative;
     display: none;
+    opacity: 0;
 }
 
 .imperial-inputs.active {
     display: block;
+    opacity: 1;
 }
 
 label[for="height-ft"], label[for="weight-st"] {
@@ -758,7 +763,7 @@ span.st, span.lbs {
         height: 6.9rem;
         margin: .5rem 0 1.2rem 0;
         border-radius: 1.2rem;
-        padding: 2rem 0;
+        padding: 2rem 2.4rem;
         background: var(--white);
         border: .1rem solid var(--borders);
         font-weight: 600;
