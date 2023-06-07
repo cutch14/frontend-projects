@@ -85,7 +85,8 @@ function idealWeightRangeStLbs(height) {
         return false;
     } else {
         return `${minimumWeightSt.toFixed(0)}st ${minimumLbsRemaining.toFixed(0)}lbs 
-        - ${maximumWeightSt.toFixed(0)}st ${maximumLbsRemaining.toFixed(0)}lbs`;
+        - ${maximumWeightSt.toFixed(0)}st 
+        ${maximumLbsRemaining.toFixed(0)}${maximumLbsRemaining.toFixed(0) == 1 ? "lb" : "lbs"}`;
     };
 };
 
