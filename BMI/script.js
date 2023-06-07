@@ -67,14 +67,25 @@ function idealWeightRangeStLbs(height) {
     let inchesToMetres = height * 0.0254;
     
     // lower ideal weight = 18.5 * height squared
-    let minimumWeight = 18.5 * (Math.pow(inchesToMetres, 2));
+    let minimumWeightKG = 18.5 * (Math.pow(inchesToMetres, 2));
     // higher ideal weight = 24.9 * height squared
-    let maximumWeight = 24.9 * (Math.pow(inchesToMetres, 2));
-    
-    if(minimumWeight < 20) {
+    let maximumWeightKG = 24.9 * (Math.pow(inchesToMetres, 2));
+    // convert min weight to lbs
+    let minimumWeightLbs = minimumWeightKG * 2.2;
+    // convert max weight to lbs
+    let maximumWeightLbs = maximumWeightKG * 2.2;
+    // convert min to st & lbs
+    let minimumWeightSt = minimumWeightLbs / 14;
+    let minimumLbsRemaining = minimumWeightLbs % 14;
+    // convert max to st & lbs
+    let maximumWeightSt = maximumWeightLbs / 14;
+    let maximumLbsRemaining = maximumWeightLbs % 14;
+
+    if(minimumWeightLbs < 20) {
         return false;
     } else {
-        return `${minimumWeight.toFixed(2)}kgs - ${maximumWeight.toFixed(2)}kgs`;
+        return `${minimumWeightSt.toFixed(0)}st ${minimumLbsRemaining.toFixed(0)}lbs 
+        - ${maximumWeightSt.toFixed(0)}st ${maximumLbsRemaining.toFixed(0)}lbs`;
     };
 };
 
@@ -169,4 +180,3 @@ function handleInputs() {
 const inputs = document.querySelectorAll("input[type=number]");
 
 inputs.forEach(elem => elem.addEventListener('input', handleInputs));
-
