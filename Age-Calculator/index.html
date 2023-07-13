@@ -11,28 +11,76 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="style.css" />
 
-    <title>Frontend Mentor | Age calculator app</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <title>Age calculator app</title>
   </head>
   <body>
-    Day DD Month MM Year YYYY -- years -- months -- days
+    <main class="main-container">
+      <header class="header">
+        <section class="day-section">
+          <h1 class="day-title">Day</h1>
+          <input
+            type="number"
+            name="day"
+            id="day"
+            class="day"
+            placeholder="DD"
+          />
+          <p class="valid-error day-error error">Must be a valid day</p>
+          <p class="field-error field-day error">This field is required</p>
+          <p class="valid-date-error error">Must be a valid date</p>
+        </section>
+        <section class="month-section">
+          <h1 class="month-title">Month</h1>
+          <input
+            type="number"
+            name="month"
+            id="month"
+            class="month"
+            placeholder="MM"
+          />
+          <p class="valid-error month-error error">Must be a valid month</p>
+          <p class="field-error field-month error">This field is required</p>
+        </section>
+        <section class="year-section">
+          <h1 class="year-title">Year</h1>
+          <input
+            type="number"
+            name="year"
+            id="year"
+            class="year"
+            placeholder="YYYY"
+          />
+          <p class="valid-error year-error error">Must be in the past</p>
+          <p class="field-error field-year error">This field is required</p>
+        </section>
+      </header>
+      <section class="start-button-section">
+        <div class="horizontal-line-left"></div>
+        <img
+          src="./images/icon-arrow.svg"
+          alt="start-button"
+          class="start-button"
+        />
+        <div class="horizontal-line-right"></div>
+      </section>
+      <section class="results-section">
+        <div class="years-result">
+          <h2 class="years-figure figure">--</h2>
+          <h2 class="years-text text">years</h2>
+        </div>
+        <div class="months-result">
+          <h2 class="months-figure figure">--</h2>
+          <h2 class="months-text text">months</h2>
+        </div>
+        <div class="days-result">
+          <h2 class="days-figure figure">--</h2>
+          <h2 class="days-text text">days</h2>
+        </div>
+      </section>
+    </main>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <script src="script.js"></script>
   </body>
 </html>
