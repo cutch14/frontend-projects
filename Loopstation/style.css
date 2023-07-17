@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    font-family: 'Alata', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --darkGray: hsl(0, 0%, 55%);
+    --veryDarkGray: hsl(0, 0%, 41%);
+}
+
+/* ////////////////////// */
+/* Mobile styling */
+/* ////////////////////// */
+
+body {
+    width: 37.5rem;
+    height: 321.7rem;
+    margin: auto;
+    background-color: var(--white);
+}
+
+.main-container {
+    width: 37.5rem;
+    height: 321.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Moblie menu */
+
+.menu {
+    width: 37.5rem;
+    height: 66.7rem;
+    background-color: var(--black);
+    padding: 4rem 2.5rem;
+    position: absolute;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.menu.active {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.menu > header {
+    width: 31rem;
+    height: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu > header > img.menu-title {
+    width: 14.4rem;
+    height: 2.4rem;
+}
+
+.menu > header > img.close-menu {
+    width: 2rem;
+    height: 2rem;
+}
+
+.menu > div.menu-options {
+    width: 12.9rem;
+    height: 22.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15rem;
+}
+
+.menu > div.menu-options > p {
+    color: var(--white);
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.5625rem;
+    text-transform: uppercase;
+}
+
+/* Mobile header */
+
+section.title-section {
+    width: 37.5rem;
+    height: 65rem;
+    padding: 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    background: url('./images/mobile/image-hero.jpg');
+    background-size: 37.5rem 65rem;
+}
+
+section.title-section > header {
+    width: 31rem;
+    height: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.title-section > h1.title {
+    width: 32.7rem;
+    height: 19.6rem;
+    border: 2px solid var(--white);
+    margin-top: 15rem;
+    color: var(--white);
+    font-family: 'Josefin Sans';
+    display: flex;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 3.5rem;
+    padding: 3rem 5rem 3rem 3rem;
+}
+
+/* Interactive info section */
+
+section.interactive-container {
+    width: 32.7rem;
+    height: 52.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.interactive-container > div.interactive-img {
+    width: 32.7rem;
+    height: 22.4rem;
+    background: url('./images/mobile/image-interactive.jpg');
+    background-size: 32.7rem 22.4rem;
+}
+
+section.interactive-container > div.interactive-info {
+    width: 27.9rem;
+    height: 25.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.interactive-container > div.interactive-info > h2 {
+    width: 27.9rem;
+    height: 6.4rem;
+    color: var(--black);
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 3.2rem;
+}
+
+section.interactive-container > div.interactive-info > p {
+    width: 27.9rem;
+    height: 17.5rem;
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0.49;
+    line-height: 2.5rem;
+}
+
+/* Creations section */
+
+section.creations {
+    width: 32.7rem;
+    height: 125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.creations > h3 {
+    width: 27.9rem;
+    height: 3.2rem;
+    font-family: 'Josefin Sans';
+    text-align: center;
+    font-weight: 300;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+}
+
+section.creations > button {
+    width: 15.7rem;
+    height: 4rem;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    order: 1;
+}
+
+section.creations > div.creation-images {
+    width: 32.7rem;
+    height: 112.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.creations > div.creation-images > div {
+    width: 32.7rem;
+    height: 12rem;
+    padding: 5.3rem 0 0 2rem;
+    font-family: 'Josefin Sans';
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    background-size: 32.7rem 12rem;
+    color: var(--white);
+}
+
+section.creations > div.creation-images > div.earth {
+    background-image: url('./images/mobile/image-deep-earth.jpg');
+}
+
+section.creations > div.creation-images > div.arcade {
+    background-image: url('./images/mobile/image-night-arcade.jpg');
+}
+
+section.creations > div.creation-images > div.soccer {
+    background-image: url('./images/mobile/image-soccer-team.jpg');
+}
+
+section.creations > div.creation-images > div.grid {
+    background-image: url('./images/mobile/image-grid.jpg');
+}
+
+section.creations > div.creation-images > div.above {
+    background-image: url('./images/mobile/image-from-above.jpg');
+}
+
+section.creations > div.creation-images > div.pocket {
+    background-image: url('./images/mobile/image-pocket-borealis.jpg');
+}
+
+section.creations > div.creation-images > div.curiosity {
+    background-image: url('./images/mobile/image-curiosity.jpg');
+}
+
+section.creations > div.creation-images > div.fisheye {
+    background-image: url('./images/mobile/image-fisheye.jpg');
+}
+
+/* Footer */
+
+footer.page-footer {
+    width: 37.5rem;
+    height: 47rem;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer.page-footer > img {
+    width: 14.4rem;
+    height: 2.4rem;
+}
+
+footer.page-footer > div.footer-options {
+    width: 5.9rem;
+    height: 18.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer.page-footer > div.footer-options > p {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+footer.page-footer > div.socials {
+    width: 14.4rem;
+    height: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer.page-footer > h5 {
+    width: 27.2rem;
+    height: 2.5rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+/* //////////////////// */
+/* //////////////////// */
+/* Desktop styling */
+/* //////////////////// */
+/* //////////////////// */
