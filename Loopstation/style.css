@@ -38,6 +38,7 @@ body {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    background-color: var(--white);
 }
 
 /* Moblie menu */
@@ -50,6 +51,7 @@ body {
     position: absolute;
     transform: translateY(-100%);
     opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
 
 .menu.active {
@@ -65,14 +67,14 @@ body {
     align-items: center;
 }
 
-.menu > header > img.menu-title {
-    width: 14.4rem;
-    height: 2.4rem;
-}
-
 .menu > header > img.close-menu {
     width: 2rem;
     height: 2rem;
+    transition: cursor 0.2s ease-in-out;
+}
+
+.menu > header > img.close-menu:hover {
+    cursor: pointer;
 }
 
 .menu > div.menu-options {
@@ -91,6 +93,12 @@ body {
     font-size: 1.5rem;
     line-height: 1.5625rem;
     text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu > div.menu-options > p:hover {
+    cursor: pointer;
+    font-size: 1.6rem;
 }
 
 /* Mobile header */
@@ -111,6 +119,18 @@ section.title-section > header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+section.title-section > header > div.desktop-options {
+    display: none;
+}
+
+section.title-section > header > img.open-menu {
+    transition: cursor 0.2s ease-in-out;
+}
+
+section.title-section > header > img.open-menu:hover {
+    cursor: pointer;
 }
 
 section.title-section > h1.title {
@@ -209,6 +229,13 @@ section.creations > button {
     font-weight: 400;
     letter-spacing: 0.5rem;
     order: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+section.creations > button:hover {
+    cursor: pointer;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 section.creations > div.creation-images {
@@ -231,6 +258,12 @@ section.creations > div.creation-images > div {
     line-height: 2.4rem;
     background-size: 32.7rem 12rem;
     color: var(--white);
+    transition: all 0.2s ease-in-out;
+}
+
+section.creations > div.creation-images > div:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 section.creations > div.creation-images > div.earth {
@@ -295,6 +328,12 @@ footer.page-footer > div.footer-options > p {
     color: var(--white);
     font-size: 1.5rem;
     font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}
+
+footer.page-footer > div.footer-options > p:hover {
+    cursor: pointer;
+    border-bottom: 1px solid var(--white);
 }
 
 footer.page-footer > div.socials {
@@ -303,6 +342,11 @@ footer.page-footer > div.socials {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: cursor 0.2s ease-in-out;
+}
+
+footer.page-footer > div.socials:hover {
+    cursor: pointer;
 }
 
 footer.page-footer > h5 {
@@ -318,3 +362,254 @@ footer.page-footer > h5 {
 /* Desktop styling */
 /* //////////////////// */
 /* //////////////////// */
+
+@media only screen and (min-width: 900px) {
+    body {
+        width: 144rem;
+        height: 289.6rem;
+        margin: auto;
+        background-color: var(--white);
+    }
+    
+    .main-container {
+        width: 144rem;
+        height: 289.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        background-color: var(--white);
+    }
+    
+    /* Mobile menu */
+    
+    .menu {
+        display: none;
+    }
+    
+    /* Header */
+    
+    section.title-section {
+        width: 144rem;
+        height: 65rem;
+        padding: 4rem 15rem;
+        background: url('./images/desktop/image-hero.jpg');
+        background-size: 144rem 65rem;
+    }
+    
+    section.title-section > header {
+        width: 110rem;
+        height: 3.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    section.title-section > header > div.desktop-options {
+        display: flex;
+        color: var(--white);
+        width: 40rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section.title-section > header > div.desktop-options > p {
+        font-size: 1.5rem;
+        transition: all 0.2s ease-in-out;
+    }
+
+    section.title-section > header > div.desktop-options > p:hover {
+        cursor: pointer;
+        border-bottom: 1px solid var(--white);
+    }
+    
+    section.title-section > header > img.open-menu {
+        display: none;
+    }
+        
+    section.title-section > h1.title {
+        width: 65rem;
+        height: 27.8rem;
+        margin-top: 15rem;
+        font-size: 7.2rem;
+        line-height: 7rem;
+        padding: 4rem 5rem 3rem 3rem;
+    }
+    
+    /* Interactive info section */
+    
+    section.interactive-container {
+        width: 111.1rem;
+        height: 50rem;
+        align-items: start;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    section.interactive-container > div.interactive-img {
+        width: 73.1rem;
+        height: 50rem;
+        background: url('./images/desktop/image-interactive.jpg');
+        background-size: 76.1rem 50rem;
+    }
+    
+    section.interactive-container > div.interactive-info {
+        position: absolute;
+        background-color: var(--white);
+        bottom: 0;
+        right: 0;
+        width: 54.1rem;
+        height: 31.7rem;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+        gap: 2rem;
+    }
+    
+    section.interactive-container > div.interactive-info > h2 {
+        width: 44.5rem;
+        height: 9.6rem;
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+        text-align: left;
+    }
+    
+    section.interactive-container > div.interactive-info > p {
+        width: 44.5rem;
+        height: 10rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        text-align: left;
+    }
+    
+    /* Creations section */
+    
+    section.creations {
+        width: 111.4rem;
+        height: 105.8rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    section.creations > h3 {
+        width: 44.5rem;
+        height: 4.8rem;
+        text-align: left;
+        font-size: 4.8rem;
+    }
+    
+    section.creations > button {
+        order: 0;
+    }
+    
+    
+    section.creations > div.creation-images {
+        width: 111.4rem;
+        height: 100rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: space-evenly;
+        justify-content: space-between;
+    }
+    
+    section.creations > div.creation-images > div {
+        width: 25.6rem;
+        height: 45rem;
+        padding: 35.5rem 0 0 4rem;
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        background-size: 25.6rem 45rem;
+    }
+
+    section.creations > div.creation-images > div.earth { 
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), 
+        url('./images/desktop/image-deep-earth.jpg');
+    }
+    
+    section.creations > div.creation-images > div.arcade {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), 
+        url('./images/desktop/image-night-arcade.jpg');
+    }
+    
+    section.creations > div.creation-images > div.soccer {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), 
+        url('./images/desktop/image-soccer-team.jpg');
+    }
+    
+    section.creations > div.creation-images > div.grid {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), 
+        url('./images/desktop/image-grid.jpg');
+    }
+    
+    section.creations > div.creation-images > div.above {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), 
+        url('./images/desktop/image-from-above.jpg');
+    }
+    
+    section.creations > div.creation-images > div.pocket {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), 
+        url('./images/desktop/image-pocket-borealis.jpg');
+    }
+    
+    section.creations > div.creation-images > div.curiosity {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), 
+        url('./images/desktop/image-curiosity.jpg');
+    }
+
+    section.creations > div.creation-images > div.fisheye {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), 
+        url('./images/desktop/image-fisheye.jpg');
+    }
+    
+    
+    /* Footer */
+    
+    footer.page-footer {
+        width: 144rem;
+        height: 16rem;
+        background-color: var(--black);
+        padding: 2rem 16.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer.page-footer > img {
+        order: 0;
+    }
+    
+    footer.page-footer > div.footer-options {
+        width: 70rem;
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4rem;
+        order: 2;
+    }
+    
+    footer.page-footer > div.socials {
+        width: 60rem;
+        height: 5rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3rem;
+        order: 1;
+    }
+    
+    footer.page-footer > h5 {
+        width: 40rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: flex-end;
+        order: 3;
+    }
+}
