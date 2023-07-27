@@ -15,16 +15,123 @@
     <title>Officelite coming soon site</title>
   </head>
   <body>
-    Work smarter. Save time. Easily manage your projects. Get on the list and
-    receive in-app perks available only to early subscribers. We are moving into
-    final development and getting ready for official launch soon.
+    <main class="main-container">
+      <img src="./assets/shared/logo.svg" alt="logo" class="logo" />
+      <section class="page-title">
+        <h1 class="title">Work smarter. <br />Save time.</h1>
+        <p class="title-text">
+          Easily manage your projects. Get on the list and receive in-app perks
+          available only to early subscribers. We are moving into final
+          development and getting ready for official launch soon.
+        </p>
+      </section>
+      <section class="time-container">
+        <h3 class="coming-soon">
+          Coming <span class="highlight">4 Nov 2020</span>
+        </h3>
+        <div class="time-remaining">
+          <div class="days-box">
+            <h4 class="days">47</h4>
+            <p class="days-text">days</p>
+          </div>
+          <div class="hours-box">
+            <h4 class="hours">07</h4>
+            <p class="hours-text">hours</p>
+          </div>
+          <div class="minutes-box">
+            <h4 class="minutes">56</h4>
+            <p class="minutes-text">minutes</p>
+          </div>
+          <div class="seconds-box">
+            <h4 class="seconds">56</h4>
+            <p class="seconds-text">seconds</p>
+          </div>
+        </div>
+      </section>
+      <section class="signup-container">
+        <div class="name-box">
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            class="name"
+            placeholder="Name"
+          />
+          <img
+            src="./assets/sign-up/icon-check.svg"
+            alt="tick"
+            class="tick"
+          /><img
+            src="./assets/sign-up/icon-cross.svg"
+            alt="cross"
+            class="cross"
+          />
+        </div>
+        <div class="email-box">
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="email"
+            placeholder="Email Address"
+          />
+          <img src="./assets/sign-up/icon-check.svg" alt="tick" class="tick" />
+          <img
+            src="./assets/sign-up/icon-cross.svg"
+            alt="cross"
+            class="cross"
+          />
+        </div>
+        <div class="subscription-box">
+          Basic Pack <span class="pack-price">Free</span>
+          <img
+            src="./assets/sign-up/icon-arrow-down.svg"
+            alt="chevron"
+            class="chevron"
+          />
+        </div>
+        <div class="phone-number-box">
+          <input
+            type="number"
+            name="phone-number"
+            id="phone-number"
+            class="number"
+            placeholder="Phone Number"
+          />
+          <img src="./assets/sign-up/icon-check.svg" alt="tick" class="tick" />
+          <img
+            src="./assets/sign-up/icon-cross.svg"
+            alt="cross"
+            class="cross"
+          />
+        </div>
+        <div class="company">
+          <input
+            type="text"
+            name="company"
+            id="company"
+            class="company"
+            placeholder="Company"
+          />
+          <img src="./assets/sign-up/icon-check.svg" alt="tick" class="tick" />
+          <img
+            src="./assets/sign-up/icon-cross.svg"
+            alt="cross"
+            class="cross"
+          />
+        </div>
+        <button class="list-btn">Get on the list</button>
+        <section class="dropdown">
+          <div class="basic">Basic Pack <span class="price">Free</span></div>
+          <div class="pro">Pro Pack <span class="price">$9.99</span></div>
+          <div class="ultimate">
+            Ultimate Pack <span class="price">$19.99</span>
+          </div>
+          <div class="dropdown-footer"></div>
+        </section>
+      </section>
+    </main>
 
-    <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-    Coming 4 Nov 2020
-
-    <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-    47 Days 07 Hours 56 Min 14 Sec Name Email Address Basic Pack Free Basic Pack
-    Free Pro Pack $9.99 Ultimate Pack $19.99 Phone Number Company Get on the
-    list
+    <script src="./sign-up.js"></script>
   </body>
 </html>
