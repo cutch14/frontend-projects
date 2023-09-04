@@ -72,20 +72,65 @@ packageOptions.forEach(elem => {
     elem.addEventListener('click', handleDropdownSelection);
 })
 
+// Grab inputs
+
+const nameInput = document.querySelector(".name");
+const emailInput = document.querySelector(".email");
+const phoneInput = document.querySelector(".number");
+const companyInput = document.querySelector(".company > input");
+const inputBtn = document.querySelector(".list-btn");
+
 // Handle input errors
 
 function handleNameInput() {
+    nameInput.parentElement.classList.remove('active');
 
+    const checkName = new RegExp(/\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/gm);
+
+    console.log(nameInput.value);
+
+    if(!nameInput.value.match(checkName)) {
+        nameInput.parentElement.classList.add('active');
+    }
+
+    nameInput.value = "";
 }
 
 function handleEmailInput() {
+    emailInput.parentElement.classList.remove('active');
 
+    const checkEmail = new RegExp(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/)
+
+    console.log(emailInput.value);
+
+    if(!emailInput.value.match(checkEmail)) {
+        emailInput.parentElement.classList.add('active');
+    }
 }
 
 function handlePhoneInput() {
+    phoneInput.parentElement.classList.remove('active');
 
+    const checkPhone = new RegExp(/(\(?\+44\)?\s?(1|2|3|7|8)\d{3}|\(?(01|02|03|07|08)\d{3}\)?)\s?\d{3}\s?\d{3}|(\(?\+44\)?\s?(1|2|3|5|7|8)\d{2}|\(?(01|02|03|05|07|08)\d{2}\)?)\s?\d{3}\s?\d{4}|(\(?\+44\)?\s?(5|9)\d{2}|\(?(05|09)\d{2}\)?)\s?\d{3}\s?\d{3}/)
+
+    console.log(phoneInput.value);
+
+    if(!phoneInput.value.match(checkPhone)) {
+        phoneInput.parentElement.classList.add('active');
+    }
 }
 
 function handleCompanyInput() {
-    
+    companyInput.parentElement.classList.remove('active');
+
+    console.log(companyInput.value);
+
+    if(!companyInput.value) {
+        companyInput.parentElement.classList.add('active');
+    }
 }
+
+inputBtn.addEventListener('click', handleNameInput);
+inputBtn.addEventListener('click', handlePhoneInput);
+inputBtn.addEventListener('click', handleEmailInput);
+inputBtn.addEventListener('click', handleCompanyInput);

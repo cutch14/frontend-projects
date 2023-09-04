@@ -312,3 +312,458 @@ img.logo {
     bottom: 0;
     z-index: 0;
 }
+
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+/* /////// Tablet Styling //////// */
+/* /////////////////////////////// */
+/* /////////////////////////////// */
+
+@media only screen and (min-width: 900px) and (max-width: 1300px) {
+    body {
+        display: flex;
+        justify-content: center;
+        /* background-color: #FAFAFA; */
+    }
+    
+    .main-container {
+        width: 76.8rem;
+        height: 131.5rem;
+        background-image: none;
+    }
+    
+    img.logo {
+        align-self: flex-start;
+        margin-left: 4rem;
+    }
+    
+    /* title section */
+    
+    .page-title {
+        width: 57.3rem;
+        height: 15rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    br { 
+        content: ' ';
+    }
+    
+    .page-title > h1 {
+        width: 57.3rem;
+        height: 4.8rem;
+    }
+    
+    .page-title > p {
+        width: 57.3rem;
+        height: 7.8rem;
+    }
+    
+    /* time remaining section */
+    
+    .time-container {
+        width: 44.8rem;
+        height: 18.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .time-remaining {
+        width: 44.8rem;
+        height: 12.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .time-remaining > div {
+        width: 10rem;
+        height: 12.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 0.4rem;
+        background-color: rgba(81, 117, 251, 0.1);
+        padding: 1rem 0;
+    }
+    
+    .time-remaining > div > h4 {
+        font-size: 5.6rem;
+    }
+    
+    .time-remaining > div > p {
+        font-size: 1.6rem;
+    }
+
+    .time-remaining > div > p.minutes-text {
+        visibility: hidden;
+        position: relative;
+    }
+
+    .time-remaining > div > p.minutes-text:after {
+        content: "mins";
+        visibility: visible;
+        position: absolute;
+        left: 1.4rem;
+    }
+    
+    .time-remaining > div > p.seconds-text {
+        visibility: hidden;
+        position: relative;
+    }
+
+    .time-remaining > div > p.seconds-text:after {
+        content: "secs";
+        visibility: visible;
+        position: absolute;
+        left: 1.4rem;
+    }
+
+    /* sign up section */
+    
+    .signup-container {
+        width: 44.5rem;
+        height: 50.8rem;
+    }
+    
+    .signup-container > div {
+        width: 36rem;
+        height: 4.5rem;
+    }
+    
+    .signup-container > div > input {
+        width: 20rem;
+        height: 4.2rem;
+    }
+    
+    .signup-container > div.subscription-box {
+        width: 36rem;
+        height: 4.5rem;
+    }
+    
+    .signup-container > div.subscription-box > span {
+        margin-left: -18rem;
+    }
+    
+    .signup-container > button {
+        width: 36rem;
+        height: 5.6rem;
+    }
+    
+    .dropdown {
+        width: 36rem;
+    }
+    
+    /* footer */
+    
+    .footer {
+        width: 76.8rem;
+        height: 38rem;
+        background-size: 58rem 58rem;
+    }
+}
+
+
+/* //////////////////////////////// */
+/* //////////////////////////////// */
+/* ////// Desktop styling ///////// */
+/* //////////////////////////////// */
+/* //////////////////////////////// */
+
+
+@media only screen and (min-width: 1301px) {
+    body {
+        display: flex;
+        justify-content: center;
+        /* background-color: #FAFAFA; */
+    }
+    
+    .main-container {
+        width: 37.5rem;
+        height: 123.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-image: url(./assets/home/bg-pattern-header.svg);
+        background-size: 45.8rem;
+        background-position: center -14rem;
+        background-repeat: no-repeat;
+        position: relative;
+        background-color: #FAFAFA;
+    }
+    
+    img.logo {
+        width: 15.5rem;
+        height: 3rem;
+    }
+    
+    /* title section */
+    
+    .page-title {
+        width: 32.7rem;
+        height: 24.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .page-title > h1 {
+        width: 32.7rem;
+        height: 9.6rem;
+        color: var(--darkGrey);
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 4.8rem;
+    }
+    
+    .page-title > p {
+        width: 32.7rem;
+        height: 13rem;
+        color: var(--grey);
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.6rem;
+    }
+    
+    /* time remaining section */
+    
+    .time-container {
+        width: 32.8rem;
+        height: 15.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .coming-soon {
+        width: 25.5rem;
+        height: 4.8rem;
+        text-align: center;
+        color: var(--darkGrey);
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+    
+    .coming-soon > span {
+        color: var(--blue);
+    }
+    
+    .time-remaining {
+        width: 32.8rem;
+        height: 9.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .time-remaining > div {
+        width: 7.2rem;
+        height: 9.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 0.4rem;
+        background-color: rgba(81, 117, 251, 0.1);
+        padding: 1rem 0;
+    }
+    
+    .time-remaining > div > h4 {
+        color: var(--blue);
+        font-size: 3.2rem;
+        font-weight: 700;
+    }
+    
+    .time-remaining > div > p {
+        color: var(--darkGrey);
+        font-size: 1.2rem;
+        font-weight: 700;
+        opacity: 0.5;
+    }
+    
+    /* sign up section */
+    
+    .signup-container {
+        width: 32.7rem;
+        height: 46.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #FFFFFF;
+        z-index: 1;
+        border-radius: 1.3rem;
+        position: relative;
+    }
+    
+    .signup-container > div {
+        width: 27.9rem;
+        height: 4.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        border-bottom: 2px solid rgba(116, 123, 149, .2);
+    }
+    
+    .signup-container > div.active {
+        border-bottom: 2px solid var(--red);
+    }
+    
+    .signup-container > div > input {
+        width: 20rem;
+        height: 4.2rem;
+        outline: none;
+        border: none;
+        color: var(--grey);
+        font-size: 1.6rem;
+        padding-bottom: 2rem;
+    }
+    
+    .signup-container > div.active > input {
+        color: var(--red);
+    }
+    
+    .signup-container > div > input::-webkit-inner-spin-button {
+        appearance: none;
+    }
+    
+    .signup-container > div.subscription-box {
+        width: 27.9rem;
+        height: 4.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--darkGrey);
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding-bottom: 2rem;
+    }
+    
+    .signup-container > div.subscription-box.active {
+        border-bottom: 2px solid rgba(116, 123, 149, .2);
+    }
+    
+    .signup-container > div.subscription-box:hover {
+        cursor: pointer;
+    }
+    
+    .signup-container > div.subscription-box > span {
+        color: var(--grey);
+        margin-left: -10rem;
+    }
+    
+    .signup-container > div.subscription-box.active > img {
+        transform: rotate(180deg);
+    }
+    
+    .signup-container > button {
+        width: 27.9rem;
+        height: 5.6rem;
+        border: none;
+        border-radius: 2.8rem;
+        background-color: var(--blue);
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+    
+    .signup-container > button:hover {
+        cursor: pointer;
+    }
+    
+    .signup-container > div > img.cross {
+        width: 2.5rem;
+        height: 2.5rem;
+        position: absolute;
+        display: none;
+        right: 0;
+        bottom: 1.8rem;
+    }
+    
+    .signup-container > div.active > img.cross {
+        display: block;
+    }
+    
+    .dropdown {
+        width: 28.5rem;
+        height: 20rem;
+        background-color: #FFFFFF;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 21.5rem;
+        border: rgba(51, 57, 80, 0.15);
+        box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.75);
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .dropdown.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .dropdown > div {
+        width: 22rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        border-bottom: 2px solid rgba(116, 123, 149, .2);
+        position: relative;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    
+    .dropdown > div:hover {
+        cursor: pointer;
+    }
+    
+    .dropdown > div > span { 
+        color: var(--grey);
+    }
+    
+    .dropdown > div > img {
+        position: absolute;
+        right: 0;
+        display: none;
+    }
+    
+    .dropdown > div.active > img {
+        display: block;
+    }
+    
+    .dropdown > div:nth-child(3) {
+        border-bottom: none;
+    }
+    
+    /* footer */
+    
+    .footer {
+        width: 37.5rem;
+        height: 32rem;
+        background-color: var(--offBlack);
+        background-image: url('./assets/home/bg-pattern-footer.svg');
+        background-size: 37.5rem 32rem;
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+    }
+}
