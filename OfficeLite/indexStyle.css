@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans';
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --blue: #5175FF;
+    --lightBlue: #829CFF;
+    --darkGrey: #333950;
+    --offBlack: #25293A;
+    --grey: #747B95;
+    --red: #F05B5B;
+}
+
+/* Mobile styling */
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #FAFAFA;
+}
+
+.main-container {
+    width: 37.5rem;
+    height: 293.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url('./assets/home/bg-pattern-header.svg');
+    background-size: 45.8rem;
+    background-repeat: no-repeat;
+    background-position: center -17rem;
+    position: relative;
+}
+
+img.logo {
+    width: 15.5rem;
+    height: 3rem;
+}
+
+/* header image */
+
+.header-container {
+    width: 32.7rem;
+    height: 66rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container>img {
+    width: 17.1rem;
+    height: 19.2rem;
+}
+
+.header-container>div {
+    width: 32.7rem;
+    height: 39.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container>div>h1 {
+    width: 32.7rem;
+    height: 14.4rem;
+    color: var(--darkGrey);
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+}
+
+.header-container>div>p {
+    width: 32.7rem;
+    height: 13rem;
+    color: var(--grey);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+}
+
+.header-container>div>button {
+    width: 17.1rem;
+    height: 5.6rem;
+    border: none;
+    border-radius: 2.8rem;
+    background-color: var(--blue);
+    box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.25);
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-container>div>button:hover {
+    cursor: pointer;
+    background-color: #6783e1;
+}
+
+/* Pricing section */
+
+.pricing-container {
+    width: 32.8rem;
+    height: 158.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pricing-container > div {
+    width: 32.7rem;
+    height: 50.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 0.75rem;
+    background-color: white;
+}
+
+.pricing-container > div > .title {
+    color: var(--darkGrey);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.pricing-container > div > div.subheader {
+    width: 18rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pricing-container > div > div.subheader > h3 {
+    color: var(--darkGrey);
+    font-size: 5.6rem;
+    font-weight: 700;
+}
+
+.pricing-container > div > div.subheader > p {
+    color: var(--darkGrey);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.pricing-container > div > div.info {
+    width: 24rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pricing-container > div > div.info > p {
+    color: var(--grey);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.pricing-container > div > button {
+    width: 17.1rem;
+    height: 5.6rem;
+    border-radius: 2.8rem;
+    border: none;
+    background: hsla(228, 100%, 66%, 0.1526);
+    color: var(--blue);
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+}
+
+.pricing-container > div > button:hover {
+    cursor: pointer;
+    background-color: #bac5f2;
+}
+
+/* pricing container alternate color */
+
+.pricing-container > div.pro-container {
+    background-color: var(--blue);
+    background-image: url('./assets/home/bg-pattern-pricing.svg');
+    background-size: 88rem;
+    background-repeat: no-repeat;
+    background-position: -27.5rem -38rem;
+}
+
+.pricing-container > div.pro-container > .title {
+    color: #FFF;
+}
+
+.pricing-container > div.pro-container > div.subheader > h3 {
+    color: #FFF;
+}
+
+.pricing-container > div.pro-container > div.subheader > p {
+    color: #FFF;
+}
+
+.pricing-container > div.pro-container > div.info > p {
+    color: #FFF;
+}
+
+.pricing-container > div.pro-container > button {
+    background: #FFF;;
+    color: var(--blue);
+    transition: all 0.2s ease-in-out;
+}
+
+.pricing-container > div.pro-container > button:hover {
+    cursor: pointer;
+    background-color: #f4eeee;
+}
+
+/* Time remaining section */
+
+/* time remaining section */
+
+.time-container {
+    width: 32.8rem;
+    height: 27rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.coming-soon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    width: 27rem;
+    height: 4.8rem;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.coming-soon > span {
+    color: var(--blue);
+}
+
+.time-remaining {
+    width: 32.8rem;
+    height: 9.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-remaining > div {
+    width: 7.2rem;
+    height: 9.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 0.4rem;
+    background-color: rgba(81, 117, 251, 0.1);
+    padding: 1rem 0;
+}
+
+.time-remaining > div > h4 {
+    color: #FFF;
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.time-remaining > div > p {
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+.time-container > button {
+    width: 17.1rem;
+    height: 5.6rem;
+    border-radius: 2.8rem;
+    background-color: var(--blue);
+    border: none;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+}
+
+.time-container > button:hover {
+    cursor: pointer;
+    background-color: #6783e1;
+}
+
+/* Footer background */
+
+footer {
+    width: 37.5rem;
+    height: 124.8rem;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--offBlack);
+    background-image: url('./assets/home/bg-pattern-footer.svg');
+    background-size: 85rem;
+    background-repeat: no-repeat;
+    background-position: -24rem 45rem;
+    z-index: -1;
+}
+
+
+/* ////////////////////////////////// */
+/* ////////////////////////////////// */
+/* //////// Tablet Styling ////////// */
+/* ////////////////////////////////// */
+/* ////////////////////////////////// */
+
+@media only screen and (min-width: 900px) and (max-width: 1300px) {
+    body {
+        display: flex;
+        justify-content: center;
+        background-color: #FAFAFA;
+    }
+    
+    .main-container {
+        width: 76.8rem;
+        height: 218.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: url('./assets/home/bg-pattern-header.svg');
+        background-size: 45.8rem;
+        background-repeat: no-repeat;
+        background-position: center -17rem;
+        position: relative;
+    }
+    
+    img.logo {
+        width: 15.5rem;
+        height: 3rem;
+        align-self: flex-start;
+        margin-left: 4.5rem;
+    }
+    
+    /* header image */
+    
+    .header-container {
+        width: 68.9rem;
+        height: 35.2rem;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .header-container>img {
+        width: 28.1rem;
+        height: 31.4rem;
+    }
+    
+    .header-container>div {
+        width: 32.7rem;
+        height: 35.2rem;
+        align-items: flex-start;
+    }
+    
+    .header-container>div>h1 {
+        width: 32.7rem;
+        height: 14.4rem;
+        text-align: left;
+    }
+    
+    .header-container>div>p {
+        width: 34.5rem;
+        height: 10.4rem;
+        text-align: left;
+    }
+    
+    /* Pricing section */
+    
+    .pricing-container {
+        width: 68.9rem;
+        height: 99.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .pricing-container > div {
+        width: 68.9rem;
+        height: 31.6rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2rem 0rem;
+    }
+    
+    .pricing-container > div > .title {
+        width: 16rem;
+        height: 2.8rem;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: -1rem;
+    }
+    
+    .pricing-container > div > div.subheader {
+        width: 16rem;
+        height: 11.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    
+    .pricing-container > div > div.subheader > h3 {
+        height: 6.4rem;
+        color: var(--darkGrey);
+        font-size: 5.6rem;
+        font-weight: 700;
+    }
+    
+    .pricing-container > div > div.subheader > p {
+        height: 2.8rem;
+        width: 20rem;
+        color: var(--darkGrey);
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    
+    .pricing-container > div > div.info {
+        width: 22.1rem;
+        height: 11.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        order: 1;
+    }
+        
+    /* Time remaining section */
+    
+    .time-container {
+        width: 44.8rem;
+        height: 28.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .time-remaining {
+        width: 44.8rem;
+        height: 12.8rem;
+    }
+    
+    .time-remaining > div {
+        width: 10rem;
+        height: 12.8rem;
+    }
+    
+    .time-remaining > div > h4 {
+        font-size: 6.4rem;
+    }
+    
+    .time-remaining > div > p {
+        font-size: 1.6rem;
+    }
+    
+    /* Footer background */
+    
+    footer {
+        width: 76.8rem;
+        height: 98.6rem;
+        background-size: 58.8rem;
+        background-repeat: no-repeat;
+        background-position: 50% 45rem;
+        z-index: -1;
+    }
+}
+
+/* /////////////////////////// */
+/* /////////////////////////// */
+/* ///// Desktop Styling ///// */
+/* /////////////////////////// */
+/* /////////////////////////// */
+
+@media only screen and (min-width: 1301px) {
+    body {
+        display: flex;
+        justify-content: center;
+        background-color: #FAFAFA;
+    }
+    
+    .main-container {
+        width: 144rem;
+        height: 178.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: url('./assets/home/bg-pattern-header.svg');
+        background-size: 113.4rem;
+        background-repeat: no-repeat;
+        background-position: 50rem -50rem;
+        position: relative;
+    }
+    
+    img.logo {
+        width: 15.5rem;
+        height: 3rem;
+        align-self: flex-start;
+        margin-left: 16.5rem;
+    }
+    
+    /* header image */
+    
+    .header-container {
+        width: 111rem;
+        height: 53.1rem;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .header-container>img {
+        width: 47.5rem;
+        height: 53.1rem;
+        margin-top: 6rem;
+    }
+    
+    .header-container>div {
+        width: 54rem;
+        height: 38.8rem;
+        align-items: flex-start;
+    }
+    
+    .header-container>div>h1 {
+        width: 54rem;
+        height: 19.2rem;
+        text-align: left;
+        font-size: 5.6rem;
+        line-height: 6.4rem;
+    }
+    
+    .header-container>div>p {
+        width: 54rem;
+        height: 8.4rem;
+        text-align: left;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+    
+    /* Pricing section */
+    
+    .pricing-container {
+        width: 111rem;
+        height: 50.8rem;
+        flex-direction: row;
+    }
+    
+    .pricing-container > div {
+        width: 35rem;
+        height: 50.8rem;
+    }
+    
+    .pricing-container > div > .title {
+        width: 16rem;
+        height: 2.8rem;
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 0rem;
+    }
+    
+    .pricing-container > div > div.subheader {
+        width: 16rem;
+        height: 11.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .pricing-container > div > div.subheader > h3 {
+        height: 6.4rem;
+        color: var(--darkGrey);
+        font-size: 5.6rem;
+        font-weight: 700;
+    }
+    
+    .pricing-container > div > div.subheader > p {
+        height: 2.8rem;
+        width: 20rem;
+        text-align: center;
+    }
+    
+    .pricing-container > div > div.info {
+        width: 22.1rem;
+        height: 11.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        order: 1;
+    }
+        
+    /* Time remaining section */
+    
+    .time-container {
+        width: 111rem;
+        height: 17.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .time-remaining {
+        width: 44.8rem;
+        height: 12.8rem;
+        align-self: flex-start;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .time-remaining > div {
+        width: 10rem;
+        height: 12.8rem;
+    }
+    
+    .time-remaining > div > h4 {
+        font-size: 6.4rem;
+    }
+    
+    .time-remaining > div > p {
+        font-size: 1.6rem;
+    }
+    
+    .coming-soon {
+        align-items: flex-start;
+        justify-content: space-evenly;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+    .time-container > button {
+        align-self: flex-end;
+    }
+    
+    /* Footer background */
+    
+    footer {
+        width: 144rem;
+        height: 60.3rem;
+        background-size: 203.6rem;
+        background-repeat: no-repeat;
+        background-position: -65rem -60rem;
+        z-index: -1;
+    }
+}

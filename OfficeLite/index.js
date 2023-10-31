@@ -33,4 +33,17 @@ function displayTimeRemaining() {
     // console.log(daysToDisplay, hoursToDisplay, minutesToDisplay, secondsToDisplay);
 } 
 
-// setInterval(displayTimeRemaining, 1000);
+setInterval(displayTimeRemaining, 1000);
+
+
+// Switch page
+
+const buttons = document.querySelectorAll('button');
+
+function switchPage() {
+    document.location.href = "./sign-up.html";
+}
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', switchPage)
+})

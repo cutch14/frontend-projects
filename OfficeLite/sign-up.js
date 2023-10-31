@@ -35,7 +35,7 @@ function displayTimeRemaining() {
     // console.log(daysToDisplay, hoursToDisplay, minutesToDisplay, secondsToDisplay);
 } 
 
-// setInterval(displayTimeRemaining, 1000);
+setInterval(displayTimeRemaining, 1000);
 
 
 // Menus
@@ -80,6 +80,13 @@ const phoneInput = document.querySelector(".number");
 const companyInput = document.querySelector(".company > input");
 const inputBtn = document.querySelector(".list-btn");
 
+// Switches
+
+let validName = false;
+let validEmail = false;
+let validPhone = false;
+let validCompany = false;
+
 // Handle input errors
 
 function handleNameInput() {
@@ -91,6 +98,8 @@ function handleNameInput() {
 
     if(!nameInput.value.match(checkName)) {
         nameInput.parentElement.classList.add('active');
+    } else {
+        validName = true;
     }
 
     nameInput.value = "";
@@ -104,7 +113,9 @@ function handleEmailInput() {
     console.log(emailInput.value);
 
     if(!emailInput.value.match(checkEmail)) {
-        emailInput.parentElement.classList.add('active');
+        emailInput.parentElement.classList.add('active'); 
+    } else {
+        validEmail = true;
     }
 }
 
@@ -116,7 +127,9 @@ function handlePhoneInput() {
     console.log(phoneInput.value);
 
     if(!phoneInput.value.match(checkPhone)) {
-        phoneInput.parentElement.classList.add('active');
+        phoneInput.parentElement.classList.add('active'); 
+    } else {
+        validPhone = true;
     }
 }
 
@@ -127,6 +140,15 @@ function handleCompanyInput() {
 
     if(!companyInput.value) {
         companyInput.parentElement.classList.add('active');
+    } else {
+       validCompany= true; 
+    }
+    console.log(validName, validEmail, validPhone, validCompany)
+}
+
+function switchToHomePage() {
+    if(validName && validEmail && validPhone && validCompany) {
+        document.location.href = "./index.html";
     }
 }
 
@@ -134,3 +156,4 @@ inputBtn.addEventListener('click', handleNameInput);
 inputBtn.addEventListener('click', handlePhoneInput);
 inputBtn.addEventListener('click', handleEmailInput);
 inputBtn.addEventListener('click', handleCompanyInput);
+inputBtn.addEventListener('click', switchToHomePage);
